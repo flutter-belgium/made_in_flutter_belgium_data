@@ -1,3 +1,5 @@
+name: CodeOwner comments
+
 on:
   pull_request:
     branches:
