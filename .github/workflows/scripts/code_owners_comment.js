@@ -19,7 +19,7 @@ function findCodeOwners(projectName) {
   const codeOwners = data.split('\n')
   console.log(codeOwners)
   const matchingOwners = []
-  const projectFolder = path.join('projects', projectName)
+  const projectFolder = `/projects/${projectName}`
   console.log(projectFolder)
   for (const line of codeOwners) {
     console.log(`LINE: ${line}`)
