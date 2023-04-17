@@ -6,7 +6,7 @@ function findProjectName(pullRequestTitle) {
   if (!projectNameParts || projectNameParts.length < 2) throw Error('No project name found in title')
   const projectName = projectNameParts[1]
   const projectFolder = path.join('projects', projectName)
-  // if (!fs.existsSync(projectFolder)) return null
+  if (!fs.existsSync(projectFolder)) return null
   return projectName
 }
 
