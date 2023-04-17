@@ -13,23 +13,16 @@ function findProjectName(pullRequestTitle) {
 function findCodeOwners(projectName) {
   const filePath = path.join('CODEOWNERS')
   const data = fs.readFileSync(filePath, { encoding: 'utf-8' })
-  console.log('Data:')
-  console.log(data)
 
   const codeOwners = data.split('\n')
-  console.log(codeOwners)
   const matchingOwners = []
   const projectFolder = `/projects/${projectName}`
-  console.log(projectFolder)
   for (const line of codeOwners) {
-    console.log(`LINE: ${line}`)
     if (line === '' || line.indexOf('#') === 0) continue
     const [pattern, owners] = line.split(/\s+/)
-    console.log(pattern)
-    console.log('---')
+    console.log(owners)
     if (pattern.indexOf(projectFolder) === 0) {
-      console.log(`FOUND ONE! ${pattern} - ${projectFolder}`)
-      matchingOwners.push(...owners.split(/\s+/))
+      matchingOwners.push(...owners.split(' '))
     }
   }
   return matchingOwners
