@@ -20,11 +20,12 @@ function findCodeOwners(projectName) {
   console.log(codeOwners)
   const matchingOwners = []
   const projectFolder = path.join('projects', projectName)
+  console.log(projectFolder)
   for (const line of codeOwners) {
+    console.log(`LINE: ${line}`)
     if (line === '' || line.indexOf('#') === 0) continue
     const [pattern, owners] = line.split(/\s+/)
     console.log(pattern)
-    console.log(projectFolder)
     console.log('---')
     if (pattern.indexOf(projectFolder) === 0) {
       console.log(`FOUND ONE! ${pattern} - ${projectFolder}`)
