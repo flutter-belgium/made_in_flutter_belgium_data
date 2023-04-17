@@ -1,0 +1,28 @@
+{
+    "name": "Covid Safe",
+    "description": "The official CovidSafeBE app makes it very easy for you to download your personal Covid certificate. This certificate enables you to travel within the European Union safely and with peace of mind.\nAnswer 3 questions to find out which Covid certificates are available to you. Then you can use a digital ID to sign in and download and save your certificates.\nFor more information and instructions on how to use the app, visit www.covidsafe.be.\n\nThis app has been commissioned by the Belgian Governments to be used by all Belgian residents. The app is published worldwide, so that Belgian citizens and residents can always find their Covid certificates. Currently the applicable geographic region where this app can be used is the European Union.",
+    "publisher": {
+        "name": "eHealth Platform",
+        "website": "https://www.ehealth.fgov.be/"
+    },
+    "developers": [
+        {
+            "githubUserName": "vanlooverenkoen"
+        },
+        {
+            "githubUserName": "ikbendewilliam"
+        },
+        {
+            "githubUserName": "HannesVDB"
+        },
+        {
+            "githubUserName": "jeroentrappers"
+        }
+    ],
+    "releaseData": "15-05-2021",
+    "links": {
+        "appstore": "https://apps.apple.com/nl/app/covidsafebe/id1566902189",
+        "playstore": "https://play.google.com/store/apps/details?id=be.fgov.ehealth.DGC",
+        "website": "https://covidsafe.be/"
+    }
+}
