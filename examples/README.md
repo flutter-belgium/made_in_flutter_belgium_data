@@ -13,8 +13,10 @@ To use these examples, you can copy the contents of the JSON files and modify th
 
 ## Folder Structure example
 
+```
 example/
 ├── example1/example1.json
 ├── example1/example1.md
 ├── example1/example2.json
 └── example1/example2.md
+```
