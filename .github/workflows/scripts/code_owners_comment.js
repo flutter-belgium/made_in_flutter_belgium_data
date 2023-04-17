@@ -31,7 +31,7 @@ function findCodeOwners(projectPath) {
 
 module.exports = async ({ github, context, core }) => {
   const pullRequestTitle = context.payload.pull_request.title
-  if (pullRequestTitle.indexOf('[') === 0) return
+  if (pullRequestTitle.indexOf('[') !== 0) return
   const projectName = findProjectPath(pullRequestTitle)
   if (projectName == null) throw Error("Project name not found! No folder under /projects/[your-project-name]")
 
