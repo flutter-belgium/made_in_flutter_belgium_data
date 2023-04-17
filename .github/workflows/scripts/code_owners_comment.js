@@ -25,7 +25,9 @@ function findCodeOwners(projectPath) {
     if (line.indexOf('#') === 0) continue
     console.log(`Line: ${line}`)
     const [pattern, owners] = line.split(/\s+/)
-    const regex = new RegExp(pattern);
+    console.log(pattern)
+    console.log(owners)
+    const regex = new RegExp(pattern)
 
     if (regex.test(projectPath)) {
       return owners.split(/\s+/)
