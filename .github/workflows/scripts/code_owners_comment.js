@@ -28,7 +28,7 @@ function findCodeOwners(projectPath) {
     const [pattern, owners] = line.split(/\s+/)
     console.log(pattern)
     console.log(owners)
-    const regex = new RegExp(pattern)
+    const regex = new RegExp('^' + pattern.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\/\*\*/g, '(?:\/[^\/]+)*\/?'));
 
     if (regex.test(projectPath)) {
       return owners.split(/\s+/)
