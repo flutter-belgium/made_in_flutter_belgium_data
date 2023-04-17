@@ -1,7 +1,7 @@
 module.exports = async ({ github, context, core }) => {
   const fs = require('fs')
   const path = require('path')
-  const filePath = path.join('CODEOWNERS.md')
+  const filePath = path.join('CODEOWNERS')
 
   const data = fs.readFileSync(filePath, { encoding: 'utf-8' })
   console.log('received data: ' + data);
