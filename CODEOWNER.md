@@ -4,3 +4,4 @@
 /CODEOWNERS                                              @vanlooverenkoen
 examples/**                                              @vanlooverenkoen
 projects/**                                              @vanlooverenkoen
+projects/covid_safe/**                                   @vanlooverenkoen @ikbendewilliam @HannesVDB @jeroentrappers
