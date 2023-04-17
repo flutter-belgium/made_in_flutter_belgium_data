@@ -14,7 +14,7 @@ function findProjectName(pullRequestTitle) {
   return projectName
 }
 
-function findCodeOwners(projectPath) {
+function findCodeOwners(projectName) {
   const filePath = path.join('CODEOWNERS')
   const data = fs.readFileSync(filePath, { encoding: 'utf-8' })
   console.log('Data:')
@@ -30,7 +30,7 @@ function findCodeOwners(projectPath) {
     console.log(owners)
     const regex = new RegExp('^' + pattern.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\/\*\*/g, '(?:\/[^\/]+)*\/?'));
 
-    if (regex.test(projectPath)) {
+    if (regex.test(projectName)) {
       return owners.split(/\s+/)
     }
   }
@@ -45,6 +45,7 @@ module.exports = async ({ github, context, core }) => {
   // if (projectName == null) throw Error("Project name not found! No folder under /projects/[your-project-name]")
 
   const codeOwners = findCodeOwners(projectName)
+  console.log(codeOwners)
   if (codeOwners == null) return
 
   const body = `${codeOwners.join(', ')} can you please review this pull-request? You have been assigned as code-owner to this project`
