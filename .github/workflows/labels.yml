@@ -12,4 +12,6 @@ jobs:
       - uses: actions/github-script@v6
         with:
           script: |
+            console.log(context.actor)
+            console.log('----')
             console.log(context)
