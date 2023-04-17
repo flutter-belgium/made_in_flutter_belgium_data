@@ -17,5 +17,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: '👋 Thanks creating a pull request!'
+              body: `👋 @${context.actor}, Thanks creating a pull request! `
             })
