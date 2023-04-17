@@ -22,7 +22,7 @@ function findCodeOwners(projectName) {
     const [pattern, owners] = line.split(/\s+/)
     console.log(owners)
     if (pattern.indexOf(projectFolder) === 0) {
-      matchingOwners.push(...owners.match(/\S+/g))
+      matchingOwners.push(...owners)
     }
   }
   return matchingOwners
