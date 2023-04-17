@@ -27,7 +27,7 @@ function findCodeOwners(projectName) {
   
       // Escape special characters in the pattern and replace * with a regular expression that matches any number of characters except /.
       const regex = new RegExp('^' + pattern.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\/\*\*/g, '(?:\/[^\/]+)*\/?'));
-      if (regex.test(projectPath)) {
+      if (regex.test(projectName)) {
         matchingOwners.push(...owners.split(/\s+/));
       }
     }
