@@ -19,7 +19,7 @@ function findCodeOwners(projectName) {
   const projectFolder = `/projects/${projectName}`
   for (const line of codeOwners) {
     if (line === '' || line.indexOf('#') === 0) continue
-    const [pattern, owners] = line.split(/\s+/)
+    const [pattern, owners] = line.split(/\S+/)
     console.log(owners)
     if (pattern.indexOf(projectFolder) === 0) {
       matchingOwners.push(...owners.split(' '))
