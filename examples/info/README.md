@@ -31,11 +31,3 @@ This is the documentation for the JSON object that contains information about a 
   * `youTube` (string or null): The URL to the application's promotional video on YouTube, or null if it's not available.
 
   * `demoYouTubeVideo` (string or null): The URL to the application's demo video, or null if it's not available. (Should be a YouTube link)
-  
-* `imagesUrls` (object or null): An object containing the following fields:
-
-  * `banner` (string or null): The URL to the application's banner image, or null if it's not available.
-  
-  * `appIcon` (string or null): The URL to the application's icon image, or null if it's not available.
-  
-  * `screenshots` (array or null): An array of strings, where each string is the URL to a screenshot image of the application.
