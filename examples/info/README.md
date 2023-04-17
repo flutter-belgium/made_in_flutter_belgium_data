@@ -8,13 +8,13 @@ This is the documentation for the JSON object that contains information about a 
 
 * `description` (string): A brief description of the application.
 
-* `publisher` (object): An object containing the following fields:
+* `publisher` (object or null): An object containing the following fields:
 
   * `name` (string): The name of the publisher of the application.
   
   * `website` (string): The website of the publisher of the application.
   
-* `developers` (array): An array of objects, where each object contains the following field:
+* `developers` (array or null): An array of objects, where each object contains the following field:
 
   * `githubUserName` (string): The GitHub username of a developer who contributed to the application.
   
@@ -28,11 +28,11 @@ This is the documentation for the JSON object that contains information about a 
   
   * `website` (string or null): The URL to the application's official website, or null if it's not available.
 
-  * `youtube` (string or null): The URL to the application's promotional video on YouTube, or null if it's not available.
+  * `youTube` (string or null): The URL to the application's promotional video on YouTube, or null if it's not available.
 
-  * `demoVideo` (string or null): The URL to the application's demo video, or null if it's not available.
+  * `demoYouTubeVideo` (string or null): The URL to the application's demo video, or null if it's not available. (Should be a YouTube link)
   
-* `imagesUrls` (object): An object containing the following fields:
+* `imagesUrls` (object or null): An object containing the following fields:
 
   * `banner` (string or null): The URL to the application's banner image, or null if it's not available.
   
