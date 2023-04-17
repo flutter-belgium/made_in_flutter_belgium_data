@@ -1,0 +1,17 @@
+on:
+  issues:
+    types: [opened]
+  pull_request:
+    branches:
+      - main    
+
+jobs:
+  apply-label:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            console.log(owner);
+            console.log(label);
+            console.log(name);
