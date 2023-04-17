@@ -13,6 +13,10 @@ Thank you for considering contributing to the "made_in_flutter_belgium_data" rep
 
 Please make sure to follow the code style and conventions used in the repository. Also, be sure to update any relevant documentation or tests when making changes.
 
+### Title pull request (PR)
+
+The title of your pull request should start with [project_name].
+
 ## Code of conduct
 
 We have a code of conduct in place to ensure that our community is welcoming and inclusive. Please read and follow our [code of conduct](CODE_OF_CONDUCT.md) when contributing to this project.
