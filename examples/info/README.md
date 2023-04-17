@@ -28,9 +28,9 @@ This is the documentation for the JSON object that contains information about a 
   
   * `website` (string or null): The URL to the application's official website, or null if it's not available.
 
-  * `youtube` (string or null): The URL to the application's promotional video on YouTube, or null if it's not available.
+  * `youTube` (string or null): The URL to the application's promotional video on YouTube, or null if it's not available.
 
-  * `demoVideo` (string or null): The URL to the application's demo video, or null if it's not available.
+  * `demoYouTubeVideo` (string or null): The URL to the application's demo video, or null if it's not available. (Should be a YouTube link)
   
 * `imagesUrls` (object or null): An object containing the following fields:
 
