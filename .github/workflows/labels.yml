@@ -12,6 +12,4 @@ jobs:
       - uses: actions/github-script@v6
         with:
           script: |
-            console.log(owner);
-            console.log(label);
-            console.log(name);
+            console.log(context)
