@@ -19,10 +19,10 @@ function findCodeOwners(projectName) {
   const projectFolder = `/projects/${projectName}`
   for (const line of codeOwners) {
     if (line === '' || line.indexOf('#') === 0) continue
-    const [pattern, owners] = line.split(/\S+/)
+    const [pattern, owners] = line.split(/\s+/)
     console.log(owners)
     if (pattern.indexOf(projectFolder) === 0) {
-      matchingOwners.push(...owners.split(' '))
+      matchingOwners.push(...owners.match(/\S+/g))
     }
   }
   return matchingOwners
@@ -38,7 +38,7 @@ module.exports = async ({ github, context, core }) => {
   console.log(codeOwners)
   if (codeOwners.length == 0) return
 
-  const body = `${codeOwners.join(', ')} can you please review this pull-request? You have been assigned as code-owner to this project`
+  const body = `${codeOwners.join(', ')} can you please review this pull-request? You have been assigned as code-owner to [${projectName}]`
   github.rest.issues.createComment({
     issue_number: context.issue.number,
     owner: context.repo.owner,
