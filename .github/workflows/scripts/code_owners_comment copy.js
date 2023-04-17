@@ -19,13 +19,11 @@ function findCodeOwners(projectName) {
   const codeOwners = data.split('\n')
   console.log(codeOwners)
   const matchingOwners = [];
+  const projectFolder = path.join('projects', projectName)
   for (const line of codeOwners) {
     if (line === '' || line.indexOf('#') === 0) continue
     const [pattern, owners] = line.split(/\s+/);
-
-    // Escape special characters in the pattern and replace * with a regular expression that matches any number of characters except /.
-    const regex = new RegExp('^' + pattern.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\/\*\*/g, '(?:\/[^\/]+)*\/?'));
-    if (regex.test(projectName)) {
+    if (pattern.indexOf(projectFolder) === 0) {
       matchingOwners.push(...owners.split(/\s+/));
     }
 
