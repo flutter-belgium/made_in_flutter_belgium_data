@@ -23,7 +23,7 @@ function findCodeOwners(projectPath) {
   const codeOwners = data.split('\n')
   console.log(codeOwners)
   for (const line of codeOwners) {
-    if (line.indexOf('#') === 0) continue
+    if (line === '' || line.indexOf('#') === 0) continue
     console.log(`Line: ${line}`)
     const [pattern, owners] = line.split(/\s+/)
     console.log(pattern)
