@@ -4,7 +4,7 @@ const path = require('path')
 
 function findProjectPath(pullRequestTitle) {
   const projectNameParts = pullRequestTitle.match(/\[(.*?)\]/)
-  if (projectNameParts.length < 2) throw Error('No project name found in title')
+  if (!projectNameParts || projectNameParts.length < 2) throw Error('No project name found in title')
   const projectName = projectNameParts[1]
   const projectFolder = path.join(`projects/${projectName}`)
 
