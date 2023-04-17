@@ -18,17 +18,20 @@ function findCodeOwners(projectName) {
 
   const codeOwners = data.split('\n')
   console.log(codeOwners)
-  const matchingOwners = [];
+  const matchingOwners = []
   const projectFolder = path.join('projects', projectName)
   for (const line of codeOwners) {
     if (line === '' || line.indexOf('#') === 0) continue
-    const [pattern, owners] = line.split(/\s+/);
+    const [pattern, owners] = line.split(/\s+/)
+    console.log(pattern)
+    console.log(projectFolder)
+    console.log('---')
     if (pattern.indexOf(projectFolder) === 0) {
       console.log(`FOUND ONE! ${pattern} - ${projectFolder}`)
-      matchingOwners.push(...owners.split(/\s+/));
+      matchingOwners.push(...owners.split(/\s+/))
     }
   }
-  return matchingOwners;
+  return matchingOwners
 }
 
 module.exports = async ({ github, context, core }) => {
