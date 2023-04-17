@@ -19,23 +19,19 @@ function findCodeOwners(projectName) {
 
   const codeOwners = data.split('\n')
   console.log(codeOwners)
+  const matchingOwners = [];
   for (const line of codeOwners) {
     if (line === '' || line.indexOf('#') === 0) continue
-    const matchingOwners = [];
-    for (const line of codeOwners) {
-      const [pattern, owners] = line.split(/\s+/);
-  
-      // Escape special characters in the pattern and replace * with a regular expression that matches any number of characters except /.
-      const regex = new RegExp('^' + pattern.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\/\*\*/g, '(?:\/[^\/]+)*\/?'));
-      if (regex.test(projectName)) {
-        matchingOwners.push(...owners.split(/\s+/));
-      }
-    }
-  
-    return matchingOwners;
-  }
+    const [pattern, owners] = line.split(/\s+/);
 
-  return null
+    // Escape special characters in the pattern and replace * with a regular expression that matches any number of characters except /.
+    const regex = new RegExp('^' + pattern.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\/\*\*/g, '(?:\/[^\/]+)*\/?'));
+    if (regex.test(projectName)) {
+      matchingOwners.push(...owners.split(/\s+/));
+    }
+
+  }
+  return matchingOwners;
 }
 
 module.exports = async ({ github, context, core }) => {
