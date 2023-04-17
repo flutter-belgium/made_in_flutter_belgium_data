@@ -6,8 +6,10 @@ function findProjectPath(pullRequestTitle) {
   const projectNameParts = pullRequestTitle.match(/\[(.*?)\]/)
   if (!projectNameParts || projectNameParts.length < 2) throw Error('No project name found in title')
   const projectName = projectNameParts[1]
+  console.log(projectName)
   const projectFolder = path.join(`projects/${projectName}`)
 
+  console.log(projectFolder)
   if (!fs.existsSync(projectFolder)) return null
   return projectName
 }
