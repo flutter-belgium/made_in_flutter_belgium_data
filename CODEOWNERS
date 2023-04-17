@@ -2,6 +2,6 @@
 # for contributions to this repository.
 
 /CODEOWNERS                                              @vanlooverenkoen
-examples/**                                              @vanlooverenkoen
-projects/**                                              @vanlooverenkoen
-projects/covid_safe/**                                   @vanlooverenkoen @ikbendewilliam @HannesVDB @jeroentrappers
+/examples/**                                              @vanlooverenkoen
+/projects/**                                              @vanlooverenkoen
+/projects/covid_safe/**                                   @vanlooverenkoen @ikbendewilliam @HannesVDB @jeroentrappers
