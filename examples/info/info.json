@@ -1,0 +1,28 @@
+{
+    "name": "",
+    "description": "",
+    "publisher": {
+        "name": "",
+        "website": ""
+    },
+    "developers": [
+        {
+            "githubUserName": ""
+        }
+    ],
+    "releaseData": "",
+    "links": {
+        "appstore": null,
+        "playstore": null,
+        "website": null,
+        "youtube": null,
+        "demoVideo": null
+    },
+    "imagesUrls": {
+        "banner": null,
+        "appIcon": null,
+        "screenshots": [
+            ""
+        ]
+    }
+}
