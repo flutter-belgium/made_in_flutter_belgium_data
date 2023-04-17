@@ -24,9 +24,9 @@ function findCodeOwners(projectName) {
     if (line === '' || line.indexOf('#') === 0) continue
     const [pattern, owners] = line.split(/\s+/);
     if (pattern.indexOf(projectFolder) === 0) {
+      console.log(`FOUND ONE! ${pattern} - ${projectFolder}`)
       matchingOwners.push(...owners.split(/\s+/));
     }
-
   }
   return matchingOwners;
 }
