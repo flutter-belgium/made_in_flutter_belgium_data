@@ -21,6 +21,7 @@ function findCodeOwners(projectPath) {
   console.log(data)
 
   const codeOwners = data.split('\n')
+  console.log(codeOwners)
   for (const line of codeOwners) {
     if (line.indexOf('#') === 0) continue
     console.log(`Line: ${line}`)
