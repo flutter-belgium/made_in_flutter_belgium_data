@@ -12,5 +12,5 @@ jobs:
       - uses: actions/github-script@v6
         with:
           script: |
-            const script = require('./github/workflows/scripts/labels.js')
+            const script = require('./.github/workflows/scripts/labels.js')
             await script({github, context, core})
