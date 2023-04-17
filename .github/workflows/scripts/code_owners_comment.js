@@ -3,7 +3,9 @@ const path = require('path')
 
 
 function findProjectPath(pullRequestTitle) {
-  const projectName = pullRequestTitle.match(/\[(.*?)\]/)[1]
+  const projectNameParts = pullRequestTitle.match(/\[(.*?)\]/)
+  if (projectNameParts.length < 2) throw Error('No project name found in title')
+  const projectName = projectNameParts[1]
   const projectFolder = path.join(`projects/${projectName}`)
 
   if (!fs.existsSync(projectFolder)) return null
@@ -28,7 +30,9 @@ function findCodeOwners(projectPath) {
 }
 
 module.exports = async ({ github, context, core }) => {
-  const projectName = findProjectPath(context.payload.pull_request.title)
+  const pullRequestTitle = context.payload.pull_request.title
+  if (!pullRequestTitle.startWith('[')) return
+  const projectName = findProjectPath(pullRequestTitle)
   if (projectName == null) throw Error("Project name not found! No folder under /projects/[your-project-name]")
 
   const codeOwners = findCodeOwners(projectName)
