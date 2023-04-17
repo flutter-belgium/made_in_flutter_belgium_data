@@ -7,7 +7,7 @@ function findProjectPath(pullRequestTitle) {
   if (!projectNameParts || projectNameParts.length < 2) throw Error('No project name found in title')
   const projectName = projectNameParts[1]
   console.log(projectName)
-  const projectFolder = path.join(`projects/${projectName}`)
+  const projectFolder = path.join('projects',projectName)
 
   console.log(projectFolder)
   if (!fs.existsSync(projectFolder)) return null
@@ -17,6 +17,8 @@ function findProjectPath(pullRequestTitle) {
 function findCodeOwners(projectPath) {
   const filePath = path.join('CODEOWNERS')
   const data = fs.readFileSync(filePath, { encoding: 'utf-8' })
+  console.log('Data:')
+  console.log(data)
 
   const codeOwners = data.split('\n')
   for (const line of codeOwners) {
@@ -35,7 +37,7 @@ module.exports = async ({ github, context, core }) => {
   const pullRequestTitle = context.payload.pull_request.title
   if (pullRequestTitle.indexOf('[') !== 0) return
   const projectName = findProjectPath(pullRequestTitle)
-  if (projectName == null) throw Error("Project name not found! No folder under /projects/[your-project-name]")
+  // if (projectName == null) throw Error("Project name not found! No folder under /projects/[your-project-name]")
 
   const codeOwners = findCodeOwners(projectName)
   if (codeOwners == null) return
