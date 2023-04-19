@@ -23,5 +23,5 @@ example/
 
 ## Documentation
 
-- projects
-- companies
+- [companies](https://github.com/flutter-belgium/made_in_flutter_belgium_data/blob/main/examples/companies)
+- [projects](https://github.com/flutter-belgium/made_in_flutter_belgium_data/blob/main/examples/projects)
