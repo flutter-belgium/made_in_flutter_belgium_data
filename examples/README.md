@@ -21,21 +21,7 @@ example/
 └── example1/example2.md
 ```
 
-## Project
+## Documentation
 
-### Assets
-
-Assets will be use to populate the UI
-
-Required assets:
-
-- assets/img/app_icon.webp
-
-### Folder Structure for a project
-```
-projects/your_project
-├── assets/img/screenshot_1.webp
-├── assets/img/app_icon.webp
-├── assets/img/banner.webp
-├── info.json
-```
+- projects
+- companies
