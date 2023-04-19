@@ -3,6 +3,7 @@
 
 /CODEOWNERS                                               @vanlooverenkoen
 /examples/**                                              @vanlooverenkoen
+/companies/**                                             @vanlooverenkoen
 /projects/**                                              @vanlooverenkoen
 /projects/covid_safe/**                                   @vanlooverenkoen @ikbendewilliam @HannesVDB @jeroentrappers
 /projects/sibos/**                                        @ikbendewilliam
