@@ -10,11 +10,11 @@ Future<void> validateProjects(String workingDirPath) async {
   for (final dir in projectsDirectory.listSync()) {
     if (dir is! Directory) continue;
     final dirSegments = dir.uri.pathSegments;
-    final projectName = dirSegments[dirSegments.length - 1];
-    print('Project: $projectName start validation');
+    final projectName = dirSegments[dirSegments.length - 2];
+    print('Project: `$projectName` start validation');
     final infoJsonFile = File(join(dir.path, 'info.json'));
     final infoJsonString = await infoJsonFile.readAsString();
     Project.fromJson(jsonDecode(infoJsonString) as Map<String, dynamic>);
-    print('Project: $projectName has a valid info.json 💙💙!');
+    print('Project: `$projectName` has a valid info.json 💙💙!');
   }
 }

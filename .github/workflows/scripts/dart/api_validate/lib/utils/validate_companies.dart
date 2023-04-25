@@ -12,10 +12,10 @@ Future<void> validateCompanies(String workingDirPath) async {
     if (dir is! Directory) continue;
     final dirSegments = dir.uri.pathSegments;
     final companyName = dirSegments[dirSegments.length - 1];
-    print('Company: $companyName start validation');
+    print('Company: `$companyName` start validation');
     final infoJsonFile = File(join(dir.path, 'info.json'));
     final infoJsonString = await infoJsonFile.readAsString();
     Company.fromJson(jsonDecode(infoJsonString) as Map<String, dynamic>);
-    print('Company: $companyName has a valid info.json 💙💙!');
+    print('Company: `$companyName` has a valid info.json 💙💙!');
   }
 }
