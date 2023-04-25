@@ -3,3 +3,6 @@
 *.ipr
 *.iws
 .idea/
+
+# Generated content
+api/

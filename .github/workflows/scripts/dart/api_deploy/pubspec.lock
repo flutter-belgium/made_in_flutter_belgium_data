@@ -136,6 +136,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.6.7"
+  json_annotation:
+    dependency: transitive
+    description:
+      name: json_annotation
+      sha256: c33da08e136c3df0190bd5bbe51ae1df4a7d96e7954d1d7249fea2968a72d317
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.8.0"
   lints:
     dependency: "direct dev"
     description:
@@ -152,6 +160,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.1.1"
+  made_in_flutter_belgium_data:
+    dependency: "direct main"
+    description:
+      path: "../made_in_flutter_belgium_data"
+      relative: true
+    source: path
+    version: "1.0.0"
   matcher:
     dependency: transitive
     description:

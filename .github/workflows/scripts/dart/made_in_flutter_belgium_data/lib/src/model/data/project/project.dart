@@ -16,15 +16,15 @@ class Project {
   final DateTime releaseData;
   @JsonKey(name: 'company')
   final Company? company;
-  @JsonKey(name: 'developer')
-  final List<ProjectDeveloper>? developer;
+  @JsonKey(name: 'developers')
+  final List<ProjectDeveloper>? developers;
 
   const Project({
     required this.name,
     required this.description,
     required this.releaseData,
     this.company,
-    this.developer,
+    this.developers,
   });
 
   factory Project.fromJson(Map<String, dynamic> json) => _$ProjectFromJson(json);
