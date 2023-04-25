@@ -11,5 +11,5 @@ jobs:
       - uses: actions/github-script@v6
         with:
           script: |
-            const script = require('./.github/workflows/scripts/code_owners_comment.js')
+            const script = require('./.github/workflows/scripts/js/code_owners_comment.js')
             await script({github, context, core})
