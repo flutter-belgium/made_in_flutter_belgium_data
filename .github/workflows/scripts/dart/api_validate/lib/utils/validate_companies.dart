@@ -6,7 +6,7 @@ import 'package:made_in_flutter_belgium_data/made_in_flutter_belgium_data.dart';
 
 Future<void> validateCompanies(String workingDirPath) async {
   final companiesDirectory = Directory(join(workingDirPath, 'companies'));
-  if (!companiesDirectory.existsSync()) throw ArgumentError('companies directory not found');
+  // if (!companiesDirectory.existsSync()) throw ArgumentError('companies directory not found');
   for (final dir in companiesDirectory.listSync()) {
     if (dir is! Directory) continue;
     final dirSegments = dir.uri.pathSegments;

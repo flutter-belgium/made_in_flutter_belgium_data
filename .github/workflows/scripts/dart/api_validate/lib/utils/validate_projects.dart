@@ -6,7 +6,7 @@ import 'package:made_in_flutter_belgium_data/made_in_flutter_belgium_data.dart';
 
 Future<void> validateProjects(String workingDirPath) async {
   final projectsDirectory = Directory(join(workingDirPath, 'projects'));
-  // if (!projectsDirectory.existsSync()) throw ArgumentError('projects directory not found');
+  if (!projectsDirectory.existsSync()) throw ArgumentError('projects directory not found');
   for (final dir in projectsDirectory.listSync()) {
     if (dir is! Directory) continue;
     final dirSegments = dir.uri.pathSegments;
