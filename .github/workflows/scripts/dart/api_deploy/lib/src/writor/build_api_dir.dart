@@ -12,5 +12,5 @@ Future<void> buildApiFolder(String workingDirPath) async {
 
 Future<void> _createIndexHtml(final Directory apiDir) async {
   final indexHtmlFile = File(join(apiDir.path, 'index.html'));
-  indexHtmlFile.writeAsString('Api under construction');
+  indexHtmlFile.writeAsStringSync('Api under construction');
 }

@@ -10,6 +10,8 @@ dependencies:
   path: ^1.8.0
   api_validate:
     path: ../api_validate
+  made_in_flutter_belgium_data:
+    path: ../made_in_flutter_belgium_data
 
 dev_dependencies:
   lints: ^2.0.0
