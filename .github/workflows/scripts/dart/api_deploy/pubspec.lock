@@ -17,6 +17,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.11.1"
+  api_validate:
+    dependency: "direct main"
+    description:
+      path: "../api_validate"
+      relative: true
+    source: path
+    version: "1.0.0"
   args:
     dependency: transitive
     description:
@@ -186,7 +193,7 @@ packages:
     source: hosted
     version: "2.1.0"
   path:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: path
       sha256: "8829d8a55c13fc0e37127c29fedf290c102f4e40ae94ada574091fe0ff96c917"
