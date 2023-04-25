@@ -1,0 +1,23 @@
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: dart-lang/setup-dart@v1
+      - name: Install dependencies
+        working-directory: .github/workflows/scripts/dart/api_validate
+        run: dart pub get
+      - name: Verify formatting
+        working-directory: .github/workflows/scripts/dart/api_validate
+        run: dart format — output=none — set-exit-if-changed .
+      - name: Analyze project source
+        working-directory: .github/workflows/scripts/dart/api_validate
+        run: dart analyze
+      - name: Api validate
+        working-directory: .github/workflows/scripts/dart/api_validate
+        run: dart run bin/api_validate.dart        
