@@ -22,7 +22,8 @@ Future<void> buildApiProjectsFolder(String workingDirPath) async {
     final project = Project.fromJson(jsonDecode(infoJsonString) as Map<String, dynamic>);
     projects.add(project);
   }
+  final sortedProjects = projects..sort((a, b) => a.name.compareTo(b.name));
   final projectsFile = File(join(projectsApiDir.path, 'all.json'));
-  projectsFile.writeAsStringSync(jsonEncode(projects));
+  projectsFile.writeAsStringSync(jsonEncode(sortedProjects));
   print('api/projects/all.json is saved successfully 💙💙!');
 }
