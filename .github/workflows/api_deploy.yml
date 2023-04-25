@@ -1,3 +1,5 @@
+name: api deploy
+
 on:
   push:
     branches: ["main"]

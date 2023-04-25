@@ -1,10 +1,12 @@
+name: api validate
+
 on:
   pull_request:
     branches:
       - main
 
 jobs:
-  deploy:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
