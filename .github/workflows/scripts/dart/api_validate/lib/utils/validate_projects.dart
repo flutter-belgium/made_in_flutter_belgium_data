@@ -47,8 +47,8 @@ Future<void> validateProjects(String workingDirPath) async {
 
   final file = join(dir, 'all.json');
   final sortedProjects = projects..sort((a, b) => a.name.compareTo(b.name));
-  final projectsFile = File(join(workingDirPath, file));
-  projectsFile.writeAsStringSync(jsonEncode(sortedProjects));
+  final projectsInfoFile = File(join(workingDirPath, file));
+  projectsInfoFile.writeAsStringSync(jsonEncode(sortedProjects));
   print('$file is saved successfully 💙💙!');
 }
 

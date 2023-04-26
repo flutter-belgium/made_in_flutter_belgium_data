@@ -45,9 +45,18 @@ Company:
     name: String
     website: String?
     developers: List<CompanyDeveloper>?
+    images:
+      type: CompanyImages
+      required: false
+      non_final: true
 
 CompanyDeveloper:
   path: data/company/
   properties:
     githubUserName: String
     role: String?
+
+CompanyImages:
+  path: data/company/
+  properties:
+    logoUrl: String
