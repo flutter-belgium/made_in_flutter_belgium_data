@@ -6,15 +6,15 @@ part 'project_images.g.dart';
 
 @JsonSerializable(explicitToJson: true)
 class ProjectImages {
-  @JsonKey(name: 'screenshotsUrls', required: true)
-  final List<String> screenshotsUrls;
+  @JsonKey(name: 'screenshotUrls', required: true)
+  final List<String> screenshotUrls;
   @JsonKey(name: 'appIconUrl', required: true)
   final String appIconUrl;
   @JsonKey(name: 'bannerUrl')
   final String? bannerUrl;
 
   const ProjectImages({
-    required this.screenshotsUrls,
+    required this.screenshotUrls,
     required this.appIconUrl,
     this.bannerUrl,
   });

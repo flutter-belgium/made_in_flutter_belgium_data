@@ -32,7 +32,7 @@ ProjectLinks:
 ProjectImages:
   path: data/project/
   properties:
-    screenshotsUrls: List<String>
+    screenshotUrls: List<String>
     bannerUrl: String?
     appIconUrl: String
 
