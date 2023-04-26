@@ -6,10 +6,7 @@ This JSON object is structured as follows:
 {
     "name": "",
     "description": "",
-    "publisher": {
-        "name": "",
-        "website": ""
-    },
+    "publisher": "",
     "developers": [
         {
             "githubUserName": "",
@@ -47,20 +44,8 @@ This JSON object is structured as follows:
 
 ### `publisher`
 
-- Data type: object
+- Data type: string
 - Description: Represents the publisher of the application.
-- Constraints: None.
-
-#### `name`
-
-- Data type: string
-- Description: Represents the name of the publisher.
-- Constraints: None.
-
-#### `website`
-
-- Data type: string
-- Description: Represents the website of the publisher.
 - Constraints: None.
 
 ### `developers`
@@ -129,10 +114,7 @@ This JSON object is structured as follows:
 {
     "name": "My App",
     "description": "This is an awesome app!",
-    "publisher": {
-        "name": "My Company",
-        "website": "https://mycompany.com"
-    },
+    "publisher": "My Company",
     "developers": [
         {
             "githubUserName": "johndoe",

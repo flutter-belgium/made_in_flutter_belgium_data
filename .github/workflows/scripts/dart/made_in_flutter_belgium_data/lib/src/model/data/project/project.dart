@@ -1,8 +1,9 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 import 'package:json_annotation/json_annotation.dart';
-import 'package:made_in_flutter_belgium_data/src/model/data/company/company.dart';
 import 'package:made_in_flutter_belgium_data/src/model/data/project/project_developer.dart';
+import 'package:made_in_flutter_belgium_data/src/model/data/project/project_images.dart';
+import 'package:made_in_flutter_belgium_data/src/model/data/project/project_links.dart';
 
 part 'project.g.dart';
 
@@ -14,17 +15,23 @@ class Project {
   final String description;
   @JsonKey(name: 'releaseData', required: true)
   final DateTime releaseData;
-  @JsonKey(name: 'company')
-  final Company? company;
+  @JsonKey(name: 'publisher')
+  final String? publisher;
   @JsonKey(name: 'developers')
   final List<ProjectDeveloper>? developers;
+  @JsonKey(name: 'links')
+  final ProjectLinks? links;
+  @JsonKey(name: 'images', includeIfNull: false)
+  ProjectImages? images;
 
-  const Project({
+  Project({
     required this.name,
     required this.description,
     required this.releaseData,
-    this.company,
+    this.publisher,
     this.developers,
+    this.links,
+    this.images,
   });
 
   factory Project.fromJson(Map<String, dynamic> json) => _$ProjectFromJson(json);

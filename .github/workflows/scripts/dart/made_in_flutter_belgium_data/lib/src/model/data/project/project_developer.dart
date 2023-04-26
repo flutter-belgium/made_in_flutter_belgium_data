@@ -8,12 +8,9 @@ part 'project_developer.g.dart';
 class ProjectDeveloper {
   @JsonKey(name: 'githubUserName', required: true)
   final String githubUserName;
-  @JsonKey(name: 'companyName')
-  final String? companyName;
 
   const ProjectDeveloper({
     required this.githubUserName,
-    this.companyName,
   });
 
   factory ProjectDeveloper.fromJson(Map<String, dynamic> json) => _$ProjectDeveloperFromJson(json);

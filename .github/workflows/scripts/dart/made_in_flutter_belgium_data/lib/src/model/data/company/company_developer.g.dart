@@ -1,22 +1,24 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'project_developer.dart';
+part of 'company_developer.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-ProjectDeveloper _$ProjectDeveloperFromJson(Map<String, dynamic> json) {
+CompanyDeveloper _$CompanyDeveloperFromJson(Map<String, dynamic> json) {
   $checkKeys(
     json,
     requiredKeys: const ['githubUserName'],
   );
-  return ProjectDeveloper(
+  return CompanyDeveloper(
     githubUserName: json['githubUserName'] as String,
+    role: json['role'] as String?,
   );
 }
 
-Map<String, dynamic> _$ProjectDeveloperToJson(ProjectDeveloper instance) =>
+Map<String, dynamic> _$CompanyDeveloperToJson(CompanyDeveloper instance) =>
     <String, dynamic>{
       'githubUserName': instance.githubUserName,
+      'role': instance.role,
     };
