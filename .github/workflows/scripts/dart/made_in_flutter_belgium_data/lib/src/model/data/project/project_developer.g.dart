@@ -9,6 +9,7 @@ part of 'project_developer.dart';
 ProjectDeveloper _$ProjectDeveloperFromJson(Map<String, dynamic> json) {
   $checkKeys(
     json,
+    allowedKeys: const ['githubUserName'],
     requiredKeys: const ['githubUserName'],
   );
   return ProjectDeveloper(

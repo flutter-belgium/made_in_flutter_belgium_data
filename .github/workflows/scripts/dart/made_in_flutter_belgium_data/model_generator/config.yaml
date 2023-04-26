@@ -43,6 +43,7 @@ Company:
   path: data/company/
   properties:
     name: String
+    description: String?
     links: CompanyLinks?
     developers: List<CompanyDeveloper>?
     images:

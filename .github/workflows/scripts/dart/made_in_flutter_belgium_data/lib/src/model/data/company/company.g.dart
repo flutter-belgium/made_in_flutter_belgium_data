@@ -9,10 +9,12 @@ part of 'company.dart';
 Company _$CompanyFromJson(Map<String, dynamic> json) {
   $checkKeys(
     json,
+    allowedKeys: const ['name', 'description', 'links', 'developers', 'images'],
     requiredKeys: const ['name'],
   );
   return Company(
     name: json['name'] as String,
+    description: json['description'] as String?,
     links: json['links'] == null
         ? null
         : CompanyLinks.fromJson(json['links'] as Map<String, dynamic>),
@@ -28,6 +30,7 @@ Company _$CompanyFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$CompanyToJson(Company instance) {
   final val = <String, dynamic>{
     'name': instance.name,
+    'description': instance.description,
     'links': instance.links?.toJson(),
     'developers': instance.developers?.map((e) => e.toJson()).toList(),
   };

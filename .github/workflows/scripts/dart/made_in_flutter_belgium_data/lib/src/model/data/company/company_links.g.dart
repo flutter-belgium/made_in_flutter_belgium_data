@@ -9,6 +9,7 @@ part of 'company_links.dart';
 CompanyLinks _$CompanyLinksFromJson(Map<String, dynamic> json) {
   $checkKeys(
     json,
+    allowedKeys: const ['website'],
     requiredKeys: const ['website'],
   );
   return CompanyLinks(
