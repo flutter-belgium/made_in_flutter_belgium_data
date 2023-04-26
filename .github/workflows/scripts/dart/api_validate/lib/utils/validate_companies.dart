@@ -11,7 +11,7 @@ Future<void> validateCompanies(String workingDirPath) async {
   if (!companiesApiDir.existsSync()) {
     companiesApiDir.createSync(recursive: true);
   }
-  await validateDir(
+  final companies = await validateDir(
     workingDirPath,
     'companies',
     'Company',
@@ -40,6 +40,12 @@ Future<void> validateCompanies(String workingDirPath) async {
       return company;
     },
   );
+
+  final file = join(dir, 'all.json');
+  final sortedProjects = companies..sort((a, b) => a.name.compareTo(b.name));
+  final projectsInfoFile = File(join(workingDirPath, file));
+  projectsInfoFile.writeAsStringSync(jsonEncode(sortedProjects));
+  print('$file is saved successfully 💙💙!');
 }
 
 CompanyImages? _getImages(

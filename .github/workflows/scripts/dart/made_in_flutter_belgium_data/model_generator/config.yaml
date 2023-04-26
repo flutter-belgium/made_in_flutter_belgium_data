@@ -43,12 +43,17 @@ Company:
   path: data/company/
   properties:
     name: String
-    website: String?
+    links: CompanyLinks?
     developers: List<CompanyDeveloper>?
     images:
       type: CompanyImages
       required: false
       non_final: true
+
+CompanyLinks:
+  path: data/company/
+  properties:
+    website: String
 
 CompanyDeveloper:
   path: data/company/

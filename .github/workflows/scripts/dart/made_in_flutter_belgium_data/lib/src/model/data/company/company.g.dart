@@ -13,7 +13,9 @@ Company _$CompanyFromJson(Map<String, dynamic> json) {
   );
   return Company(
     name: json['name'] as String,
-    website: json['website'] as String?,
+    links: json['links'] == null
+        ? null
+        : CompanyLinks.fromJson(json['links'] as Map<String, dynamic>),
     developers: (json['developers'] as List<dynamic>?)
         ?.map((e) => CompanyDeveloper.fromJson(e as Map<String, dynamic>))
         .toList(),
@@ -26,7 +28,7 @@ Company _$CompanyFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$CompanyToJson(Company instance) {
   final val = <String, dynamic>{
     'name': instance.name,
-    'website': instance.website,
+    'links': instance.links?.toJson(),
     'developers': instance.developers?.map((e) => e.toJson()).toList(),
   };
 
