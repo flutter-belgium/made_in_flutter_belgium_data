@@ -1,10 +1,7 @@
 {
     "name": "Sibos",
     "description": "The official app for the world’s premier financial services event gives you access to all the latest news and updates on your mobile and tablet devices. Register and log in now to access the digital Sibos experience and navigate through this year’s online conference programme, virtual networking events and thought leadership content",
-    "publisher": {
-        "name": "Swift",
-        "website": "https://www.swift.com/"
-    },
+    "publisher": "Swift",
     "developers": [
         {
             "githubUserName": "vanlooverenkoen"

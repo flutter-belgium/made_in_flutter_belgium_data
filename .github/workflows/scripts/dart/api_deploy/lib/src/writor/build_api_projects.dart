@@ -1,29 +1,20 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:api_validate/utils/validate_projects.dart';
 import 'package:path/path.dart';
-import 'package:made_in_flutter_belgium_data/made_in_flutter_belgium_data.dart';
 
 Future<void> buildApiProjectsFolder(String workingDirPath) async {
-  final projectsDir = Directory(join(workingDirPath, 'projects'));
-  final projectsApiDir = Directory(join(workingDirPath, 'api', 'projects'));
+  final dir = join('api', 'projects');
+  final file = join(dir, 'all.json');
+  final projectsApiDir = Directory(join(workingDirPath, dir));
   if (!projectsApiDir.existsSync()) {
     projectsApiDir.createSync(recursive: true);
   }
-  final projects = <Project>[];
+  final projects = await validateProjects(workingDirPath);
 
-  for (final dir in projectsDir.listSync()) {
-    if (dir is! Directory) continue;
-    final dirSegments = dir.uri.pathSegments;
-    final projectName = dirSegments[dirSegments.length - 2];
-    print('Project: `$projectName` start writing');
-    final infoJsonFile = File(join(dir.path, 'info.json'));
-    final infoJsonString = await infoJsonFile.readAsString();
-    final project = Project.fromJson(jsonDecode(infoJsonString) as Map<String, dynamic>);
-    projects.add(project);
-  }
   final sortedProjects = projects..sort((a, b) => a.name.compareTo(b.name));
-  final projectsFile = File(join(projectsApiDir.path, 'all.json'));
+  final projectsFile = File(join(workingDirPath, file));
   projectsFile.writeAsStringSync(jsonEncode(sortedProjects));
-  print('api/projects/all.json is saved successfully 💙💙!');
+  print('$file is saved successfully 💙💙!');
 }
