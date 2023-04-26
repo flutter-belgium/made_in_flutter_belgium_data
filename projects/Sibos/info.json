@@ -1,0 +1,26 @@
+{
+    "name": "Sibos",
+    "description": "The official app for the world’s premier financial services event gives you access to all the latest news and updates on your mobile and tablet devices. Register and log in now to access the digital Sibos experience and navigate through this year’s online conference programme, virtual networking events and thought leadership content",
+    "publisher": "Swift",
+    "developers": [
+        {
+            "githubUserName": "vanlooverenkoen"
+        },
+        {
+            "githubUserName": "HannesVDB"
+        },
+        {
+            "githubUserName": "ikbendewilliam"
+        },
+        {
+            "githubUserName": "jorre127"
+        }
+    ],
+    "releaseData": "2020-07-04",
+    "links": {
+        "appstore": "https://apps.apple.com/us/app/sibos-app/id457284606",
+        "playstore": "https://play.google.com/store/apps/details?id=mobi.inthepocket.sibos",
+        "website": "https://www.sibos.com/",
+        "youTube": "https://www.youtube.com/@SibosTV"
+    }
+}
