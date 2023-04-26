@@ -9,6 +9,15 @@ part of 'project.dart';
 Project _$ProjectFromJson(Map<String, dynamic> json) {
   $checkKeys(
     json,
+    allowedKeys: const [
+      'name',
+      'description',
+      'releaseData',
+      'publisher',
+      'developers',
+      'links',
+      'images'
+    ],
     requiredKeys: const ['name', 'description', 'releaseData'],
   );
   return Project(

@@ -9,6 +9,7 @@ part of 'company_images.dart';
 CompanyImages _$CompanyImagesFromJson(Map<String, dynamic> json) {
   $checkKeys(
     json,
+    allowedKeys: const ['logoUrl'],
     requiredKeys: const ['logoUrl'],
   );
   return CompanyImages(

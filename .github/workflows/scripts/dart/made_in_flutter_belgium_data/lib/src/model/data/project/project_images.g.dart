@@ -9,6 +9,7 @@ part of 'project_images.dart';
 ProjectImages _$ProjectImagesFromJson(Map<String, dynamic> json) {
   $checkKeys(
     json,
+    allowedKeys: const ['screenshotUrls', 'appIconUrl', 'bannerUrl'],
     requiredKeys: const ['screenshotUrls', 'appIconUrl'],
   );
   return ProjectImages(

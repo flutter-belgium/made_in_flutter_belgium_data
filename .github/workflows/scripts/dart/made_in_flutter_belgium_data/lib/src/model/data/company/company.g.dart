@@ -9,6 +9,7 @@ part of 'company.dart';
 Company _$CompanyFromJson(Map<String, dynamic> json) {
   $checkKeys(
     json,
+    allowedKeys: const ['name', 'links', 'developers', 'images'],
     requiredKeys: const ['name'],
   );
   return Company(

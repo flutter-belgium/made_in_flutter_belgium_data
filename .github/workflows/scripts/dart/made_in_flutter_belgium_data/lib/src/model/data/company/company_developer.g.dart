@@ -9,6 +9,7 @@ part of 'company_developer.dart';
 CompanyDeveloper _$CompanyDeveloperFromJson(Map<String, dynamic> json) {
   $checkKeys(
     json,
+    allowedKeys: const ['githubUserName', 'role'],
     requiredKeys: const ['githubUserName'],
   );
   return CompanyDeveloper(
