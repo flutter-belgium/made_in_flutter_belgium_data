@@ -35,6 +35,12 @@ Future<void> validateProjects(String workingDirPath) async {
         );
       }
       project.images = _getImages(workingDirPath, itemDir, project);
+      final projectsDir = Directory(join(dir, project.name));
+      if (!projectsDir.existsSync()) {
+        projectsDir.createSync(recursive: true);
+      }
+      final projectFile = File(join(workingDirPath, projectsDir.path, 'info.json'));
+      projectFile.writeAsStringSync(jsonEncode(project));
       return project;
     },
   );
