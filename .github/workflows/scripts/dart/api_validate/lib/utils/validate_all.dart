@@ -16,17 +16,6 @@ Future<void> validateAll(List<Project> projects, List<Company> companies) async 
       throw ArgumentError('Company `${project.publisher}` not found for project `${project.name}` in the list of companies');
     }
     activePublisher.add(companyForProject);
-    final projectImages = project.images;
-    if (projectImages == null) {
-      throw ArgumentError('Project `${project.name}` has no images configured! Create a bug ticket for this. Because this should not happen!');
-    }
-
-    project.images = ProjectImages(
-      appIconUrl: projectImages.appIconUrl,
-      screenshotUrls: projectImages.screenshotUrls,
-      bannerUrl: projectImages.bannerUrl,
-      companyLogoUrl: companyForProject.images?.logoUrl,
-    );
     print('🤍 `${project.name}` has a valid publisher!');
   }
   if (companies.length != activePublisher.length) {

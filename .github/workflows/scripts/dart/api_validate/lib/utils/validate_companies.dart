@@ -49,7 +49,7 @@ Future<List<Company>> validateCompanies(String workingDirPath) async {
   return sortedCompanies;
 }
 
-CompanyImages? _getImages(
+CompanyImages _getImages(
   String workingDirPath,
   Directory itemDir,
   Company company,
