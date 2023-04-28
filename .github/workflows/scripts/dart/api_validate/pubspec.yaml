@@ -8,6 +8,7 @@ environment:
 
 dependencies:
   collection: ^1.17.1
+  http: ^0.13.5
   path: ^1.8.0
   made_in_flutter_belgium_data:
     path: ../made_in_flutter_belgium_data

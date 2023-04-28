@@ -1,52 +1,25 @@
-import 'dart:convert';
 import 'dart:io';
 
-import 'package:api_validate/utils/validate_dir.dart';
 import 'package:made_in_flutter_belgium_data/made_in_flutter_belgium_data.dart';
 import 'package:path/path.dart';
 
-Future<List<Company>> validateCompanies(String workingDirPath) async {
-  final dir = join('api', 'companies');
-  final companiesApiDir = Directory(join(workingDirPath, dir));
-  if (!companiesApiDir.existsSync()) {
-    companiesApiDir.createSync(recursive: true);
-  }
-  final companies = await validateDir(
-    workingDirPath,
-    'companies',
-    'Company',
-    (data, itemDir) {
-      final company = Company.fromJson(data);
-      final baseName = basename(itemDir.path);
-      if (baseName != company.name) {
-        throw ArgumentError(
-          '${company.name} has an invalid name. (directory and name in info.json should be the same)\n\n'
-          'Check the documentation for more information. https://github.com/flutter-belgium/made_in_flutter_belgium_data/tree/main/examples/companies',
-        );
-      }
-      if (company.images != null) {
-        throw ArgumentError(
-          '${company.name} has configured images.\n\n'
-          'Check the documentation for more information. https://github.com/flutter-belgium/made_in_flutter_belgium_data/tree/main/examples/companies',
-        );
-      }
-      company.images = _getImages(workingDirPath, itemDir, company);
-      final companiesDir = Directory(join(dir, company.name));
-      if (!companiesDir.existsSync()) {
-        companiesDir.createSync(recursive: true);
-      }
-      final companyInfoFile = File(join(workingDirPath, companiesDir.path, 'info.json'));
-      companyInfoFile.writeAsStringSync(jsonEncode(company));
-      return company;
-    },
-  );
+enum CompanyImageType {
+  logoWebp('logo.webp'),
+  logoSvg('logo.svg');
 
-  final file = join(dir, 'all.json');
-  final sortedCompanies = companies..sort((a, b) => a.name.compareTo(b.name));
-  final companiesInfoFile = File(join(workingDirPath, file));
-  companiesInfoFile.writeAsStringSync(jsonEncode(sortedCompanies));
-  print('$file is saved successfully 💙💙!');
-  return sortedCompanies;
+  final String fileName;
+
+  const CompanyImageType(this.fileName);
+}
+
+void validateCompanyImages(Company company, String workingDirPath, Directory itemDir) {
+  if (company.images != null) {
+    throw ArgumentError(
+      '${company.name} has configured images.\n\n'
+      'Check the documentation for more information. https://github.com/flutter-belgium/made_in_flutter_belgium_data/tree/main/examples/companies',
+    );
+  }
+  company.images = _getImages(workingDirPath, itemDir, company);
 }
 
 CompanyImages _getImages(
@@ -98,13 +71,4 @@ CompanyImages _getImages(
   return CompanyImages(
     logoUrl: logoUrl,
   );
-}
-
-enum CompanyImageType {
-  logoWebp('logo.webp'),
-  logoSvg('logo.svg');
-
-  final String fileName;
-
-  const CompanyImageType(this.fileName);
 }
