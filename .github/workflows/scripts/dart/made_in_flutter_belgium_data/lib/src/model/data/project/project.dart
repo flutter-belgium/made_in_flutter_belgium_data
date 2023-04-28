@@ -17,8 +17,8 @@ class Project {
   final DateTime releaseData;
   @JsonKey(name: 'publisher')
   final String? publisher;
-  @JsonKey(name: 'developers')
-  final List<ProjectDeveloper>? developers;
+  @JsonKey(name: 'developers', includeIfNull: false)
+  List<ProjectDeveloper>? developers;
   @JsonKey(name: 'links')
   final ProjectLinks? links;
   @JsonKey(name: 'images', includeIfNull: false)

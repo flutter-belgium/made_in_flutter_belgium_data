@@ -8,9 +8,12 @@ part 'project_developer.g.dart';
 class ProjectDeveloper {
   @JsonKey(name: 'githubUserName', required: true)
   final String githubUserName;
+  @JsonKey(name: 'profilePictureUrl', includeIfNull: false)
+  String? profilePictureUrl;
 
-  const ProjectDeveloper({
+  ProjectDeveloper({
     required this.githubUserName,
+    this.profilePictureUrl,
   });
 
   factory ProjectDeveloper.fromJson(Map<String, dynamic> json) => _$ProjectDeveloperFromJson(json);

@@ -1,4 +1,16 @@
 ##################################################################################
+#####                          MinimizedProject                              #####
+##################################################################################
+MinimizedProject:
+  path: data/project/
+  properties:
+    name: String
+    appIconUrl: String
+    publisher:
+      type: String
+      ignore: true
+
+##################################################################################
 #####                              Project                                   #####
 ##################################################################################
 Project:
@@ -7,7 +19,12 @@ Project:
     name: String
     description: String
     publisher: String?
-    developers: List<ProjectDeveloper>?
+    developers:
+      type: array
+      items:
+        type: ProjectDeveloper
+      required: false
+      non_final: true
     releaseData: DateTime
     links: ProjectLinks?
     images:
@@ -19,6 +36,10 @@ ProjectDeveloper:
   path: data/project/
   properties:
     githubUserName: String
+    profilePictureUrl:
+      type: String
+      required: false
+      non_final: true
 
 ProjectLinks:
   path: data/project/

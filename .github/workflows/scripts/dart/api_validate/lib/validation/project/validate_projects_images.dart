@@ -1,7 +1,5 @@
-import 'dart:convert';
 import 'dart:io';
 
-import 'package:api_validate/utils/validate_dir.dart';
 import 'package:collection/collection.dart';
 import 'package:made_in_flutter_belgium_data/made_in_flutter_belgium_data.dart';
 import 'package:path/path.dart';
@@ -10,54 +8,24 @@ const _allowedImageFolder = [
   'screenshots',
 ];
 
-Future<List<Project>> validateProjects(String workingDirPath, List<Company> companies) async {
-  final dir = join('api', 'projects');
-  final projectsApiDir = Directory(join(workingDirPath, dir));
-  if (!projectsApiDir.existsSync()) {
-    projectsApiDir.createSync(recursive: true);
-  }
-  final projects = await validateDir(
-    workingDirPath,
-    'projects',
-    'Project',
-    (data, itemDir) {
-      final project = Project.fromJson(data);
-      final baseName = basename(itemDir.path);
-      if (baseName != project.name) {
-        throw ArgumentError(
-          '${project.name} has an invalid name. (directory and name in info.json should be the same)\n\n'
-          'Check the documentation for more information. https://github.com/flutter-belgium/made_in_flutter_belgium_data/tree/main/examples/projects',
-        );
-      }
-      if (project.images != null) {
-        throw ArgumentError(
-          '${project.name} has configured images.\n\n'
-          'Check the documentation for more information. https://github.com/flutter-belgium/made_in_flutter_belgium_data/tree/main/examples/projects',
-        );
-      }
-      final companyForProject = companies.firstWhereOrNull((element) => element.name == project.publisher);
-      project.images = _getImages(workingDirPath, itemDir, project, companyForProject);
-      final projectsDir = Directory(join(dir, project.name));
-      if (!projectsDir.existsSync()) {
-        projectsDir.createSync(recursive: true);
-      }
-      final projectFile = File(join(workingDirPath, projectsDir.path, 'info.json'));
-      projectFile.writeAsStringSync(jsonEncode(project));
-      return project;
-    },
-  );
-  final sortedProjects = projects..sort((a, b) => a.name.compareTo(b.name));
-  writeProjectsToFile(sortedProjects, projectsApiDir, 'all');
-  writeProjectsToFile(sortedProjects.where((element) => element.publisher != null).toList(), projectsApiDir, 'professional');
-  writeProjectsToFile(sortedProjects.where((element) => element.publisher == null).toList(), projectsApiDir, 'personal');
-  return sortedProjects;
+enum ProjectImageType {
+  appIcon('app_icon.webp'),
+  banner('banner.webp');
+
+  final String fileName;
+
+  const ProjectImageType(this.fileName);
 }
 
-void writeProjectsToFile(List<Project> projects, Directory projectDirectory, String fileName) {
-  final fullFileName = '$fileName.json';
-  final projectsInfoFile = File(join(projectDirectory.path, fullFileName));
-  projectsInfoFile.writeAsStringSync(jsonEncode(projects));
-  print('$fullFileName is saved successfully 💙💙!');
+void validateProjectImages(Project project, List<Company> companies, String workingDirPath, Directory itemDir) {
+  if (project.images != null) {
+    throw ArgumentError(
+      '${project.name} has configured images.\n\n'
+      'Check the documentation for more information. https://github.com/flutter-belgium/made_in_flutter_belgium_data/tree/main/examples/projects',
+    );
+  }
+  final companyForProject = companies.firstWhereOrNull((element) => element.name == project.publisher);
+  project.images = _getImages(workingDirPath, itemDir, project, companyForProject);
 }
 
 ProjectImages _getImages(
@@ -123,12 +91,3 @@ ProjectImages _getImages(
 }
 
 List<String> _getScreenshots(Directory imageFile) => [];
-
-enum ProjectImageType {
-  appIcon('app_icon.webp'),
-  banner('banner.webp');
-
-  final String fileName;
-
-  const ProjectImageType(this.fileName);
-}

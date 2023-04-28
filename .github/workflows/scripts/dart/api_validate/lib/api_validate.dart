@@ -1,8 +1,8 @@
 import 'dart:io';
 
-import 'package:api_validate/utils/validate_all.dart';
-import 'package:api_validate/utils/validate_companies.dart';
-import 'package:api_validate/utils/validate_projects.dart';
+import 'package:api_validate/validation/validate_all.dart';
+import 'package:api_validate/validation/company/validate_companies.dart';
+import 'package:api_validate/validation/project/validate_projects.dart';
 import 'package:path/path.dart';
 
 Future<void> apiValidate() async {

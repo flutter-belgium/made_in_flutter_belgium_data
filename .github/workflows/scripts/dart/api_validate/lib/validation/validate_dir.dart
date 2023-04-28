@@ -7,7 +7,7 @@ Future<List<T>> validateDir<T>(
   String workingDirPath,
   String dirName,
   String dataType,
-  T Function(Map<String, dynamic> data, Directory itemDir) parser,
+  Future<T> Function(Map<String, dynamic> data, Directory itemDir) parser,
 ) async {
   final dir = Directory(join(workingDirPath, dirName));
   if (!dir.existsSync()) throw ArgumentError('$dirName directory not found');
@@ -19,7 +19,7 @@ Future<List<T>> validateDir<T>(
     print('🔎 $dataType: `$projectName` start validation');
     final infoJsonFile = File(join(dir.path, 'info.json'));
     final infoJsonString = await infoJsonFile.readAsString();
-    final item = parser(jsonDecode(infoJsonString) as Map<String, dynamic>, dir);
+    final item = await parser(jsonDecode(infoJsonString) as Map<String, dynamic>, dir);
     print('🤍 $dataType: `$projectName` has a valid info.json!');
     data.add(item);
   }

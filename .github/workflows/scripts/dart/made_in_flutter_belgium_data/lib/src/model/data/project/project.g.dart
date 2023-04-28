@@ -43,8 +43,6 @@ Map<String, dynamic> _$ProjectToJson(Project instance) {
     'description': instance.description,
     'releaseData': instance.releaseData.toIso8601String(),
     'publisher': instance.publisher,
-    'developers': instance.developers?.map((e) => e.toJson()).toList(),
-    'links': instance.links?.toJson(),
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -53,6 +51,9 @@ Map<String, dynamic> _$ProjectToJson(Project instance) {
     }
   }
 
+  writeNotNull(
+      'developers', instance.developers?.map((e) => e.toJson()).toList());
+  val['links'] = instance.links?.toJson();
   writeNotNull('images', instance.images?.toJson());
   return val;
 }
