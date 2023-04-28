@@ -44,13 +44,18 @@ Future<List<Project>> validateProjects(String workingDirPath) async {
       return project;
     },
   );
-
-  final file = join(dir, 'all.json');
   final sortedProjects = projects..sort((a, b) => a.name.compareTo(b.name));
-  final projectsInfoFile = File(join(workingDirPath, file));
-  projectsInfoFile.writeAsStringSync(jsonEncode(sortedProjects));
-  print('$file is saved successfully 💙💙!');
+  writeProjectsToFile(sortedProjects, projectsApiDir, 'all');
+  writeProjectsToFile(sortedProjects.where((element) => element.publisher != null).toList(), projectsApiDir, 'professional');
+  writeProjectsToFile(sortedProjects.where((element) => element.publisher == null).toList(), projectsApiDir, 'personal');
   return sortedProjects;
+}
+
+void writeProjectsToFile(List<Project> projects, Directory projectDirectory, String fileName) {
+  final fullFileName = '$fileName.json';
+  final projectsInfoFile = File(join(projectDirectory.path, fullFileName));
+  projectsInfoFile.writeAsStringSync(jsonEncode(projects));
+  print('$fullFileName is saved successfully 💙💙!');
 }
 
 ProjectImages? _getImages(
