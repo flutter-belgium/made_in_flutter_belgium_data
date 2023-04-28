@@ -32,9 +32,10 @@ ProjectLinks:
 ProjectImages:
   path: data/project/
   properties:
-    screenshotUrls: List<String>
-    bannerUrl: String?
     appIconUrl: String
+    companyLogoUrl: String?
+    bannerUrl: String?
+    screenshotUrls: List<String>
 
 ##################################################################################
 #####                              Company                                   #####

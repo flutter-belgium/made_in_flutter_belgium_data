@@ -9,7 +9,7 @@ const _allowedImageFolder = [
   'screenshots',
 ];
 
-Future<void> validateProjects(String workingDirPath) async {
+Future<List<Project>> validateProjects(String workingDirPath) async {
   final dir = join('api', 'projects');
   final projectsApiDir = Directory(join(workingDirPath, dir));
   if (!projectsApiDir.existsSync()) {
@@ -50,6 +50,7 @@ Future<void> validateProjects(String workingDirPath) async {
   final projectsInfoFile = File(join(workingDirPath, file));
   projectsInfoFile.writeAsStringSync(jsonEncode(sortedProjects));
   print('$file is saved successfully 💙💙!');
+  return sortedProjects;
 }
 
 ProjectImages? _getImages(

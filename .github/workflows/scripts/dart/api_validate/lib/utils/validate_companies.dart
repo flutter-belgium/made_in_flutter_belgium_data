@@ -5,7 +5,7 @@ import 'package:api_validate/utils/validate_dir.dart';
 import 'package:made_in_flutter_belgium_data/made_in_flutter_belgium_data.dart';
 import 'package:path/path.dart';
 
-Future<void> validateCompanies(String workingDirPath) async {
+Future<List<Company>> validateCompanies(String workingDirPath) async {
   final dir = join('api', 'companies');
   final companiesApiDir = Directory(join(workingDirPath, dir));
   if (!companiesApiDir.existsSync()) {
@@ -35,17 +35,18 @@ Future<void> validateCompanies(String workingDirPath) async {
       if (!companiesDir.existsSync()) {
         companiesDir.createSync(recursive: true);
       }
-      final compnyInfoFile = File(join(workingDirPath, companiesDir.path, 'info.json'));
-      compnyInfoFile.writeAsStringSync(jsonEncode(company));
+      final companyInfoFile = File(join(workingDirPath, companiesDir.path, 'info.json'));
+      companyInfoFile.writeAsStringSync(jsonEncode(company));
       return company;
     },
   );
 
   final file = join(dir, 'all.json');
-  final sortedProjects = companies..sort((a, b) => a.name.compareTo(b.name));
-  final projectsInfoFile = File(join(workingDirPath, file));
-  projectsInfoFile.writeAsStringSync(jsonEncode(sortedProjects));
+  final sortedCompanies = companies..sort((a, b) => a.name.compareTo(b.name));
+  final companiesInfoFile = File(join(workingDirPath, file));
+  companiesInfoFile.writeAsStringSync(jsonEncode(sortedCompanies));
   print('$file is saved successfully 💙💙!');
+  return sortedCompanies;
 }
 
 CompanyImages? _getImages(
