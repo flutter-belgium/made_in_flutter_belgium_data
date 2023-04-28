@@ -1,12 +1,9 @@
-import 'dart:io';
 
 import 'package:api_validate/validation/validate_all.dart';
 import 'package:api_validate/validation/company/validate_companies.dart';
 import 'package:api_validate/validation/project/validate_projects.dart';
-import 'package:path/path.dart';
 
-Future<void> apiValidate() async {
-  final workingDirPath = join(Directory.current.path, '..', '..', '..', '..', '..');
+Future<void> apiValidate(String workingDirPath) async {
   final companies = await validateCompanies(workingDirPath);
   print('💙 All companies are valid!!');
   final projects = await validateProjects(workingDirPath, companies);
