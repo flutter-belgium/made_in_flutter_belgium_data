@@ -9,21 +9,28 @@ part of 'project_images.dart';
 ProjectImages _$ProjectImagesFromJson(Map<String, dynamic> json) {
   $checkKeys(
     json,
-    allowedKeys: const ['screenshotUrls', 'appIconUrl', 'bannerUrl'],
-    requiredKeys: const ['screenshotUrls', 'appIconUrl'],
+    allowedKeys: const [
+      'appIconUrl',
+      'screenshotUrls',
+      'companyLogoUrl',
+      'bannerUrl'
+    ],
+    requiredKeys: const ['appIconUrl', 'screenshotUrls'],
   );
   return ProjectImages(
+    appIconUrl: json['appIconUrl'] as String,
     screenshotUrls: (json['screenshotUrls'] as List<dynamic>)
         .map((e) => e as String)
         .toList(),
-    appIconUrl: json['appIconUrl'] as String,
+    companyLogoUrl: json['companyLogoUrl'] as String?,
     bannerUrl: json['bannerUrl'] as String?,
   );
 }
 
 Map<String, dynamic> _$ProjectImagesToJson(ProjectImages instance) =>
     <String, dynamic>{
-      'screenshotUrls': instance.screenshotUrls,
       'appIconUrl': instance.appIconUrl,
+      'screenshotUrls': instance.screenshotUrls,
+      'companyLogoUrl': instance.companyLogoUrl,
       'bannerUrl': instance.bannerUrl,
     };

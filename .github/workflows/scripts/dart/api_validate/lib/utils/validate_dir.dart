@@ -16,11 +16,11 @@ Future<List<T>> validateDir<T>(
     if (dir is! Directory) continue;
     final dirSegments = dir.uri.pathSegments;
     final projectName = dirSegments[dirSegments.length - 2];
-    print('$dataType: `$projectName` start validation');
+    print('🔎 $dataType: `$projectName` start validation');
     final infoJsonFile = File(join(dir.path, 'info.json'));
     final infoJsonString = await infoJsonFile.readAsString();
     final item = parser(jsonDecode(infoJsonString) as Map<String, dynamic>, dir);
-    print('$dataType: `$projectName` has a valid info.json 💙!');
+    print('🤍 $dataType: `$projectName` has a valid info.json!');
     data.add(item);
   }
   return data;
