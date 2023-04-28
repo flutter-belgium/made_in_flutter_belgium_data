@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:api_validate/utils/validate_dir.dart';
+import 'package:collection/collection.dart';
 import 'package:made_in_flutter_belgium_data/made_in_flutter_belgium_data.dart';
 import 'package:path/path.dart';
 
@@ -9,7 +10,7 @@ const _allowedImageFolder = [
   'screenshots',
 ];
 
-Future<List<Project>> validateProjects(String workingDirPath) async {
+Future<List<Project>> validateProjects(String workingDirPath, List<Company> companies) async {
   final dir = join('api', 'projects');
   final projectsApiDir = Directory(join(workingDirPath, dir));
   if (!projectsApiDir.existsSync()) {
@@ -34,7 +35,8 @@ Future<List<Project>> validateProjects(String workingDirPath) async {
           'Check the documentation for more information. https://github.com/flutter-belgium/made_in_flutter_belgium_data/tree/main/examples/projects',
         );
       }
-      project.images = _getImages(workingDirPath, itemDir, project);
+      final companyForProject = companies.firstWhereOrNull((element) => element.name == project.publisher);
+      project.images = _getImages(workingDirPath, itemDir, project, companyForProject);
       final projectsDir = Directory(join(dir, project.name));
       if (!projectsDir.existsSync()) {
         projectsDir.createSync(recursive: true);
@@ -58,10 +60,11 @@ void writeProjectsToFile(List<Project> projects, Directory projectDirectory, Str
   print('$fullFileName is saved successfully 💙💙!');
 }
 
-ProjectImages? _getImages(
+ProjectImages _getImages(
   String workingDirPath,
   Directory itemDir,
   Project project,
+  Company? company,
 ) {
   final screenshotLinks = <String>[];
   String? appIconUrl;
@@ -115,6 +118,7 @@ ProjectImages? _getImages(
     appIconUrl: appIconUrl,
     bannerUrl: bannedUrl,
     screenshotUrls: screenshotLinks,
+    companyLogoUrl: company?.images?.logoUrl,
   );
 }
 
