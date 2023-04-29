@@ -9,8 +9,7 @@ This JSON object is structured as follows:
     "publisher": "",
     "developers": [
         {
-            "githubUserName": "",
-            "companyName": null
+            "githubUserName": ""
         }
     ],
     "releaseData": "",
@@ -45,7 +44,7 @@ This JSON object is structured as follows:
 ### `publisher`
 
 - Data type: string
-- Description: Represents the publisher of the application.
+- Description: Represents the publisher of the application. (Should be a company that is added to the companies folder)
 - Constraints: None.
 
 ### `developers`
@@ -58,12 +57,6 @@ This JSON object is structured as follows:
 
 - Data type: string
 - Description: Represents the GitHub username of the developer.
-- Constraints: None.
-
-#### `companyName`
-
-- Data type: string or null
-- Description: Represents the name of the company the developer is associated with or null if not available.
 - Constraints: None.
 
 ### `releaseData`

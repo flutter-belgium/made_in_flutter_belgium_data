@@ -68,6 +68,12 @@ Company:
     description: String?
     links: CompanyLinks?
     developers: List<CompanyDeveloper>?
+    projects:
+      type: array
+      items:
+        type: MinimizedProject
+      required: false
+      non_final: true
     images:
       type: CompanyImages
       required: false
