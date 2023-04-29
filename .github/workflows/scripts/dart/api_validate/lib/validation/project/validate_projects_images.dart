@@ -45,6 +45,7 @@ ProjectImages _getImages(
       'Check the documentation for more information. https://github.com/flutter-belgium/made_in_flutter_belgium_data/tree/main/examples/projects',
     );
   }
+  final dir = Directory(join(workingDirPath, 'api', 'projects', project.name, 'images'));
   for (final imageFile in imagesDir.listSync()) {
     final fileName = basename(imageFile.path);
     if (imageFile is Directory) {
@@ -54,10 +55,9 @@ ProjectImages _getImages(
           'Check the documentation for more information. https://github.com/flutter-belgium/made_in_flutter_belgium_data/tree/main/examples/projects',
         );
       }
-      screenshotLinks.addAll(_getScreenshots(imageFile));
+      screenshotLinks.addAll(_getScreenshotsUrls(project, imageFile, dir));
     } else if (imageFile is File) {
       final imageUrl = 'https://api.madein.flutterbelgium.be/projects/${project.name}/images/$fileName';
-      final dir = Directory(join(workingDirPath, 'api', 'projects', project.name, 'images'));
       if (!dir.existsSync()) {
         dir.createSync(recursive: true);
       }
@@ -90,4 +90,19 @@ ProjectImages _getImages(
   );
 }
 
-List<String> _getScreenshots(Directory imageFile) => [];
+List<String> _getScreenshotsUrls(Project project, Directory imageFile, Directory dir) {
+  final screenshots = <String>[];
+  var hasImages = true;
+  do {
+    final fileName = 'screenshot_${screenshots.length + 1}.webp';
+    final screenshotImage = File(join(imageFile.path, fileName));
+    if (screenshotImage.existsSync()) {
+      final imageUrl = 'https://api.madein.flutterbelgium.be/projects/${project.name}/images/$fileName';
+      screenshots.add(imageUrl);
+      screenshotImage.copySync(join(dir.path, fileName));
+    } else {
+      hasImages = false;
+    }
+  } while (hasImages);
+  return screenshots;
+}
