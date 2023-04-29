@@ -1,5 +1,5 @@
 {
-    "name": "CovidScanBE",
+    "name": "Covid Scan",
     "description": "The application from the Belgian government enables you to scan, read and verify QR codes containing European Health Certificates.\n\nScan the QR code, read the contents and validate its validity and expiration.\n\nEuropean Health certificates allow you to attend events and travel within the European Union.\n\nThis app has been commissioned by the Belgian Governments to be used by all Belgian residents. The app is published worldwide, so that Belgian citizens and residents can always find their Covid certificates. Currently the applicable geographic region where this app can be used is the European Union.",
     "publisher": "eHealth Platform",
     "developers": [
