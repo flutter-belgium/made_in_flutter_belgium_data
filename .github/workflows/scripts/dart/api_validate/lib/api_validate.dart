@@ -10,4 +10,5 @@ Future<void> apiValidate(String workingDirPath) async {
   print('💙 All projects are valid!!');
   await validateAll(projects, companies);
   print('💙 All companies are linked to 1 or more projects!!');
+  await saveCompaniesToApi(companies, workingDirPath);
 }

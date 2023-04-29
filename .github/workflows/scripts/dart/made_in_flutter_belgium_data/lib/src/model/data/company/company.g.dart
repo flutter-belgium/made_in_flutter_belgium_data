@@ -9,7 +9,14 @@ part of 'company.dart';
 Company _$CompanyFromJson(Map<String, dynamic> json) {
   $checkKeys(
     json,
-    allowedKeys: const ['name', 'description', 'links', 'developers', 'images'],
+    allowedKeys: const [
+      'name',
+      'description',
+      'links',
+      'developers',
+      'projects',
+      'images'
+    ],
     requiredKeys: const ['name'],
   );
   return Company(
@@ -20,6 +27,9 @@ Company _$CompanyFromJson(Map<String, dynamic> json) {
         : CompanyLinks.fromJson(json['links'] as Map<String, dynamic>),
     developers: (json['developers'] as List<dynamic>?)
         ?.map((e) => CompanyDeveloper.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    projects: (json['projects'] as List<dynamic>?)
+        ?.map((e) => MinimizedProject.fromJson(e as Map<String, dynamic>))
         .toList(),
     images: json['images'] == null
         ? null
@@ -41,6 +51,7 @@ Map<String, dynamic> _$CompanyToJson(Company instance) {
     }
   }
 
+  writeNotNull('projects', instance.projects?.map((e) => e.toJson()).toList());
   writeNotNull('images', instance.images?.toJson());
   return val;
 }

@@ -4,6 +4,7 @@ import 'package:json_annotation/json_annotation.dart';
 import 'package:made_in_flutter_belgium_data/src/model/data/company/company_developer.dart';
 import 'package:made_in_flutter_belgium_data/src/model/data/company/company_images.dart';
 import 'package:made_in_flutter_belgium_data/src/model/data/company/company_links.dart';
+import 'package:made_in_flutter_belgium_data/src/model/data/project/minimized_project.dart';
 
 part 'company.g.dart';
 
@@ -17,6 +18,8 @@ class Company {
   final CompanyLinks? links;
   @JsonKey(name: 'developers')
   final List<CompanyDeveloper>? developers;
+  @JsonKey(name: 'projects', includeIfNull: false)
+  List<MinimizedProject>? projects;
   @JsonKey(name: 'images', includeIfNull: false)
   CompanyImages? images;
 
@@ -25,6 +28,7 @@ class Company {
     this.description,
     this.links,
     this.developers,
+    this.projects,
     this.images,
   });
 

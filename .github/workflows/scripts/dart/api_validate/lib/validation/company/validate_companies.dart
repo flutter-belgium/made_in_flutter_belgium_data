@@ -7,11 +7,6 @@ import 'package:made_in_flutter_belgium_data/made_in_flutter_belgium_data.dart';
 import 'package:path/path.dart';
 
 Future<List<Company>> validateCompanies(String workingDirPath) async {
-  final dir = join('api', 'companies');
-  final companiesApiDir = Directory(join(workingDirPath, dir));
-  if (!companiesApiDir.existsSync()) {
-    companiesApiDir.createSync(recursive: true);
-  }
   final companies = await validateDir(
     workingDirPath,
     'companies',
@@ -26,20 +21,29 @@ Future<List<Company>> validateCompanies(String workingDirPath) async {
         );
       }
       validateCompanyImages(company, workingDirPath, itemDir);
-      final companiesDir = Directory(join(dir, company.name));
-      if (!companiesDir.existsSync()) {
-        companiesDir.createSync(recursive: true);
-      }
-      final companyInfoFile = File(join(workingDirPath, companiesDir.path, 'info.json'));
-      companyInfoFile.writeAsStringSync(jsonEncode(company));
       return company;
     },
   );
+  return companies..sort((a, b) => a.name.compareTo(b.name));
+}
+
+Future<void> saveCompaniesToApi(List<Company> companies, String workingDirPath) async {
+  final dir = join('api', 'companies');
+  final companiesApiDir = Directory(join(workingDirPath, dir));
+  if (!companiesApiDir.existsSync()) {
+    companiesApiDir.createSync(recursive: true);
+  }
+  for (final company in companies) {
+    final companiesDir = Directory(join(dir, company.name));
+    if (!companiesDir.existsSync()) {
+      companiesDir.createSync(recursive: true);
+    }
+    final companyInfoFile = File(join(workingDirPath, companiesDir.path, 'info.json'));
+    companyInfoFile.writeAsStringSync(jsonEncode(company));
+  }
 
   final file = join(dir, 'all.json');
-  final sortedCompanies = companies..sort((a, b) => a.name.compareTo(b.name));
   final companiesInfoFile = File(join(workingDirPath, file));
-  companiesInfoFile.writeAsStringSync(jsonEncode(sortedCompanies));
+  companiesInfoFile.writeAsStringSync(jsonEncode(companies));
   print('$file is saved successfully 💙💙!');
-  return sortedCompanies;
 }
