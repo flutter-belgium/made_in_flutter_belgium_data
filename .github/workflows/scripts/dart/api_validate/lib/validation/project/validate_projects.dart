@@ -42,7 +42,7 @@ Future<List<Project>> validateProjects(String workingDirPath, List<Company> comp
   writeProjectsToFile(sortedProjects.where((element) => element.publisher != null).toList(), projectsApiDir, 'professional');
   writeProjectsToFile(sortedProjects.where((element) => element.publisher == null).toList(), projectsApiDir, 'personal');
   final minimizedProject = sortedProjects.map((e) => e.toProjectMinimized()).toList();
-  writeMinimizedProjectsToFile(minimizedProject, projectsApiDir, 'minimized');
+  writeMinimizedProjectsToFile(minimizedProject, projectsApiDir, 'minimized_all');
   writeMinimizedProjectsToFile(minimizedProject.where((element) => element.publisher != null).toList(), projectsApiDir, 'minimized_professional');
   writeMinimizedProjectsToFile(minimizedProject.where((element) => element.publisher == null).toList(), projectsApiDir, 'minimized_personal');
   return sortedProjects;
