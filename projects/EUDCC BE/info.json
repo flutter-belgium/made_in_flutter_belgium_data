@@ -1,0 +1,25 @@
+{
+    "name": "EUDCC BE",
+    "description": "Belgian Covid passport scanning app. Verify integrity of the certificate. The application from the Belgian government enables you to scan, read and verify QR codes containing European Health Certificates.\n\nScan the QR code, read the contents and validate its validity and expiration.\n\nEuropean Health certificates allow you to attend events and travel within the European Union.",
+    "publisher": "eHealth Platform",
+    "developers": [
+        {
+            "githubUserName": "vanlooverenkoen"
+        },
+        {
+            "githubUserName": "ikbendewilliam"
+        },
+        {
+            "githubUserName": "HannesVDB"
+        },
+        {
+            "githubUserName": "jeroentrappers"
+        }
+    ],
+    "releaseData": "2021-05-15",
+    "links": {
+        "appstore": "https://apps.apple.com/be/app/eudcc-be/id1597124974",
+        "playstore": "https://play.google.com/store/apps/details?id=be.fgov.ehealth.DGC.scan.be",
+        "website": "https://covidscan.be/"
+    }
+}
