@@ -1,0 +1,16 @@
+{
+    "name": "Mijn Mooie Straat",
+    "description": "Do you clean up litter in your neighborhood? You can register your cleaning sessions quickly and easily in the 'My Beautiful Street' app.\nThe app keeps track of your route while you clean up. In many municipalities you can also indicate where you leave the collected waste.",
+    "publisher": "Mooimakers",
+    "developers": [
+        {
+            "githubUserName": "jorre127"
+        }
+    ],
+    "releaseData": "2021-12-23",
+    "links": {
+        "appstore": "https://apps.apple.com/be/app/mijn-mooie-straat/id1598090825",
+        "playstore": "https://play.google.com/store/apps/details?id=be.fostplus.mijnmooiestraat",
+        "website": "https://www.mijnmooiestraat.be/"
+    }
+}
