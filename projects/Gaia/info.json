@@ -1,0 +1,19 @@
+{
+    "name": "Gaia",
+    "description": "Helping animals has never been easier\n\nWith the GAIA app you help and protect animals, anytime, anywhere, in a few clicks. Stay informed and take action with us now. Sign petitions, send protest emails, receive the latest news, become a member of our online community animal friends,…? Swipe, click, click and done. Fast, easy and with results. Want to really make a difference? Install the GAIA app today!",
+    "publisher": "Gaia",
+    "developers": [
+        {
+            "githubUserName": "vanlooverenkoen"
+        },
+        {
+            "githubUserName": "jorre127"
+        }
+    ],
+    "releaseData": "2020-06-10",
+    "links": {
+        "appstore": "https://apps.apple.com/us/app/gaia-help-animals-in-1-click/id1482003894",
+        "playstore": "https://play.google.com/store/apps/details?id=com.petition.gaia",
+        "website": "https://www.gaia.be/nl/campagnes/nieuwe-gaia-app"
+    }
+}
