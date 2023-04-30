@@ -11,11 +11,13 @@ Required assets:
 ## Folder Structure for a project
 ```
 projects/your_project
-├── assets/img/screenshot_1.webp
+├── assets/img/screenshots/screenshot_1.webp
 ├── assets/img/app_icon.webp
 ├── assets/img/banner.webp
 ├── info.json
 ```
+
+The easiest to get the right images is use the public images from the playstore.
 
 ## Json Documentation
 
