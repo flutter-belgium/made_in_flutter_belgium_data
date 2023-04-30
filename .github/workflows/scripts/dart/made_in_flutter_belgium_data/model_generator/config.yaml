@@ -66,6 +66,9 @@ Company:
   properties:
     name: String
     description: String?
+    useLogoInsteadOfTextTitle:
+      type: boolean
+      default_value: false
     links: CompanyLinks?
     developers: List<CompanyDeveloper>?
     projects:

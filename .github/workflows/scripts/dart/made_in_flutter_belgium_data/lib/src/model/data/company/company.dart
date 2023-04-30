@@ -14,6 +14,8 @@ class Company {
   final String name;
   @JsonKey(name: 'description')
   final String? description;
+  @JsonKey(name: 'useLogoInsteadOfTextTitle', includeIfNull: false)
+  final bool? useLogoInsteadOfTextTitle;
   @JsonKey(name: 'links')
   final CompanyLinks? links;
   @JsonKey(name: 'developers')
@@ -26,6 +28,7 @@ class Company {
   Company({
     required this.name,
     this.description,
+    this.useLogoInsteadOfTextTitle = false,
     this.links,
     this.developers,
     this.projects,
