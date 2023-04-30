@@ -12,6 +12,7 @@ Required assets:
 ```
 companies/your_company
 ├── assets/img/logo.webp
+├── (assets/img/logo.svg)
 ├── info.json
 ```
 
