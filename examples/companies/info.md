@@ -6,6 +6,7 @@ This JSON object is structured as follows:
 {
     "name": "",
     "description": "",
+    "useLogoInsteadOfTextTitle": false,
     "links": {
         "website": null
     }
@@ -36,6 +37,13 @@ This JSON object is structured as follows:
 - Description: Represents a collection of links related to the object.
 - Constraints: None.
 
+### `useLogoInsteadOfTextTitle`
+
+- Data type: boolean
+- Description: If set to true the logo of the company will be used as title instead of text.
+- Default: false
+- Constraints: None.
+
 #### `website`
 
 - Data type: string or null
@@ -48,6 +56,7 @@ This JSON object is structured as follows:
 {
     "name": "Example Company",
     "description": "This is an example company description.",
+    "useLogoInsteadOfTextTitle": false,
     "links": {
         "website": "https://example-company.com"
     }

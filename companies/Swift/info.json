@@ -1,6 +1,7 @@
 {
     "name": "Swift",
     "description": "Swift is a global member-owned cooperative and the world's leading provider of secure financial messaging services",
+    "useLogoInsteadOfTextTitle": true,
     "links": {
         "website": "https://www.swift.com/"
     }

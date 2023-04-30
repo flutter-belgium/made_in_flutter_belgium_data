@@ -1,6 +1,7 @@
 {
     "name": "Het Geluidshuis",
     "description": "Het Geluidshuis is een audioproductiehuis voor radio, tv, musea en podcasts, én een uitgeverij van heerlijke en andere hoorspelen.",
+    "useLogoInsteadOfTextTitle": true,
     "links": {
         "website": "https://www.geluidshuis.be"
     }
