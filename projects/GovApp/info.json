@@ -1,0 +1,19 @@
+{
+    "name": "GovApp",
+    "description": "The authorities are looking for faster and safer ways to inform you, at first about COVID issues. GovApp is a free mobile application that allows you to receive official messages from the authorities. All you need is your phone number. Your national registration number is not required.\nGovApp replaces the current SMS notifications, which are short and not very user-friendly. GovApp ensures that the message actually comes from the authorities, hence reducing the risk of fraudulent SMSes (phishing).",
+    "publisher": "Vlaamse Overheid",
+    "developers": [
+        {
+            "githubUserName": "vanlooverenkoen"
+        },
+        {
+            "githubUserName": "HannesVDB"
+        }
+    ],
+    "releaseData": "2022-04-02",
+    "links": {
+        "appstore": "https://apps.apple.com/us/app/govapp/id1620323239",
+        "playstore": "https://play.google.com/store/apps/details?id=be.fgov.govapp",
+        "website": "https://govapp.be/"
+    }
+}
