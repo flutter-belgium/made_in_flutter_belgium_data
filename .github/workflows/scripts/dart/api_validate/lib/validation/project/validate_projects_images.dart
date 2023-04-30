@@ -46,6 +46,9 @@ ProjectImages _getImages(
     );
   }
   final dir = Directory(join(workingDirPath, 'api', 'projects', project.name, 'images'));
+  if (!dir.existsSync()) {
+    dir.createSync(recursive: true);
+  }
   for (final imageFile in imagesDir.listSync()) {
     final fileName = basename(imageFile.path);
     if (imageFile is Directory) {
@@ -58,9 +61,6 @@ ProjectImages _getImages(
       screenshotLinks.addAll(_getScreenshotsUrls(project, imageFile, dir));
     } else if (imageFile is File) {
       final imageUrl = 'https://api.madein.flutterbelgium.be/projects/${project.name}/images/$fileName';
-      if (!dir.existsSync()) {
-        dir.createSync(recursive: true);
-      }
       imageFile.copySync(join(dir.path, fileName));
       if (fileName == ProjectImageType.appIcon.fileName) {
         appIconUrl = imageUrl;
