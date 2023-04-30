@@ -36,6 +36,10 @@ CompanyImages _getImages(
       'Check the documentation for more information. https://github.com/flutter-belgium/made_in_flutter_belgium_data/tree/main/examples/companies',
     );
   }
+  final dir = Directory(join(workingDirPath, 'api', 'companies', company.name, 'images'));
+  if (!dir.existsSync()) {
+    dir.createSync(recursive: true);
+  }
   for (final imageFile in imagesDir.listSync()) {
     final fileName = basename(imageFile.path);
     if (imageFile is Directory) {
@@ -45,10 +49,7 @@ CompanyImages _getImages(
       );
     } else if (imageFile is File) {
       final imageUrl = 'https://api.madein.flutterbelgium.be/companies/${company.name}/images/$fileName';
-      final dir = Directory(join(workingDirPath, 'api', 'companies', company.name, 'images'));
-      if (!dir.existsSync()) {
-        dir.createSync(recursive: true);
-      }
+
       imageFile.copySync(join(dir.path, fileName));
       if (fileName == CompanyImageType.logoSvg.fileName || fileName == CompanyImageType.logoWebp.fileName) {
         logoUrl = imageUrl;
