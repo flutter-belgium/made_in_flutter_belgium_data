@@ -1,0 +1,19 @@
+{
+    "name": "m-Path",
+    "description": "m-Path is a free and GDPR compliant platform for practitioners and their clients who wish to extend psychological treatment beyond the therapy room. \nFlexibly tailored around the specific needs of each therapeutic phase, m-Path is designed to provide practitioners with a unique first-seat insight into the everyday life of their clients. In an assessment phase, m-Path can repeatedly fire short momentary surveys to get a better understanding of the nature, causes and consequences of symptoms or complaints, the daily activities of a client, and his or her therapeutic progress over time. In an intervention stage, m-Path can be used to schedule and implement real-time therapeutic exercises, assignments or reminders, and to evaluate their effectiveness in the moment. \n\nConsulting the online dashboard with all information concisely summarized in the form of intuitive timelines, charts and graphs, practitioners are equipped with an excellent feedback tool to evaluate and adjust their therapy goals, and to discuss critical insights with their clients in the actual therapy session.",
+    "publisher": "KU Leuven",
+    "developers": [
+        {
+            "githubUserName": "sc00n"
+        },
+        {
+            "githubUserName": "kilobitter"
+        }
+    ],
+    "releaseData": "2019-10-11",
+    "links": {
+        "appstore": "https://play.google.com/store/apps/details?id=io.m_Path.kuleuven",
+        "playstore": "https://apps.apple.com/us/app/m-path/id1469274164",
+        "website": "https://m-path.io/landing/"
+    }
+}
