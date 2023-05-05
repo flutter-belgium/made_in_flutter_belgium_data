@@ -1,4 +1,4 @@
-import 'package:api_validate/validation/url/validate_url.dart';
+import 'package:api_validate/src/validation/url/validate_url.dart';
 import 'package:made_in_flutter_belgium_data/made_in_flutter_belgium_data.dart';
 
 const _playStorePrefix = 'https://play.google.com/store/apps/details?id=';

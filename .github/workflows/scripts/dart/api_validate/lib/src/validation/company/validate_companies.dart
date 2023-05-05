@@ -1,9 +1,9 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:api_validate/validation/company/validate_companies_images.dart';
-import 'package:api_validate/validation/company/validate_company_links.dart';
-import 'package:api_validate/validation/validate_dir.dart';
+import 'package:api_validate/src/validation/company/validate_companies_images.dart';
+import 'package:api_validate/src/validation/company/validate_company_links.dart';
+import 'package:api_validate/src/validation/validate_dir.dart';
 import 'package:made_in_flutter_belgium_data/made_in_flutter_belgium_data.dart';
 import 'package:path/path.dart';
 
