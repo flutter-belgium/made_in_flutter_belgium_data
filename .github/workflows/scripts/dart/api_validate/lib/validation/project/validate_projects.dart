@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:api_validate/validation/developer/validate_project_developer.dart';
 import 'package:api_validate/validation/project/validate_projects_images.dart';
+import 'package:api_validate/validation/project/validate_projects_links.dart';
 import 'package:api_validate/validation/validate_dir.dart';
 import 'package:made_in_flutter_belgium_data/made_in_flutter_belgium_data.dart';
 import 'package:path/path.dart';
@@ -28,6 +29,7 @@ Future<List<Project>> validateProjects(String workingDirPath, List<Company> comp
       }
       validateProjectImages(project, companies, workingDirPath, itemDir);
       await validateProjectDevelopers(project);
+      await validateProjectLinks(project);
       final projectsDir = Directory(join(dir, project.name));
       if (!projectsDir.existsSync()) {
         projectsDir.createSync(recursive: true);
@@ -37,7 +39,7 @@ Future<List<Project>> validateProjects(String workingDirPath, List<Company> comp
       return project;
     },
   );
-  final sortedProjects = projects..sort((a, b) => a.name.compareTo(b.name));
+  final sortedProjects = projects..sort((a, b) => a.name.toLowerCase().compareTo(b.name.toLowerCase()));
   writeProjectsToFile(sortedProjects, projectsApiDir, 'all');
   writeProjectsToFile(sortedProjects.where((element) => element.publisher != null).toList(), projectsApiDir, 'professional');
   writeProjectsToFile(sortedProjects.where((element) => element.publisher == null).toList(), projectsApiDir, 'personal');
