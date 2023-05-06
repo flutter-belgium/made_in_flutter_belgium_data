@@ -1,7 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 import 'package:json_annotation/json_annotation.dart';
-import 'package:made_in_flutter_belgium_data/src/model/data/project/project_developer.dart';
+import 'package:made_in_flutter_belgium_data/src/model/data/developer/minimized_developer.dart';
 import 'package:made_in_flutter_belgium_data/src/model/data/project/project_images.dart';
 import 'package:made_in_flutter_belgium_data/src/model/data/project/project_links.dart';
 
@@ -18,7 +18,7 @@ class Project {
   @JsonKey(name: 'publisher')
   final String? publisher;
   @JsonKey(name: 'developers', includeIfNull: false)
-  List<ProjectDeveloper>? developers;
+  List<MinimizedDeveloper>? developers;
   @JsonKey(name: 'links')
   final ProjectLinks? links;
   @JsonKey(name: 'images', includeIfNull: false)

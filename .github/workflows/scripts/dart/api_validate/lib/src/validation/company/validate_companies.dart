@@ -1,9 +1,10 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:api_validate/src/validation/company/validate_companies_images.dart';
+import 'package:api_validate/src/validation/company/validate_company_images.dart';
 import 'package:api_validate/src/validation/company/validate_company_links.dart';
 import 'package:api_validate/src/validation/validate_dir.dart';
+import 'package:api_validate/src/writor/list_writor.dart';
 import 'package:made_in_flutter_belgium_data/made_in_flutter_belgium_data.dart';
 import 'package:path/path.dart';
 
@@ -21,7 +22,7 @@ Future<List<Company>> validateCompanies(String workingDirPath) async {
           'Check the documentation for more information. https://github.com/flutter-belgium/made_in_flutter_belgium_data/tree/main/examples/companies',
         );
       }
-      validateCompanyImages(company, workingDirPath, itemDir);
+      await validateCompanyImages(company, workingDirPath, itemDir);
       await validateCompanyLinks(company);
       return company;
     },
@@ -32,25 +33,16 @@ Future<List<Company>> validateCompanies(String workingDirPath) async {
 Future<void> saveCompaniesToApi(List<Company> companies, String workingDirPath) async {
   final dir = join('api', 'companies');
   final companiesApiDir = Directory(join(workingDirPath, dir));
-  if (!companiesApiDir.existsSync()) {
-    companiesApiDir.createSync(recursive: true);
-  }
   for (final company in companies) {
-    final companiesDir = Directory(join(dir, company.name));
+    final developerPath = join(companiesApiDir.path, company.name);
+    final companiesDir = Directory(developerPath);
     if (!companiesDir.existsSync()) {
       companiesDir.createSync(recursive: true);
     }
-    final companyInfoFile = File(join(workingDirPath, companiesDir.path, 'info.json'));
+    final companyInfoFile = File(join(developerPath, 'info.json'));
     companyInfoFile.writeAsStringSync(jsonEncode(company));
   }
-  writeCompaniesToFile(companies, companiesApiDir, 'all');
+  writeListToFile(companies, companiesApiDir, 'all');
   final minimizedProject = companies.map((e) => e.toMinimizedCompany()).toList();
-  writeCompaniesToFile(minimizedProject, companiesApiDir, 'minimized_all');
-}
-
-void writeCompaniesToFile<T>(List<T> projects, Directory projectDirectory, String fileName) {
-  final fullFileName = '$fileName.json';
-  final projectsInfoFile = File(join(projectDirectory.path, fullFileName));
-  projectsInfoFile.writeAsStringSync(jsonEncode(projects));
-  print('$fullFileName is saved successfully 💙💙!');
+  writeListToFile(minimizedProject, companiesApiDir, 'minimized_all');
 }

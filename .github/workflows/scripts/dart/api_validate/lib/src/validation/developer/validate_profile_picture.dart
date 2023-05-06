@@ -1,9 +1,8 @@
 import 'package:http/http.dart';
 import 'package:made_in_flutter_belgium_data/made_in_flutter_belgium_data.dart';
 
-Future<String> getProfilePictureUrl(ProjectDeveloper projectDeveloper) async {
-  final githubUserName = projectDeveloper.githubUserName;
-  if (projectDeveloper.profilePictureUrl != null) {
+Future<String> getProfilePictureUrlForGithubUserName(String githubUserName, {MinimizedDeveloper? minimizedDeveloper}) async {
+  if (minimizedDeveloper != null && minimizedDeveloper.profilePictureUrl != null) {
     throw ArgumentError(
       'profilePictureUrl for $githubUserName was already set.'
       'Check the documentation for more information. https://github.com/flutter-belgium/made_in_flutter_belgium_data/tree/main/examples/projects',

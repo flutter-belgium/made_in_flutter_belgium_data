@@ -7,21 +7,8 @@ const _appStorePrefix = 'https://apps.apple.com/';
 Future<void> validateProjectLinks(Project project) async {
   final links = project.links;
   if (links == null) return;
-  final playStoreLink = links.playstore;
-  if (playStoreLink != null) {
-    if (!playStoreLink.startsWith(_playStorePrefix)) {
-      throw Exception('Invalid playstore link: should start with $_playStorePrefix');
-    }
-    await validateUrl(playStoreLink, 'playstore');
-  }
-
-  final appStoreLink = links.appstore;
-  if (appStoreLink != null) {
-    if (!appStoreLink.startsWith(_appStorePrefix)) {
-      throw Exception('Invalid appstore link: should start with $_appStorePrefix');
-    }
-    await validateUrl(appStoreLink, 'appstore');
-  }
+  await validateUrl(links.playstore, 'playstore', requiredPrefixes: [_playStorePrefix]);
+  await validateUrl(links.appstore, 'appstore', requiredPrefixes: [_appStorePrefix]);
   await validateUrl(links.website, 'website');
   await validateUrl(links.youTube, 'youTube');
   await validateUrl(links.demoYouTubeVideo, 'demoYouTubeVideo');

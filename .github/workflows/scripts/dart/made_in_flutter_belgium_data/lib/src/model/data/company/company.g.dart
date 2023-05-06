@@ -29,7 +29,7 @@ Company _$CompanyFromJson(Map<String, dynamic> json) {
         ? null
         : CompanyLinks.fromJson(json['links'] as Map<String, dynamic>),
     developers: (json['developers'] as List<dynamic>?)
-        ?.map((e) => CompanyDeveloper.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => MinimizedDeveloper.fromJson(e as Map<String, dynamic>))
         .toList(),
     projects: (json['projects'] as List<dynamic>?)
         ?.map((e) => MinimizedProject.fromJson(e as Map<String, dynamic>))

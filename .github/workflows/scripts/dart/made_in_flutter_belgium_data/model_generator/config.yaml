@@ -22,22 +22,13 @@ Project:
     developers:
       type: array
       items:
-        type: ProjectDeveloper
+        type: MinimizedDeveloper
       required: false
       non_final: true
     releaseData: DateTime
     links: ProjectLinks?
     images:
       type: ProjectImages
-      required: false
-      non_final: true
-
-ProjectDeveloper:
-  path: data/project/
-  properties:
-    githubUserName: String
-    profilePictureUrl:
-      type: String
       required: false
       non_final: true
 
@@ -78,7 +69,7 @@ Company:
       required: true
       default_value: false
     links: CompanyLinks?
-    developers: List<CompanyDeveloper>?
+    developers: List<MinimizedDeveloper>?
     projects:
       type: array
       items:
@@ -95,13 +86,53 @@ CompanyLinks:
   properties:
     website: String
 
-CompanyDeveloper:
-  path: data/company/
-  properties:
-    githubUserName: String
-    role: String?
-
 CompanyImages:
   path: data/company/
   properties:
     logoUrl: String
+
+##################################################################################
+#####                             Developer                                  #####
+##################################################################################
+MinimizedDeveloper:
+  path: data/developer/
+  properties:
+    githubUserName: String
+    name:
+      type: String
+      required: false
+      non_final: true
+    profilePictureUrl:
+      type: String
+      required: false
+      non_final: true
+
+Developer:
+  path: data/developer/
+  properties:
+    githubUserName: String
+    name: String?
+    description: String?
+    images:
+      type: DeveloperImages
+      required: false
+      non_final: true
+    links: DeveloperLinks?
+    projects:
+      type: array
+      items:
+        type: MinimizedProject
+      required: false
+      non_final: true
+
+DeveloperLinks:
+  path: data/developer/
+  properties:
+    linkedin: String?
+    personalWebsite: String?
+    freelanceWebsite: String?
+
+DeveloperImages:
+  path: data/developer/
+  properties:
+    profilePictureUrl: String
