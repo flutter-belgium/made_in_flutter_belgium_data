@@ -61,6 +61,13 @@ ProjectImages:
 ##################################################################################
 #####                              Company                                   #####
 ##################################################################################
+MinimizedCompany:
+  path: data/company/
+  properties:
+    name: String
+    logoUrl: String
+    useLogoInsteadOfTextTitle: boolean
+
 Company:
   path: data/company/
   properties:
@@ -68,6 +75,7 @@ Company:
     description: String?
     useLogoInsteadOfTextTitle:
       type: boolean
+      required: true
       default_value: false
     links: CompanyLinks?
     developers: List<CompanyDeveloper>?

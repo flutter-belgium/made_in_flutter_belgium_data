@@ -32,6 +32,6 @@ Future<void> _validateCompaniesLinkedToProjects(List<Project> projects, List<Com
   for (final company in companies) {
     final projectsForCompany = projects.where((element) => element.publisher == company.name).toList();
     if (company.projects != null) throw ArgumentError('Company `${company.name}` already has projects configured. This is not allowed.');
-    company.projects = projectsForCompany.map((e) => e.toProjectMinimized()).toList();
+    company.projects = projectsForCompany.map((e) => e.toMinimizedProject()).toList();
   }
 }
