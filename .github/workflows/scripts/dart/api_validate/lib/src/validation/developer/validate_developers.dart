@@ -9,7 +9,7 @@ import 'package:collection/collection.dart';
 import 'package:made_in_flutter_belgium_data/made_in_flutter_belgium_data.dart';
 import 'package:path/path.dart';
 
-Future<List<Developer>> validateDevelopers(List<Project> projectDevelopers, String workingDirPath) async {
+Future<List<Developer>> validateDevelopers(List<Project> projects, String workingDirPath) async {
   final developers = await validateDir(
     workingDirPath,
     'developers',
@@ -27,7 +27,7 @@ Future<List<Developer>> validateDevelopers(List<Project> projectDevelopers, Stri
       return developer;
     },
   );
-  await _addMissingDevelopers(developers, projectDevelopers, workingDirPath);
+  await _addMissingDevelopers(developers, projects, workingDirPath);
   return developers..sort((a, b) => a.githubUserName.toLowerCase().compareTo(b.githubUserName.toLowerCase()));
 }
 
