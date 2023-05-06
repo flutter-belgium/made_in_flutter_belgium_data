@@ -5,15 +5,13 @@ import 'package:api_validate/src/validation/developer/validate_project_developer
 import 'package:api_validate/src/validation/project/validate_projects_images.dart';
 import 'package:api_validate/src/validation/project/validate_projects_links.dart';
 import 'package:api_validate/src/validation/validate_dir.dart';
+import 'package:api_validate/src/writor/list_writor.dart';
 import 'package:made_in_flutter_belgium_data/made_in_flutter_belgium_data.dart';
 import 'package:path/path.dart';
 
 Future<List<Project>> validateProjects(String workingDirPath, List<Company> companies) async {
   final dir = join('api', 'projects');
   final projectsApiDir = Directory(join(workingDirPath, dir));
-  if (!projectsApiDir.existsSync()) {
-    projectsApiDir.createSync(recursive: true);
-  }
   final projects = await validateDir(
     workingDirPath,
     'projects',
@@ -28,7 +26,7 @@ Future<List<Project>> validateProjects(String workingDirPath, List<Company> comp
         );
       }
       validateProjectImages(project, companies, workingDirPath, itemDir);
-      await validateProjectDevelopers(project);
+      await validateProjectDeveloper(project);
       await validateProjectLinks(project);
       final projectsDir = Directory(join(dir, project.name));
       if (!projectsDir.existsSync()) {
@@ -40,19 +38,12 @@ Future<List<Project>> validateProjects(String workingDirPath, List<Company> comp
     },
   );
   final sortedProjects = projects..sort((a, b) => a.name.toLowerCase().compareTo(b.name.toLowerCase()));
-  writeProjectsToFile(sortedProjects, projectsApiDir, 'all');
-  writeProjectsToFile(sortedProjects.where((element) => element.publisher != null).toList(), projectsApiDir, 'professional');
-  writeProjectsToFile(sortedProjects.where((element) => element.publisher == null).toList(), projectsApiDir, 'personal');
+  writeListToFile(sortedProjects, projectsApiDir, 'all');
+  writeListToFile(sortedProjects.where((element) => element.publisher != null).toList(), projectsApiDir, 'professional');
+  writeListToFile(sortedProjects.where((element) => element.publisher == null).toList(), projectsApiDir, 'personal');
   final minimizedProject = sortedProjects.map((e) => e.toMinimizedProject()).toList();
-  writeProjectsToFile(minimizedProject, projectsApiDir, 'minimized_all');
-  writeProjectsToFile(minimizedProject.where((element) => element.publisher != null).toList(), projectsApiDir, 'minimized_professional');
-  writeProjectsToFile(minimizedProject.where((element) => element.publisher == null).toList(), projectsApiDir, 'minimized_personal');
+  writeListToFile(minimizedProject, projectsApiDir, 'minimized_all');
+  writeListToFile(minimizedProject.where((element) => element.publisher != null).toList(), projectsApiDir, 'minimized_professional');
+  writeListToFile(minimizedProject.where((element) => element.publisher == null).toList(), projectsApiDir, 'minimized_personal');
   return sortedProjects;
-}
-
-void writeProjectsToFile<T>(List<T> projects, Directory projectDirectory, String fileName) {
-  final fullFileName = '$fileName.json';
-  final projectsInfoFile = File(join(projectDirectory.path, fullFileName));
-  projectsInfoFile.writeAsStringSync(jsonEncode(projects));
-  print('$fullFileName is saved successfully 💙💙!');
 }

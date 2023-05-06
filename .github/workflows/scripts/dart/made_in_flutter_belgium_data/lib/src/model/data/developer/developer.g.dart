@@ -1,52 +1,46 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'company.dart';
+part of 'developer.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-Company _$CompanyFromJson(Map<String, dynamic> json) {
+Developer _$DeveloperFromJson(Map<String, dynamic> json) {
   $checkKeys(
     json,
     allowedKeys: const [
+      'githubUserName',
       'name',
-      'useLogoInsteadOfTextTitle',
       'description',
       'links',
-      'developers',
       'projects',
       'images'
     ],
-    requiredKeys: const ['name'],
+    requiredKeys: const ['githubUserName'],
   );
-  return Company(
-    name: json['name'] as String,
-    useLogoInsteadOfTextTitle:
-        json['useLogoInsteadOfTextTitle'] as bool? ?? false,
+  return Developer(
+    githubUserName: json['githubUserName'] as String,
+    name: json['name'] as String?,
     description: json['description'] as String?,
     links: json['links'] == null
         ? null
-        : CompanyLinks.fromJson(json['links'] as Map<String, dynamic>),
-    developers: (json['developers'] as List<dynamic>?)
-        ?.map((e) => MinimizedDeveloper.fromJson(e as Map<String, dynamic>))
-        .toList(),
+        : DeveloperLinks.fromJson(json['links'] as Map<String, dynamic>),
     projects: (json['projects'] as List<dynamic>?)
         ?.map((e) => MinimizedProject.fromJson(e as Map<String, dynamic>))
         .toList(),
     images: json['images'] == null
         ? null
-        : CompanyImages.fromJson(json['images'] as Map<String, dynamic>),
+        : DeveloperImages.fromJson(json['images'] as Map<String, dynamic>),
   );
 }
 
-Map<String, dynamic> _$CompanyToJson(Company instance) {
+Map<String, dynamic> _$DeveloperToJson(Developer instance) {
   final val = <String, dynamic>{
+    'githubUserName': instance.githubUserName,
     'name': instance.name,
-    'useLogoInsteadOfTextTitle': instance.useLogoInsteadOfTextTitle,
     'description': instance.description,
     'links': instance.links?.toJson(),
-    'developers': instance.developers?.map((e) => e.toJson()).toList(),
   };
 
   void writeNotNull(String key, dynamic value) {

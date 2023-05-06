@@ -26,7 +26,7 @@ Project _$ProjectFromJson(Map<String, dynamic> json) {
     releaseData: DateTime.parse(json['releaseData'] as String),
     publisher: json['publisher'] as String?,
     developers: (json['developers'] as List<dynamic>?)
-        ?.map((e) => ProjectDeveloper.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => MinimizedDeveloper.fromJson(e as Map<String, dynamic>))
         .toList(),
     links: json['links'] == null
         ? null

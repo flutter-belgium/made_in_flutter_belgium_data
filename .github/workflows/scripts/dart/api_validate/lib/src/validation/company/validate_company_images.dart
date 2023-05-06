@@ -12,21 +12,21 @@ enum CompanyImageType {
   const CompanyImageType(this.fileName);
 }
 
-void validateCompanyImages(Company company, String workingDirPath, Directory itemDir) {
+Future<void> validateCompanyImages(Company company, String workingDirPath, Directory itemDir) async {
   if (company.images != null) {
     throw ArgumentError(
       '${company.name} has configured images.\n\n'
       'Check the documentation for more information. https://github.com/flutter-belgium/made_in_flutter_belgium_data/tree/main/examples/companies',
     );
   }
-  company.images = _getImages(workingDirPath, itemDir, company);
+  company.images = await _getImages(workingDirPath, itemDir, company);
 }
 
-CompanyImages _getImages(
+Future<CompanyImages> _getImages(
   String workingDirPath,
   Directory itemDir,
   Company company,
-) {
+) async {
   String? logoUrl;
 
   final imagesDir = Directory(join(itemDir.path, 'assets', 'img'));

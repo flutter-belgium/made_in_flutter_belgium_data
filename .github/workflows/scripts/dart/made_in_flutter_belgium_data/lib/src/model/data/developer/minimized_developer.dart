@@ -2,22 +2,25 @@
 
 import 'package:json_annotation/json_annotation.dart';
 
-part 'project_developer.g.dart';
+part 'minimized_developer.g.dart';
 
 @JsonSerializable(explicitToJson: true)
-class ProjectDeveloper {
+class MinimizedDeveloper {
   @JsonKey(name: 'githubUserName', required: true)
   final String githubUserName;
+  @JsonKey(name: 'name', includeIfNull: false)
+  String? name;
   @JsonKey(name: 'profilePictureUrl', includeIfNull: false)
   String? profilePictureUrl;
 
-  ProjectDeveloper({
+  MinimizedDeveloper({
     required this.githubUserName,
+    this.name,
     this.profilePictureUrl,
   });
 
-  factory ProjectDeveloper.fromJson(Map<String, dynamic> json) => _$ProjectDeveloperFromJson(json);
+  factory MinimizedDeveloper.fromJson(Map<String, dynamic> json) => _$MinimizedDeveloperFromJson(json);
 
-  Map<String, dynamic> toJson() => _$ProjectDeveloperToJson(this);
+  Map<String, dynamic> toJson() => _$MinimizedDeveloperToJson(this);
 
 }
