@@ -8,7 +8,7 @@ No Required assets
 
 ## Folder Structure for a project
 ```
-projects/your_project
+developers/your_github_username
 ├── info.json
 ```
 
