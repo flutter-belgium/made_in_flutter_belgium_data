@@ -15,20 +15,20 @@ class Developer {
   final String? name;
   @JsonKey(name: 'description')
   final String? description;
+  @JsonKey(name: 'images', includeIfNull: false)
+  DeveloperImages? images;
   @JsonKey(name: 'links')
   final DeveloperLinks? links;
   @JsonKey(name: 'projects', includeIfNull: false)
   List<MinimizedProject>? projects;
-  @JsonKey(name: 'images', includeIfNull: false)
-  DeveloperImages? images;
 
   Developer({
     required this.githubUserName,
     this.name,
     this.description,
+    this.images,
     this.links,
     this.projects,
-    this.images,
   });
 
   factory Developer.fromJson(Map<String, dynamic> json) => _$DeveloperFromJson(json);

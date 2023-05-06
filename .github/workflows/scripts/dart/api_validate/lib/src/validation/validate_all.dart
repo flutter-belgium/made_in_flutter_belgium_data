@@ -3,7 +3,6 @@ import 'package:collection/collection.dart';
 
 Future<void> validateAll(List<Project> projects, List<Company> companies) async {
   await _validateProjectsLinkedToCompanies(projects, companies);
-  await _validateCompaniesLinkedToProjects(projects, companies);
 }
 
 Future<void> _validateProjectsLinkedToCompanies(List<Project> projects, List<Company> companies) async {
@@ -25,13 +24,5 @@ Future<void> _validateProjectsLinkedToCompanies(List<Project> projects, List<Com
   }
   if (companies.length != activePublisher.length) {
     throw ArgumentError('1 or more companies are not used in any project:\n\n${companies.where((element) => !activePublisher.contains(element)).map((e) => e.name).join('\n')}');
-  }
-}
-
-Future<void> _validateCompaniesLinkedToProjects(List<Project> projects, List<Company> companies) async {
-  for (final company in companies) {
-    final projectsForCompany = projects.where((element) => element.publisher == company.name).toList();
-    if (company.projects != null) throw ArgumentError('Company `${company.name}` already has projects configured. This is not allowed.');
-    company.projects = projectsForCompany.map((e) => e.toMinimizedProject()).toList();
   }
 }

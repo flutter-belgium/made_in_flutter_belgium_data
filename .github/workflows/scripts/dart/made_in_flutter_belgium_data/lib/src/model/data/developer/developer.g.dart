@@ -13,9 +13,9 @@ Developer _$DeveloperFromJson(Map<String, dynamic> json) {
       'githubUserName',
       'name',
       'description',
+      'images',
       'links',
-      'projects',
-      'images'
+      'projects'
     ],
     requiredKeys: const ['githubUserName'],
   );
@@ -23,15 +23,15 @@ Developer _$DeveloperFromJson(Map<String, dynamic> json) {
     githubUserName: json['githubUserName'] as String,
     name: json['name'] as String?,
     description: json['description'] as String?,
+    images: json['images'] == null
+        ? null
+        : DeveloperImages.fromJson(json['images'] as Map<String, dynamic>),
     links: json['links'] == null
         ? null
         : DeveloperLinks.fromJson(json['links'] as Map<String, dynamic>),
     projects: (json['projects'] as List<dynamic>?)
         ?.map((e) => MinimizedProject.fromJson(e as Map<String, dynamic>))
         .toList(),
-    images: json['images'] == null
-        ? null
-        : DeveloperImages.fromJson(json['images'] as Map<String, dynamic>),
   );
 }
 
@@ -40,7 +40,6 @@ Map<String, dynamic> _$DeveloperToJson(Developer instance) {
     'githubUserName': instance.githubUserName,
     'name': instance.name,
     'description': instance.description,
-    'links': instance.links?.toJson(),
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -49,7 +48,8 @@ Map<String, dynamic> _$DeveloperToJson(Developer instance) {
     }
   }
 
-  writeNotNull('projects', instance.projects?.map((e) => e.toJson()).toList());
   writeNotNull('images', instance.images?.toJson());
+  val['links'] = instance.links?.toJson();
+  writeNotNull('projects', instance.projects?.map((e) => e.toJson()).toList());
   return val;
 }

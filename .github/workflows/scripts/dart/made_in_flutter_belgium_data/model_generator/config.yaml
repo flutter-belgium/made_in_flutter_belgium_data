@@ -107,22 +107,21 @@ MinimizedDeveloper:
       required: false
       non_final: true
 
-
 Developer:
   path: data/developer/
   properties:
     githubUserName: String
     name: String?
     description: String?
+    images:
+      type: DeveloperImages
+      required: false
+      non_final: true
     links: DeveloperLinks?
     projects:
       type: array
       items:
         type: MinimizedProject
-      required: false
-      non_final: true
-    images:
-      type: DeveloperImages
       required: false
       non_final: true
 
