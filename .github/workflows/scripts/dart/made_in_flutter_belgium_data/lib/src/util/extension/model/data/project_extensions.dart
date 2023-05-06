@@ -2,11 +2,9 @@ import 'package:made_in_flutter_belgium_data/src/model/data/project/minimized_pr
 import 'package:made_in_flutter_belgium_data/src/model/data/project/project.dart';
 
 extension ProjectExtension on Project {
-  MinimizedProject toProjectMinimized() {
-    return MinimizedProject(
-      name: name,
-      appIconUrl: images!.appIconUrl,
-      publisher: publisher,
-    );
-  }
+  MinimizedProject toMinimizedProject() => MinimizedProject(
+        name: name,
+        appIconUrl: images!.appIconUrl,
+        publisher: publisher,
+      );
 }

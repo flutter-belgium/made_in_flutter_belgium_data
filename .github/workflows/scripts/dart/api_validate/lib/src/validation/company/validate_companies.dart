@@ -43,9 +43,14 @@ Future<void> saveCompaniesToApi(List<Company> companies, String workingDirPath) 
     final companyInfoFile = File(join(workingDirPath, companiesDir.path, 'info.json'));
     companyInfoFile.writeAsStringSync(jsonEncode(company));
   }
+  writeCompaniesToFile(companies, companiesApiDir, 'all');
+  final minimizedProject = companies.map((e) => e.toMinimizedCompany()).toList();
+  writeCompaniesToFile(minimizedProject, companiesApiDir, 'minimized_all');
+}
 
-  final file = join(dir, 'all.json');
-  final companiesInfoFile = File(join(workingDirPath, file));
-  companiesInfoFile.writeAsStringSync(jsonEncode(companies));
-  print('$file is saved successfully 💙💙!');
+void writeCompaniesToFile<T>(List<T> projects, Directory projectDirectory, String fileName) {
+  final fullFileName = '$fileName.json';
+  final projectsInfoFile = File(join(projectDirectory.path, fullFileName));
+  projectsInfoFile.writeAsStringSync(jsonEncode(projects));
+  print('$fullFileName is saved successfully 💙💙!');
 }

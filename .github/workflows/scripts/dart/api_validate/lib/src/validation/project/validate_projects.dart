@@ -43,21 +43,14 @@ Future<List<Project>> validateProjects(String workingDirPath, List<Company> comp
   writeProjectsToFile(sortedProjects, projectsApiDir, 'all');
   writeProjectsToFile(sortedProjects.where((element) => element.publisher != null).toList(), projectsApiDir, 'professional');
   writeProjectsToFile(sortedProjects.where((element) => element.publisher == null).toList(), projectsApiDir, 'personal');
-  final minimizedProject = sortedProjects.map((e) => e.toProjectMinimized()).toList();
-  writeMinimizedProjectsToFile(minimizedProject, projectsApiDir, 'minimized_all');
-  writeMinimizedProjectsToFile(minimizedProject.where((element) => element.publisher != null).toList(), projectsApiDir, 'minimized_professional');
-  writeMinimizedProjectsToFile(minimizedProject.where((element) => element.publisher == null).toList(), projectsApiDir, 'minimized_personal');
+  final minimizedProject = sortedProjects.map((e) => e.toMinimizedProject()).toList();
+  writeProjectsToFile(minimizedProject, projectsApiDir, 'minimized_all');
+  writeProjectsToFile(minimizedProject.where((element) => element.publisher != null).toList(), projectsApiDir, 'minimized_professional');
+  writeProjectsToFile(minimizedProject.where((element) => element.publisher == null).toList(), projectsApiDir, 'minimized_personal');
   return sortedProjects;
 }
 
-void writeProjectsToFile(List<Project> projects, Directory projectDirectory, String fileName) {
-  final fullFileName = '$fileName.json';
-  final projectsInfoFile = File(join(projectDirectory.path, fullFileName));
-  projectsInfoFile.writeAsStringSync(jsonEncode(projects));
-  print('$fullFileName is saved successfully 💙💙!');
-}
-
-void writeMinimizedProjectsToFile(List<MinimizedProject> projects, Directory projectDirectory, String fileName) {
+void writeProjectsToFile<T>(List<T> projects, Directory projectDirectory, String fileName) {
   final fullFileName = '$fileName.json';
   final projectsInfoFile = File(join(projectDirectory.path, fullFileName));
   projectsInfoFile.writeAsStringSync(jsonEncode(projects));
