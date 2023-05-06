@@ -65,7 +65,8 @@ This JSON object is structured as follows:
     "description": "This is a description about myself",
     "links": {
         "linkedin": "https://linkedin.com",
-        "website": "https://mywebsite.com",
+        "personalWebsite": "https://mywebsite.com",
+        "freelanceWebsite": "https://mywebsite.com",
     }
 }
 ```
