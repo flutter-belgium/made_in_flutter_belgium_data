@@ -1,7 +1,6 @@
 {
     "name": "Four In A Row - Classic",
     "description": "You can now play the classic Four In A Row board game on your phone or tablet! The objective of the game is to connect 4 of your chips in a row. You can do this horizontally, vertically, or diagonal. The first player who does this wins! But watch out when you're playing, as your opponent will try to connect their four chips as well!",
-    "publisher": "Ignace Maes",
     "developers": [
         {
             "githubUserName": "IgnaceMaes"
