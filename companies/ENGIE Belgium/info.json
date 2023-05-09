@@ -1,0 +1,8 @@
+{
+    "name": "ENGIE Belgium",
+    "description": "ENGIE is a leading energy and services company with a wide range of activities. Participating in the energy transition is now more necessary than ever. It is THE solution for the planet, but also for your wallet. By combining small and large daily actions, we will succeed in reducing our consumption, lowering our energy bills, and contributing together to a carbon-neutral future.",
+    "useLogoInsteadOfTextTitle": true,
+    "links": {
+        "website": "https://engie.be/"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "name": "ENGIE Smart",
+    "description": "Get more out of your digital meter with the ENGIE Smart app. You have insight into your consumption and costs at a glance, anytime and anywhere. If you have solar panels, you know how much you inject and what it yields.\n\n - You are always aware of your electricity and gas consumption\n - You always know whether your consumption is higher or lower than foreseen in your advance\n - You will receive a notification when your advance is no longer adjusted to your actual consumption with a proposal to change it immediately",
+    "publisher": "ENGIE Belgium",
+    "developers": [
+        {
+            "githubUserName": "BramDC3"
+        },
+        {
+            "githubUserName": "sdplus"
+        },
+        {
+            "githubUserName": "Jjagg"
+        }
+    ],
+    "releaseData": "2021-04-16",
+    "links": {
+        "appstore": "https://apps.apple.com/us/app/engie-belgi%C3%AB/id1562119194",
+        "playstore": "https://play.google.com/store/apps/details?id=be.engie.smart",
+        "website": "https://engie.be/nl/smart-app/"
+    }
+}
