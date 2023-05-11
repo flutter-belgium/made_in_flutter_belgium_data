@@ -1,0 +1,16 @@
+{
+    "name": "Mercier Vanderlinden Asset Management Portfolio",
+    "description": "The Portfolio app of Mercier Vanderlinden lets customers easily, always and everywhere access the composition, performance and history of their portfolios.",
+    "publisher": "Mercier Vanderlinden Asset Management",
+    "developers": [
+        {
+            "githubUserName": "jeroentrappers"
+        }
+    ],
+    "releaseData": "2019-01-02",
+    "links": {
+        "appstore": "https://apps.apple.com/be/app/mercier-vanderlinden-portfolio/id1421434908",
+        "playstore": "https://play.google.com/store/apps/details?id=be.mvam.portfolio",
+        "website": "https://merciervanderlinden.com/en/mobile-application/"
+    }
+}
