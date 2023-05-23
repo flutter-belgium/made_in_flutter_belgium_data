@@ -19,8 +19,8 @@ class MinimizedDeveloper {
     this.profilePictureUrl,
   });
 
-  factory MinimizedDeveloper.fromJson(Map<String, dynamic> json) => _$MinimizedDeveloperFromJson(json);
+  factory MinimizedDeveloper.fromJson(Map<String, dynamic> json) =>
+      _$MinimizedDeveloperFromJson(json);
 
   Map<String, dynamic> toJson() => _$MinimizedDeveloperToJson(this);
-
 }

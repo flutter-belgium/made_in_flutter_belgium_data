@@ -19,8 +19,8 @@ class DeveloperLinks {
     this.freelanceWebsite,
   });
 
-  factory DeveloperLinks.fromJson(Map<String, dynamic> json) => _$DeveloperLinksFromJson(json);
+  factory DeveloperLinks.fromJson(Map<String, dynamic> json) =>
+      _$DeveloperLinksFromJson(json);
 
   Map<String, dynamic> toJson() => _$DeveloperLinksToJson(this);
-
 }

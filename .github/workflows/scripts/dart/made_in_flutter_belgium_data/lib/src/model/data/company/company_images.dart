@@ -13,8 +13,8 @@ class CompanyImages {
     required this.logoUrl,
   });
 
-  factory CompanyImages.fromJson(Map<String, dynamic> json) => _$CompanyImagesFromJson(json);
+  factory CompanyImages.fromJson(Map<String, dynamic> json) =>
+      _$CompanyImagesFromJson(json);
 
   Map<String, dynamic> toJson() => _$CompanyImagesToJson(this);
-
 }

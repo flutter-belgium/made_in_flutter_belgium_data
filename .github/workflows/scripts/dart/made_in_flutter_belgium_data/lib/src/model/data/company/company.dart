@@ -12,7 +12,11 @@ part 'company.g.dart';
 class Company {
   @JsonKey(name: 'name', required: true)
   final String name;
-  @JsonKey(name: 'useLogoInsteadOfTextTitle', required: false, disallowNullValue: false, includeIfNull: false)
+  @JsonKey(
+      name: 'useLogoInsteadOfTextTitle',
+      required: false,
+      disallowNullValue: false,
+      includeIfNull: false)
   final bool useLogoInsteadOfTextTitle;
   @JsonKey(name: 'description')
   final String? description;
@@ -41,8 +45,8 @@ class Company {
     this.isAgency = false,
   });
 
-  factory Company.fromJson(Map<String, dynamic> json) => _$CompanyFromJson(json);
+  factory Company.fromJson(Map<String, dynamic> json) =>
+      _$CompanyFromJson(json);
 
   Map<String, dynamic> toJson() => _$CompanyToJson(this);
-
 }

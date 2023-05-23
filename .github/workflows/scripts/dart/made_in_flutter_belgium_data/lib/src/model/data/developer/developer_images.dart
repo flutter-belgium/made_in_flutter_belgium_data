@@ -13,8 +13,8 @@ class DeveloperImages {
     required this.profilePictureUrl,
   });
 
-  factory DeveloperImages.fromJson(Map<String, dynamic> json) => _$DeveloperImagesFromJson(json);
+  factory DeveloperImages.fromJson(Map<String, dynamic> json) =>
+      _$DeveloperImagesFromJson(json);
 
   Map<String, dynamic> toJson() => _$DeveloperImagesToJson(this);
-
 }
