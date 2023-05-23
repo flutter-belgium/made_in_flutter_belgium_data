@@ -11,15 +11,40 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: dart-lang/setup-dart@v1
+      
       - name: Install dependencies
         working-directory: .github/workflows/scripts/dart/api_validate
         run: dart pub get
-      - name: Verify formatting
+      - name: Install dependencies (api_validate)
         working-directory: .github/workflows/scripts/dart/api_validate
-        run: dart format — output=none — set-exit-if-changed .
-      - name: Analyze project source
+        run: dart pub get
+      - name: Verify formatting (api_validate)
+        working-directory: .github/workflows/scripts/dart/api_validate
+        run: dart format --set-exit-if-changed .
+      - name: Analyze project source (api_validate)
         working-directory: .github/workflows/scripts/dart/api_validate
         run: dart analyze
+
+      - name: Install dependencies (api_deploy)
+        working-directory: .github/workflows/scripts/dart/api_deploy
+        run: dart pub get
+      - name: Verify formatting Deploy (api_deploy)
+        working-directory: .github/workflows/scripts/dart/api_deploy
+        run: dart format --set-exit-if-changed .
+      - name: Analyze project source (api_deploy)
+        working-directory: .github/workflows/scripts/dart/api_deploy
+        run: dart analyze
+        
+      - name: Install dependencies (made_in_flutter_belgium_data)
+        working-directory: .github/workflows/scripts/dart/made_in_flutter_belgium_data
+        run: dart pub get
+      - name: Verify formatting Deploy (made_in_flutter_belgium_data)
+        working-directory: .github/workflows/scripts/dart/made_in_flutter_belgium_data
+        run: dart format --set-exit-if-changed .
+      - name: Analyze project source (made_in_flutter_belgium_data)
+        working-directory: .github/workflows/scripts/dart/made_in_flutter_belgium_data
+        run: dart analyze
+
       - name: Api validate
         working-directory: .github/workflows/scripts/dart/api_validate
         run: dart run bin/api_validate.dart        

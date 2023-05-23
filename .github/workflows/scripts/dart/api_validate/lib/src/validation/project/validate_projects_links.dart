@@ -7,8 +7,10 @@ const _appStorePrefix = 'https://apps.apple.com/';
 Future<void> validateProjectLinks(Project project) async {
   final links = project.links;
   if (links == null) return;
-  await validateUrl(links.playstore, 'playstore', requiredPrefixes: [_playStorePrefix]);
-  await validateUrl(links.appstore, 'appstore', requiredPrefixes: [_appStorePrefix]);
+  await validateUrl(links.playstore, 'playstore',
+      requiredPrefixes: [_playStorePrefix]);
+  await validateUrl(links.appstore, 'appstore',
+      requiredPrefixes: [_appStorePrefix]);
   await validateUrl(links.website, 'website');
   await validateUrl(links.youTube, 'youTube');
   await validateUrl(links.demoYouTubeVideo, 'demoYouTubeVideo');

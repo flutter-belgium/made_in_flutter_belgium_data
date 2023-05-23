@@ -17,15 +17,18 @@ enum ProjectImageType {
   const ProjectImageType(this.fileName);
 }
 
-void validateProjectImages(Project project, List<Company> companies, String workingDirPath, Directory itemDir) {
+void validateProjectImages(Project project, List<Company> companies,
+    String workingDirPath, Directory itemDir) {
   if (project.images != null) {
     throw ArgumentError(
       '${project.name} has configured images.\n\n'
       'Check the documentation for more information. https://github.com/flutter-belgium/made_in_flutter_belgium_data/tree/main/examples/projects',
     );
   }
-  final companyForProject = companies.firstWhereOrNull((element) => element.name == project.publisher);
-  project.images = _getImages(workingDirPath, itemDir, project, companyForProject);
+  final companyForProject = companies
+      .firstWhereOrNull((element) => element.name == project.publisher);
+  project.images =
+      _getImages(workingDirPath, itemDir, project, companyForProject);
 }
 
 ProjectImages _getImages(
@@ -45,7 +48,8 @@ ProjectImages _getImages(
       'Check the documentation for more information. https://github.com/flutter-belgium/made_in_flutter_belgium_data/tree/main/examples/projects',
     );
   }
-  final dir = Directory(join(workingDirPath, 'api', 'projects', project.name, 'images'));
+  final dir = Directory(
+      join(workingDirPath, 'api', 'projects', project.name, 'images'));
   if (!dir.existsSync()) {
     dir.createSync(recursive: true);
   }
@@ -60,7 +64,8 @@ ProjectImages _getImages(
       }
       screenshotLinks.addAll(_getScreenshotsUrls(project, imageFile, dir));
     } else if (imageFile is File) {
-      final imageUrl = 'https://api.madein.flutterbelgium.be/projects/${project.name}/images/$fileName';
+      final imageUrl =
+          'https://api.madein.flutterbelgium.be/projects/${project.name}/images/$fileName';
       imageFile.copySync(join(dir.path, fileName));
       if (fileName == ProjectImageType.appIcon.fileName) {
         appIconUrl = imageUrl;
@@ -73,7 +78,8 @@ ProjectImages _getImages(
         );
       }
     } else {
-      throw ArgumentError('${project.name} has invalid file type: accepted, file/directory -> ($imageFile).');
+      throw ArgumentError(
+          '${project.name} has invalid file type: accepted, file/directory -> ($imageFile).');
     }
   }
   if (appIconUrl == null) {
@@ -90,14 +96,16 @@ ProjectImages _getImages(
   );
 }
 
-List<String> _getScreenshotsUrls(Project project, Directory imageFile, Directory dir) {
+List<String> _getScreenshotsUrls(
+    Project project, Directory imageFile, Directory dir) {
   final screenshots = <String>[];
   var hasImages = true;
   do {
     final fileName = 'screenshot_${screenshots.length + 1}.webp';
     final screenshotImage = File(join(imageFile.path, fileName));
     if (screenshotImage.existsSync()) {
-      final imageUrl = 'https://api.madein.flutterbelgium.be/projects/${project.name}/images/$fileName';
+      final imageUrl =
+          'https://api.madein.flutterbelgium.be/projects/${project.name}/images/$fileName';
       screenshots.add(imageUrl);
       screenshotImage.copySync(join(dir.path, fileName));
     } else {

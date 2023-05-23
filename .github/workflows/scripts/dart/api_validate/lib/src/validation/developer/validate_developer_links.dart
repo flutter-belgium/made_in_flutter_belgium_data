@@ -9,8 +9,10 @@ Future<void> validateDeveloperLinks(Developer company) async {
   if (links == null) return;
   await validateUrl(links.personalWebsite, 'personalWebsite');
   await validateUrl(links.freelanceWebsite, 'freelanceWebsite');
-  await validateUrl(links.linkedin, 'linkedin', skipGetCheck: true, requiredPrefixes: [
-    _linkedInPrefix,
-    _linkedInPrefix2,
-  ]);
+  await validateUrl(links.linkedin, 'linkedin',
+      skipGetCheck: true,
+      requiredPrefixes: [
+        _linkedInPrefix,
+        _linkedInPrefix2,
+      ]);
 }

@@ -22,8 +22,8 @@ class ProjectImages {
     this.bannerUrl,
   });
 
-  factory ProjectImages.fromJson(Map<String, dynamic> json) => _$ProjectImagesFromJson(json);
+  factory ProjectImages.fromJson(Map<String, dynamic> json) =>
+      _$ProjectImagesFromJson(json);
 
   Map<String, dynamic> toJson() => _$ProjectImagesToJson(this);
-
 }

@@ -12,7 +12,8 @@ enum CompanyImageType {
   const CompanyImageType(this.fileName);
 }
 
-Future<void> validateCompanyImages(Company company, String workingDirPath, Directory itemDir) async {
+Future<void> validateCompanyImages(
+    Company company, String workingDirPath, Directory itemDir) async {
   if (company.images != null) {
     throw ArgumentError(
       '${company.name} has configured images.\n\n'
@@ -36,7 +37,8 @@ Future<CompanyImages> _getImages(
       'Check the documentation for more information. https://github.com/flutter-belgium/made_in_flutter_belgium_data/tree/main/examples/companies',
     );
   }
-  final dir = Directory(join(workingDirPath, 'api', 'companies', company.name, 'images'));
+  final dir = Directory(
+      join(workingDirPath, 'api', 'companies', company.name, 'images'));
   if (!dir.existsSync()) {
     dir.createSync(recursive: true);
   }
@@ -48,10 +50,12 @@ Future<CompanyImages> _getImages(
         'Check the documentation for more information. https://github.com/flutter-belgium/made_in_flutter_belgium_data/tree/main/examples/companies',
       );
     } else if (imageFile is File) {
-      final imageUrl = 'https://api.madein.flutterbelgium.be/companies/${company.name}/images/$fileName';
+      final imageUrl =
+          'https://api.madein.flutterbelgium.be/companies/${company.name}/images/$fileName';
 
       imageFile.copySync(join(dir.path, fileName));
-      if (fileName == CompanyImageType.logoSvg.fileName || fileName == CompanyImageType.logoWebp.fileName) {
+      if (fileName == CompanyImageType.logoSvg.fileName ||
+          fileName == CompanyImageType.logoWebp.fileName) {
         logoUrl = imageUrl;
       } else {
         throw ArgumentError(
@@ -60,7 +64,8 @@ Future<CompanyImages> _getImages(
         );
       }
     } else {
-      throw ArgumentError('${company.name} has invalid file type: accepted, file/directory -> ($imageFile).');
+      throw ArgumentError(
+          '${company.name} has invalid file type: accepted, file/directory -> ($imageFile).');
     }
   }
   if (logoUrl == null) {

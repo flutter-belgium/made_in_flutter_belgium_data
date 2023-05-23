@@ -19,10 +19,10 @@ Future<List<T>> validateDir<T>(
     print('🔎 $dataType: `$projectName` start validation');
     final infoJsonFile = File(join(itemDir.path, 'info.json'));
     final infoJsonString = await infoJsonFile.readAsString();
-    final item = await parser(jsonDecode(infoJsonString) as Map<String, dynamic>, itemDir);
+    final item = await parser(
+        jsonDecode(infoJsonString) as Map<String, dynamic>, itemDir);
     print('🤍 $dataType: `$projectName` has a valid info.json!');
     data.add(item);
   }
   return data;
 }
-

@@ -16,8 +16,8 @@ class CompanyLinks {
     this.jobWebsite,
   });
 
-  factory CompanyLinks.fromJson(Map<String, dynamic> json) => _$CompanyLinksFromJson(json);
+  factory CompanyLinks.fromJson(Map<String, dynamic> json) =>
+      _$CompanyLinksFromJson(json);
 
   Map<String, dynamic> toJson() => _$CompanyLinksToJson(this);
-
 }
