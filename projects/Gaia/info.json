@@ -4,10 +4,12 @@
     "publisher": "Gaia",
     "developers": [
         {
-            "githubUserName": "vanlooverenkoen"
+            "githubUserName": "vanlooverenkoen",
+            "companyName": "icapps"
         },
         {
-            "githubUserName": "jorre127"
+            "githubUserName": "jorre127",
+            "companyName": "icapps"
         }
     ],
     "releaseData": "2020-06-10",

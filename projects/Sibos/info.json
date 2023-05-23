@@ -4,16 +4,20 @@
     "publisher": "Swift",
     "developers": [
         {
-            "githubUserName": "vanlooverenkoen"
+            "githubUserName": "vanlooverenkoen",
+            "companyName": "icapps"
         },
         {
-            "githubUserName": "HannesVDB"
+            "githubUserName": "HannesVDB",
+            "companyName": "icapps"
         },
         {
-            "githubUserName": "ikbendewilliam"
+            "githubUserName": "ikbendewilliam",
+            "companyName": "icapps"
         },
         {
-            "githubUserName": "jorre127"
+            "githubUserName": "jorre127",
+            "companyName": "icapps"
         }
     ],
     "releaseData": "2020-07-04",

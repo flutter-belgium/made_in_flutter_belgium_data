@@ -16,7 +16,9 @@ Company _$CompanyFromJson(Map<String, dynamic> json) {
       'links',
       'developers',
       'projects',
-      'images'
+      'involvedProjects',
+      'images',
+      'isAgency'
     ],
     requiredKeys: const ['name'],
   );
@@ -34,9 +36,13 @@ Company _$CompanyFromJson(Map<String, dynamic> json) {
     projects: (json['projects'] as List<dynamic>?)
         ?.map((e) => MinimizedProject.fromJson(e as Map<String, dynamic>))
         .toList(),
+    involvedProjects: (json['involvedProjects'] as List<dynamic>?)
+        ?.map((e) => MinimizedProject.fromJson(e as Map<String, dynamic>))
+        .toList(),
     images: json['images'] == null
         ? null
         : CompanyImages.fromJson(json['images'] as Map<String, dynamic>),
+    isAgency: json['isAgency'] as bool? ?? false,
   );
 }
 
@@ -56,6 +62,9 @@ Map<String, dynamic> _$CompanyToJson(Company instance) {
   }
 
   writeNotNull('projects', instance.projects?.map((e) => e.toJson()).toList());
+  writeNotNull('involvedProjects',
+      instance.involvedProjects?.map((e) => e.toJson()).toList());
   writeNotNull('images', instance.images?.toJson());
+  writeNotNull('isAgency', instance.isAgency);
   return val;
 }

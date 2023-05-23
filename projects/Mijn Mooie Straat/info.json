@@ -4,13 +4,16 @@
     "publisher": "Mooimakers",
     "developers": [
         {
-            "githubUserName": "jorre127"
+            "githubUserName": "jorre127",
+            "companyName": "icapps"
         },
         {
-            "githubUserName": "NicolaVerbeeck"
+            "githubUserName": "NicolaVerbeeck",
+            "companyName": "icapps"
         },
         {
-            "githubUserName": "vanlooverenkoen"
+            "githubUserName": "vanlooverenkoen",
+            "companyName": "icapps"
         }
     ],
     "releaseData": "2021-12-23",

@@ -8,6 +8,9 @@ Future<void> validateProjectDeveloper(Project project) async {
     return;
   }
   for (final minimizedDeveloper in minimizedDevelopers) {
-    minimizedDeveloper.profilePictureUrl = await getProfilePictureUrlForGithubUserName(minimizedDeveloper.githubUserName, minimizedDeveloper: minimizedDeveloper);
+    minimizedDeveloper.profilePictureUrl = await getProfilePictureUrlForGithubUserName(
+      minimizedDeveloper.githubUserName,
+      minimizedDeveloper: minimizedDeveloper.toMinimizedDeveloper(),
+    );
   }
 }

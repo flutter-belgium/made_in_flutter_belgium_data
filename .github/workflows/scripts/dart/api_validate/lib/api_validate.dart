@@ -1,4 +1,5 @@
 import 'package:api_validate/src/model/api_validation_data.dart';
+import 'package:api_validate/src/validation/cleanup_all.dart';
 import 'package:api_validate/src/validation/developer/validate_developers.dart';
 import 'package:api_validate/src/validation/link_all.dart';
 import 'package:api_validate/src/validation/validate_all.dart';
@@ -16,6 +17,8 @@ Future<ApiValidationData> apiValidate(String workingDirPath) async {
   print('💙 All companies are linked to 1 or more projects!!');
   await setLinkedProjects(projects, companies, developers);
   print('💙 All projects are linked to the correct companies & developers');
+  await cleanupAll(projects, companies, developers);
+  await saveProjectsToApi(projects, workingDirPath);
   await saveCompaniesToApi(companies, workingDirPath);
   await saveDevelopersToApi(developers, workingDirPath);
   return ApiValidationData(

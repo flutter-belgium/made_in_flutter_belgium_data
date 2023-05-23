@@ -4,19 +4,24 @@
     "publisher": "Het Geluidshuis",
     "developers": [
         {
-            "githubUserName": "NicolaVerbeeck"
+            "githubUserName": "NicolaVerbeeck",
+            "companyName": "icapps"
         },
         {
-            "githubUserName": "jorre127"
+            "githubUserName": "jorre127",
+            "companyName": "icapps"
         },
         {
-            "githubUserName": "vanlooverenkoen"
+            "githubUserName": "vanlooverenkoen",
+            "companyName": "icapps"
         },
         {
-            "githubUserName": "HannesVDB"
+            "githubUserName": "HannesVDB",
+            "companyName": "icapps"
         },
         {
-            "githubUserName": "luca-vz"
+            "githubUserName": "luca-vz",
+            "companyName": "icapps"
         }
     ],
     "releaseData": "2021-05-03",

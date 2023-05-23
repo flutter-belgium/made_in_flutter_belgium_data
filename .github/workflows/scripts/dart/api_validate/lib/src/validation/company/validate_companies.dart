@@ -43,6 +43,6 @@ Future<void> saveCompaniesToApi(List<Company> companies, String workingDirPath) 
     companyInfoFile.writeAsStringSync(jsonEncode(company));
   }
   writeListToFile(companies, companiesApiDir, 'all');
-  final minimizedProject = companies.map((e) => e.toMinimizedCompany()).toList();
-  writeListToFile(minimizedProject, companiesApiDir, 'minimized_all');
+  final minimizedCompanies = companies.map((e) => e.toMinimizedCompany()).toList();
+  writeListToFile(minimizedCompanies, companiesApiDir, 'minimized_all');
 }

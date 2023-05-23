@@ -22,8 +22,12 @@ class Company {
   final List<MinimizedDeveloper>? developers;
   @JsonKey(name: 'projects', includeIfNull: false)
   List<MinimizedProject>? projects;
+  @JsonKey(name: 'involvedProjects', includeIfNull: false)
+  List<MinimizedProject>? involvedProjects;
   @JsonKey(name: 'images', includeIfNull: false)
   CompanyImages? images;
+  @JsonKey(name: 'isAgency', includeIfNull: false)
+  bool? isAgency;
 
   Company({
     required this.name,
@@ -32,7 +36,9 @@ class Company {
     this.links,
     this.developers,
     this.projects,
+    this.involvedProjects,
     this.images,
+    this.isAgency = false,
   });
 
   factory Company.fromJson(Map<String, dynamic> json) => _$CompanyFromJson(json);
