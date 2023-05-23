@@ -4,16 +4,20 @@
     "publisher": "eHealth Platform",
     "developers": [
         {
-            "githubUserName": "vanlooverenkoen"
+            "githubUserName": "vanlooverenkoen",
+            "companyName": "icapps"
         },
         {
-            "githubUserName": "ikbendewilliam"
+            "githubUserName": "ikbendewilliam",
+            "companyName": "icapps"
         },
         {
-            "githubUserName": "HannesVDB"
+            "githubUserName": "HannesVDB",
+            "companyName": "icapps"
         },
         {
-            "githubUserName": "jeroentrappers"
+            "githubUserName": "jeroentrappers",
+            "companyName": "icapps"
         }
     ],
     "releaseData": "2021-05-15",

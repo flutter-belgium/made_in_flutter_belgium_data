@@ -16,7 +16,8 @@ Project _$ProjectFromJson(Map<String, dynamic> json) {
       'publisher',
       'developers',
       'links',
-      'images'
+      'images',
+      'involvedCompanies'
     ],
     requiredKeys: const ['name', 'description', 'releaseData'],
   );
@@ -26,7 +27,7 @@ Project _$ProjectFromJson(Map<String, dynamic> json) {
     releaseData: DateTime.parse(json['releaseData'] as String),
     publisher: json['publisher'] as String?,
     developers: (json['developers'] as List<dynamic>?)
-        ?.map((e) => MinimizedDeveloper.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => ProjectDeveloper.fromJson(e as Map<String, dynamic>))
         .toList(),
     links: json['links'] == null
         ? null
@@ -34,6 +35,9 @@ Project _$ProjectFromJson(Map<String, dynamic> json) {
     images: json['images'] == null
         ? null
         : ProjectImages.fromJson(json['images'] as Map<String, dynamic>),
+    involvedCompanies: (json['involvedCompanies'] as List<dynamic>?)
+        ?.map((e) => MinimizedCompany.fromJson(e as Map<String, dynamic>))
+        .toList(),
   );
 }
 
@@ -55,5 +59,7 @@ Map<String, dynamic> _$ProjectToJson(Project instance) {
       'developers', instance.developers?.map((e) => e.toJson()).toList());
   val['links'] = instance.links?.toJson();
   writeNotNull('images', instance.images?.toJson());
+  writeNotNull('involvedCompanies',
+      instance.involvedCompanies?.map((e) => e.toJson()).toList());
   return val;
 }

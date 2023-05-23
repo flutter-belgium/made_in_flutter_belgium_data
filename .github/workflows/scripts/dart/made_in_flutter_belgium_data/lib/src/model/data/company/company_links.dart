@@ -8,9 +8,12 @@ part 'company_links.g.dart';
 class CompanyLinks {
   @JsonKey(name: 'website', required: true)
   final String website;
+  @JsonKey(name: 'jobWebsite')
+  final String? jobWebsite;
 
   const CompanyLinks({
     required this.website,
+    this.jobWebsite,
   });
 
   factory CompanyLinks.fromJson(Map<String, dynamic> json) => _$CompanyLinksFromJson(json);

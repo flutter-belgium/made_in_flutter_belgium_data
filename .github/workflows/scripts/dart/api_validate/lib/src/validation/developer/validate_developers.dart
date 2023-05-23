@@ -37,8 +37,7 @@ Future<void> _updateDeveloper(Developer developer, String workingDirPath, Direct
 }
 
 Future<void> _addMissingDevelopers(List<Developer> developers, List<Project> projects, String workingDirPath) async {
-  final projectDevelopers = projects.expand<MinimizedDeveloper>((map) => map.developers ?? []).toList();
-  print(projectDevelopers.length);
+  final projectDevelopers = projects.expand<MinimizedDeveloper>((map) => map.developers?.map((e) => e.toMinimizedDeveloper()) ?? []).toList();
   for (final projectDeveloper in projectDevelopers) {
     final existingDeveloper = developers.firstWhereOrNull((developer) => developer.githubUserName == projectDeveloper.githubUserName);
     if (existingDeveloper == null) {
@@ -53,7 +52,6 @@ Future<void> saveDevelopersToApi(List<Developer> developers, String workingDirPa
   final dir = join('api', 'developers');
   final developersApiDir = Directory(join(workingDirPath, dir));
   for (final developer in developers) {
-    print(developer.githubUserName);
     final developerPath = join(developersApiDir.path, developer.githubUserName);
     final developerDir = Directory(developerPath);
     if (!developerDir.existsSync()) {

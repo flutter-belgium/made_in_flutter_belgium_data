@@ -4,10 +4,12 @@
     "publisher": "Vlaamse Overheid",
     "developers": [
         {
-            "githubUserName": "vanlooverenkoen"
+            "githubUserName": "vanlooverenkoen",
+            "companyName": "icapps"
         },
         {
-            "githubUserName": "HannesVDB"
+            "githubUserName": "HannesVDB",
+            "companyName": "icapps"
         }
     ],
     "releaseData": "2022-04-02",

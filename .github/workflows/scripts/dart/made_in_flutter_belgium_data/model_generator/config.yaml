@@ -22,13 +22,36 @@ Project:
     developers:
       type: array
       items:
-        type: MinimizedDeveloper
+        type: ProjectDeveloper
       required: false
       non_final: true
     releaseData: DateTime
     links: ProjectLinks?
     images:
       type: ProjectImages
+      required: false
+      non_final: true
+    involvedCompanies:
+      type: array
+      items:
+        type: MinimizedCompany
+      required: false
+      non_final: true
+
+ProjectDeveloper:
+  path: data/developer/
+  properties:
+    githubUserName: String
+    name:
+      type: String
+      required: false
+      non_final: true
+    companyName:
+      type: String
+      required: false
+      non_final: true
+    profilePictureUrl:
+      type: String
       required: false
       non_final: true
 
@@ -76,15 +99,27 @@ Company:
         type: MinimizedProject
       required: false
       non_final: true
+    involvedProjects:
+      type: array
+      items:
+        type: MinimizedProject
+      required: false
+      non_final: true
     images:
       type: CompanyImages
       required: false
+      non_final: true
+    isAgency:
+      type: boolean
+      required: false
+      default_value: false
       non_final: true
 
 CompanyLinks:
   path: data/company/
   properties:
     website: String
+    jobWebsite: String?
 
 CompanyImages:
   path: data/company/
