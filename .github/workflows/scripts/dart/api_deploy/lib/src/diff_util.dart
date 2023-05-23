@@ -1,9 +1,11 @@
 import 'package:made_in_flutter_belgium_data/made_in_flutter_belgium_data.dart';
 
-Future<void> checkForNewProjects(List<Project> apiProjects, List<Project> generateProjects) async {
+Future<void> checkForNewProjects(
+    List<Project> apiProjects, List<Project> generateProjects) async {
   final newProjects = <Project>[];
   for (final project in generateProjects) {
-    final projects = apiProjects.where((generatedProject) => generatedProject.name == project.name);
+    final projects = apiProjects
+        .where((generatedProject) => generatedProject.name == project.name);
     if (projects.isEmpty) {
       newProjects.add(project);
     }
@@ -16,10 +18,12 @@ Future<void> checkForNewProjects(List<Project> apiProjects, List<Project> genera
   }
 }
 
-Future<void> checkForNewCompanies(List<Company> apiCompanies, List<Company> generatedCompanies) async {
+Future<void> checkForNewCompanies(
+    List<Company> apiCompanies, List<Company> generatedCompanies) async {
   final newCompanies = <Company>[];
   for (final company in generatedCompanies) {
-    final companies = apiCompanies.where((generatedProject) => generatedProject.name == company.name);
+    final companies = apiCompanies
+        .where((generatedProject) => generatedProject.name == company.name);
     if (companies.isEmpty) {
       newCompanies.add(company);
     }
