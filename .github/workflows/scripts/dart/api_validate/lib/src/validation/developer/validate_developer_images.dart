@@ -11,7 +11,8 @@ enum DeveloperImageType {
   const DeveloperImageType(this.fileName);
 }
 
-Future<void> validateDeveloperImages(Developer developer, String workingDirPath, Directory itemDir) async {
+Future<void> validateDeveloperImages(
+    Developer developer, String workingDirPath, Directory itemDir) async {
   if (developer.images != null) {
     throw ArgumentError(
       '${developer.githubUserName} has configured images.\n\n'
@@ -26,7 +27,8 @@ Future<DeveloperImages> _getImages(
   Directory itemDir,
   Developer developer,
 ) async {
-  final profilePictureUrl = await getProfilePictureUrlForGithubUserName(developer.githubUserName);
+  final profilePictureUrl =
+      await getProfilePictureUrlForGithubUserName(developer.githubUserName);
   return DeveloperImages(
     profilePictureUrl: profilePictureUrl,
   );

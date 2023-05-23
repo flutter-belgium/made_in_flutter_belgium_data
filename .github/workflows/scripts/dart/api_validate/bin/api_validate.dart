@@ -5,7 +5,8 @@ import 'package:path/path.dart';
 
 Future<void> main(List<String> arguments) async {
   try {
-    final workingDirPath = join(Directory.current.path, '..', '..', '..', '..', '..');
+    final workingDirPath =
+        join(Directory.current.path, '..', '..', '..', '..', '..');
     await apiValidate(workingDirPath);
     print('💙💙 Validation completed successfully!! 💙💙');
   } catch (e) {
