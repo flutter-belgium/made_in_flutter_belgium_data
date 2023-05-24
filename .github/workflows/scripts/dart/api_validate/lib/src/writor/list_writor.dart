@@ -10,7 +10,8 @@ void writeListToFile<T, E>(
   E Function(T item) toMinimizedItem,
 ) {
   _writeListToFile(list, projectDirectory, fileName);
-  _writeListToFile(list.map((e) => toMinimizedItem(e)).toList(), projectDirectory, 'minimized_$fileName');
+  _writeListToFile(list.map((e) => toMinimizedItem(e)).toList(),
+      projectDirectory, 'minimized_$fileName');
 }
 
 void _writeListToFile<T, E>(
