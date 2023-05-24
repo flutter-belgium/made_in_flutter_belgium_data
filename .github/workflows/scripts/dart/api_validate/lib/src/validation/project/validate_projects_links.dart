@@ -11,7 +11,8 @@ Future<void> validateProjectLinks(Project project) async {
       requiredPrefixes: [_playStorePrefix]);
   await validateUrl(links.appstore, 'appstore',
       requiredPrefixes: [_appStorePrefix]);
-  await validateUrl(links.website, 'website');
+  await validateUrl(links.webApp, 'webApp');
+  await validateUrl(links.marketingWebsite, 'marketingWebsite');
   await validateUrl(links.youTube, 'youTube');
   await validateUrl(links.demoYouTubeVideo, 'demoYouTubeVideo');
 }
