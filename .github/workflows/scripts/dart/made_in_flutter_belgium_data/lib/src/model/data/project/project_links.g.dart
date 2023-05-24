@@ -15,7 +15,8 @@ ProjectLinks _$ProjectLinksFromJson(Map<String, dynamic> json) {
       'webApp',
       'marketingWebsite',
       'youTube',
-      'demoYouTubeVideo'
+      'demoYouTubeVideo',
+      'openSourceCode'
     ],
   );
   return ProjectLinks(
@@ -25,6 +26,7 @@ ProjectLinks _$ProjectLinksFromJson(Map<String, dynamic> json) {
     marketingWebsite: json['marketingWebsite'] as String?,
     youTube: json['youTube'] as String?,
     demoYouTubeVideo: json['demoYouTubeVideo'] as String?,
+    openSourceCode: json['openSourceCode'] as String?,
   );
 }
 
@@ -36,4 +38,5 @@ Map<String, dynamic> _$ProjectLinksToJson(ProjectLinks instance) =>
       'marketingWebsite': instance.marketingWebsite,
       'youTube': instance.youTube,
       'demoYouTubeVideo': instance.demoYouTubeVideo,
+      'openSourceCode': instance.openSourceCode,
     };
