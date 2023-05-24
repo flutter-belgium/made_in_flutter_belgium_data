@@ -69,6 +69,7 @@ ProjectLinks:
     marketingWebsite: String?
     youTube: String?
     demoYouTubeVideo: String?
+    openSourceCode: String?
 
 ProjectImages:
   path: data/project/

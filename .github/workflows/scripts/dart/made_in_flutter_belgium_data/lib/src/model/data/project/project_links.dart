@@ -18,6 +18,8 @@ class ProjectLinks {
   final String? youTube;
   @JsonKey(name: 'demoYouTubeVideo')
   final String? demoYouTubeVideo;
+  @JsonKey(name: 'openSourceCode')
+  final String? openSourceCode;
 
   const ProjectLinks({
     this.appstore,
@@ -26,6 +28,7 @@ class ProjectLinks {
     this.marketingWebsite,
     this.youTube,
     this.demoYouTubeVideo,
+    this.openSourceCode,
   });
 
   factory ProjectLinks.fromJson(Map<String, dynamic> json) =>
