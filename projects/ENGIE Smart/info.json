@@ -4,13 +4,20 @@
     "publisher": "ENGIE Belgium",
     "developers": [
         {
-            "githubUserName": "BramDC3"
+            "githubUserName": "BramDC3",
+            "companyName": "In The Pocket"
         },
         {
-            "githubUserName": "sdplus"
+            "githubUserName": "sdplus",
+            "companyName": "In The Pocket"
         },
         {
-            "githubUserName": "Jjagg"
+            "githubUserName": "Jjagg",
+            "companyName": "In The Pocket"
+        },
+        {
+            "githubUserName": "Cliffus",
+            "companyName": "In The Pocket"
         }
     ],
     "releaseData": "2021-04-16",
