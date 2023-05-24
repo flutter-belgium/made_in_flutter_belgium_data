@@ -16,12 +16,20 @@ class Project {
   final String description;
   @JsonKey(name: 'releaseData', required: true)
   final DateTime releaseData;
+  @JsonKey(
+      name: 'isSunsetted',
+      required: false,
+      disallowNullValue: false,
+      includeIfNull: false)
+  final bool isSunsetted;
   @JsonKey(name: 'publisher')
   final String? publisher;
   @JsonKey(name: 'developers', includeIfNull: false)
   List<ProjectDeveloper>? developers;
   @JsonKey(name: 'links')
   final ProjectLinks? links;
+  @JsonKey(name: 'sunsetReason')
+  final String? sunsetReason;
   @JsonKey(name: 'images', includeIfNull: false)
   ProjectImages? images;
   @JsonKey(name: 'involvedCompanies', includeIfNull: false)
@@ -31,9 +39,11 @@ class Project {
     required this.name,
     required this.description,
     required this.releaseData,
+    this.isSunsetted = false,
     this.publisher,
     this.developers,
     this.links,
+    this.sunsetReason,
     this.images,
     this.involvedCompanies,
   });
