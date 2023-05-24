@@ -13,7 +13,8 @@ Future<void> apiDeploy() async {
     final workingDirPath =
         join(Directory.current.path, '..', '..', '..', '..', '..');
     await buildApiFolder(workingDirPath);
-    final apiValidateData = await apiValidate(workingDirPath);
+    await apiValidate(workingDirPath);
+    // final apiValidateData = await apiValidate(workingDirPath);
     // await checkForNewProjects(apiProjects, apiValidateData.projects);
     // await checkForNewCompanies(apiCompanies, apiValidateData.companies);
     print('💙💙 Deploy completed successfully!! 💙💙');
