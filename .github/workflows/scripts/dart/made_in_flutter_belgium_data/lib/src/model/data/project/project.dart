@@ -16,7 +16,11 @@ class Project {
   final String description;
   @JsonKey(name: 'releaseData', required: true)
   final DateTime releaseData;
-  @JsonKey(name: 'isSunsetted', required: false, disallowNullValue: false, includeIfNull: false)
+  @JsonKey(
+      name: 'isSunsetted',
+      required: false,
+      disallowNullValue: false,
+      includeIfNull: false)
   final bool isSunsetted;
   @JsonKey(name: 'publisher')
   final String? publisher;
@@ -44,8 +48,8 @@ class Project {
     this.involvedCompanies,
   });
 
-  factory Project.fromJson(Map<String, dynamic> json) => _$ProjectFromJson(json);
+  factory Project.fromJson(Map<String, dynamic> json) =>
+      _$ProjectFromJson(json);
 
   Map<String, dynamic> toJson() => _$ProjectToJson(this);
-
 }

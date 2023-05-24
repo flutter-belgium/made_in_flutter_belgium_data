@@ -22,8 +22,8 @@ class ProjectDeveloper {
     this.profilePictureUrl,
   });
 
-  factory ProjectDeveloper.fromJson(Map<String, dynamic> json) => _$ProjectDeveloperFromJson(json);
+  factory ProjectDeveloper.fromJson(Map<String, dynamic> json) =>
+      _$ProjectDeveloperFromJson(json);
 
   Map<String, dynamic> toJson() => _$ProjectDeveloperToJson(this);
-
 }

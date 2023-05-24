@@ -31,8 +31,8 @@ class Developer {
     this.projects,
   });
 
-  factory Developer.fromJson(Map<String, dynamic> json) => _$DeveloperFromJson(json);
+  factory Developer.fromJson(Map<String, dynamic> json) =>
+      _$DeveloperFromJson(json);
 
   Map<String, dynamic> toJson() => _$DeveloperToJson(this);
-
 }
