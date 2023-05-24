@@ -65,7 +65,8 @@ ProjectLinks:
   properties:
     appstore: String?
     playstore: String?
-    website: String?
+    webApp: String?
+    marketingWebsite: String?
     youTube: String?
     demoYouTubeVideo: String?
 

@@ -10,8 +10,10 @@ class ProjectLinks {
   final String? appstore;
   @JsonKey(name: 'playstore')
   final String? playstore;
-  @JsonKey(name: 'website')
-  final String? website;
+  @JsonKey(name: 'webApp')
+  final String? webApp;
+  @JsonKey(name: 'marketingWebsite')
+  final String? marketingWebsite;
   @JsonKey(name: 'youTube')
   final String? youTube;
   @JsonKey(name: 'demoYouTubeVideo')
@@ -20,13 +22,14 @@ class ProjectLinks {
   const ProjectLinks({
     this.appstore,
     this.playstore,
-    this.website,
+    this.webApp,
+    this.marketingWebsite,
     this.youTube,
     this.demoYouTubeVideo,
   });
 
-  factory ProjectLinks.fromJson(Map<String, dynamic> json) =>
-      _$ProjectLinksFromJson(json);
+  factory ProjectLinks.fromJson(Map<String, dynamic> json) => _$ProjectLinksFromJson(json);
 
   Map<String, dynamic> toJson() => _$ProjectLinksToJson(this);
+
 }

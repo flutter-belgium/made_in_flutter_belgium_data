@@ -15,9 +15,10 @@ Future<void> _setLinkedProjectsToCompanies(
     List<Project> projects, List<Company> companies) async {
   for (final company in companies) {
     final companyName = company.name;
-    if (company.projects != null)
+    if (company.projects != null) {
       throw ArgumentError(
           'Company `$companyName` already has projects configured. This is not allowed.');
+    }
     final projectsForCompany =
         projects.where((e) => e.publisher == companyName).toList();
     final involvedProjectsForCompany = projects.where((e) {
@@ -36,9 +37,10 @@ Future<void> _setInvolvedCompaniesToProjects(
     List<Project> projects, List<Company> companies) async {
   for (final project in projects) {
     final projectName = project.name;
-    if (project.involvedCompanies != null)
+    if (project.involvedCompanies != null) {
       throw ArgumentError(
           'Project `$projectName` already has involvedCompanies configured. This is not allowed.');
+    }
     final involvedCompanies = <Company>{};
     final developers = project.developers;
     if (developers == null) continue;
@@ -58,9 +60,10 @@ Future<void> _setInvolvedCompaniesToProjects(
 Future<void> _setLinkedProjectsToDevelopers(
     List<Project> projects, List<Developer> developers) async {
   for (final developer in developers) {
-    if (developer.projects != null)
+    if (developer.projects != null) {
       throw ArgumentError(
           'Developer `${developer.githubUserName}` already has projects configured. This is not allowed.');
+    }
     final projectsForDeveloper = projects.where((project) {
       final projectDevelopers = project.developers;
       if (projectDevelopers == null) return false;

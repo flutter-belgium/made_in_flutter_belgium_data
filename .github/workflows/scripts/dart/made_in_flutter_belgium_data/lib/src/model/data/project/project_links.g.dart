@@ -12,7 +12,8 @@ ProjectLinks _$ProjectLinksFromJson(Map<String, dynamic> json) {
     allowedKeys: const [
       'appstore',
       'playstore',
-      'website',
+      'webApp',
+      'marketingWebsite',
       'youTube',
       'demoYouTubeVideo'
     ],
@@ -20,7 +21,8 @@ ProjectLinks _$ProjectLinksFromJson(Map<String, dynamic> json) {
   return ProjectLinks(
     appstore: json['appstore'] as String?,
     playstore: json['playstore'] as String?,
-    website: json['website'] as String?,
+    webApp: json['webApp'] as String?,
+    marketingWebsite: json['marketingWebsite'] as String?,
     youTube: json['youTube'] as String?,
     demoYouTubeVideo: json['demoYouTubeVideo'] as String?,
   );
@@ -30,7 +32,8 @@ Map<String, dynamic> _$ProjectLinksToJson(ProjectLinks instance) =>
     <String, dynamic>{
       'appstore': instance.appstore,
       'playstore': instance.playstore,
-      'website': instance.website,
+      'webApp': instance.webApp,
+      'marketingWebsite': instance.marketingWebsite,
       'youTube': instance.youTube,
       'demoYouTubeVideo': instance.demoYouTubeVideo,
     };
