@@ -19,8 +19,8 @@ class MinimizedProject {
     this.publisher,
   });
 
-  factory MinimizedProject.fromJson(Map<String, dynamic> json) => _$MinimizedProjectFromJson(json);
+  factory MinimizedProject.fromJson(Map<String, dynamic> json) =>
+      _$MinimizedProjectFromJson(json);
 
   Map<String, dynamic> toJson() => _$MinimizedProjectToJson(this);
-
 }

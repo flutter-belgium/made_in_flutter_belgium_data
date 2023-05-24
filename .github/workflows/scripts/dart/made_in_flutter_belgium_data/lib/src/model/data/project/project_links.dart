@@ -28,8 +28,8 @@ class ProjectLinks {
     this.demoYouTubeVideo,
   });
 
-  factory ProjectLinks.fromJson(Map<String, dynamic> json) => _$ProjectLinksFromJson(json);
+  factory ProjectLinks.fromJson(Map<String, dynamic> json) =>
+      _$ProjectLinksFromJson(json);
 
   Map<String, dynamic> toJson() => _$ProjectLinksToJson(this);
-
 }

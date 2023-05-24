@@ -19,8 +19,8 @@ class MinimizedCompany {
     required this.useLogoInsteadOfTextTitle,
   });
 
-  factory MinimizedCompany.fromJson(Map<String, dynamic> json) => _$MinimizedCompanyFromJson(json);
+  factory MinimizedCompany.fromJson(Map<String, dynamic> json) =>
+      _$MinimizedCompanyFromJson(json);
 
   Map<String, dynamic> toJson() => _$MinimizedCompanyToJson(this);
-
 }
