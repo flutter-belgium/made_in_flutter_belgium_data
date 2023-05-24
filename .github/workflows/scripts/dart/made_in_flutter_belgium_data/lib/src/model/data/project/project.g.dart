@@ -13,9 +13,11 @@ Project _$ProjectFromJson(Map<String, dynamic> json) {
       'name',
       'description',
       'releaseData',
+      'isSunsetted',
       'publisher',
       'developers',
       'links',
+      'sunsetReason',
       'images',
       'involvedCompanies'
     ],
@@ -25,6 +27,7 @@ Project _$ProjectFromJson(Map<String, dynamic> json) {
     name: json['name'] as String,
     description: json['description'] as String,
     releaseData: DateTime.parse(json['releaseData'] as String),
+    isSunsetted: json['isSunsetted'] as bool? ?? false,
     publisher: json['publisher'] as String?,
     developers: (json['developers'] as List<dynamic>?)
         ?.map((e) => ProjectDeveloper.fromJson(e as Map<String, dynamic>))
@@ -32,6 +35,7 @@ Project _$ProjectFromJson(Map<String, dynamic> json) {
     links: json['links'] == null
         ? null
         : ProjectLinks.fromJson(json['links'] as Map<String, dynamic>),
+    sunsetReason: json['sunsetReason'] as String?,
     images: json['images'] == null
         ? null
         : ProjectImages.fromJson(json['images'] as Map<String, dynamic>),
@@ -46,6 +50,7 @@ Map<String, dynamic> _$ProjectToJson(Project instance) {
     'name': instance.name,
     'description': instance.description,
     'releaseData': instance.releaseData.toIso8601String(),
+    'isSunsetted': instance.isSunsetted,
     'publisher': instance.publisher,
   };
 
@@ -58,6 +63,7 @@ Map<String, dynamic> _$ProjectToJson(Project instance) {
   writeNotNull(
       'developers', instance.developers?.map((e) => e.toJson()).toList());
   val['links'] = instance.links?.toJson();
+  val['sunsetReason'] = instance.sunsetReason;
   writeNotNull('images', instance.images?.toJson());
   writeNotNull('involvedCompanies',
       instance.involvedCompanies?.map((e) => e.toJson()).toList());

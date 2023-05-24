@@ -27,6 +27,11 @@ Project:
       non_final: true
     releaseData: DateTime
     links: ProjectLinks?
+    isSunsetted:
+      type: boolean
+      required: true
+      default_value: false
+    sunsetReason: String?
     images:
       type: ProjectImages
       required: false
