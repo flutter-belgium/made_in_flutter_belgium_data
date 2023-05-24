@@ -76,8 +76,6 @@ Future<void> saveDevelopersToApi(
     final developerInfoFile = File(join(developerPath, 'info.json'));
     developerInfoFile.writeAsStringSync(jsonEncode(developer));
   }
-  writeListToFile(developers, developersApiDir, 'all');
-  final minimizedProject =
-      developers.map((e) => e.toMinimizedDeveloper()).toList();
-  writeListToFile(minimizedProject, developersApiDir, 'minimized_all');
+  writeListToFile(
+      developers, developersApiDir, 'all', (e) => e.toMinimizedDeveloper());
 }

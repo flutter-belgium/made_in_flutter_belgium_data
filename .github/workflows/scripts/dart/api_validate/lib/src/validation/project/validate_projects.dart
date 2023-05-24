@@ -47,23 +47,16 @@ Future<void> saveProjectsToApi(
         File(join(workingDirPath, projectsDir.path, 'info.json'));
     projectFile.writeAsStringSync(jsonEncode(project));
   }
-  writeListToFile(projects, projectsApiDir, 'all');
+  writeListToFile(
+      projects, projectsApiDir, 'all', (e) => e.toMinimizedProject());
   writeListToFile(
       projects.where((element) => element.publisher != null).toList(),
       projectsApiDir,
-      'professional');
+      'professional',
+      (e) => e.toMinimizedProject());
   writeListToFile(
       projects.where((element) => element.publisher == null).toList(),
       projectsApiDir,
-      'personal');
-  final minimizedProject = projects.map((e) => e.toMinimizedProject()).toList();
-  writeListToFile(minimizedProject, projectsApiDir, 'minimized_all');
-  writeListToFile(
-      minimizedProject.where((element) => element.publisher != null).toList(),
-      projectsApiDir,
-      'minimized_professional');
-  writeListToFile(
-      minimizedProject.where((element) => element.publisher == null).toList(),
-      projectsApiDir,
-      'minimized_personal');
+      'personal',
+      (e) => e.toMinimizedProject());
 }

@@ -44,8 +44,10 @@ Future<void> saveCompaniesToApi(
     final companyInfoFile = File(join(developerPath, 'info.json'));
     companyInfoFile.writeAsStringSync(jsonEncode(company));
   }
-  writeListToFile(companies, companiesApiDir, 'all');
-  final minimizedCompanies =
-      companies.map((e) => e.toMinimizedCompany()).toList();
-  writeListToFile(minimizedCompanies, companiesApiDir, 'minimized_all');
+  writeListToFile(
+      companies, companiesApiDir, 'all', (e) => e.toMinimizedCompany());
+  final agencyCompanies =
+      companies.where((element) => element.isAgency == true).toList();
+  writeListToFile(agencyCompanies, companiesApiDir, 'agencies',
+      (e) => e.toMinimizedCompany());
 }
