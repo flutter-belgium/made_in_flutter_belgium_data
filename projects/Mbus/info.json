@@ -1,0 +1,21 @@
+{
+    "name": "Mbus",
+    "description": "Mbus is a platform for companies to manage their employees' mobility. It allows employees to book a seat on a shuttle bus to and from work. The platform is created by Max Mobiel, a company that provides shuttle bus services to companies in Ghent, Belgium.",
+    "publisher": "Max Mobiel",
+    "developers": [
+        {
+            "githubUserName": "AntonBaeckelandt",
+            "companyName": "make it fly"
+        },
+        {
+            "githubUserName": "dumazy",
+            "companyName": "make it fly"
+        }
+    ],
+    "releaseData": "2020-03-06",
+    "links": {
+        "playstore": "https://play.google.com/store/apps/details?id=be.maxmobiel.pendelbus.employee",
+        "appstore": "https://apps.apple.com/us/app/mbus-from-max-mobiel/id1500545716",
+        "marketingWebsite": "https://www.max-mobiel.be/en"
+    }
+}
