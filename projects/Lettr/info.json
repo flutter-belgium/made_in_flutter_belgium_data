@@ -1,0 +1,18 @@
+{
+    "name": "Lettr",
+    "description": "Create and print your own newspaper or photo booklet in no time with the Lettr app!\n\nInvite family and friends to work on your design together. We’ll print and ship your newspaper or photo book to your listed addresses within a week, starting from just a single copy. That way, you don’t have to wait long to surprise friends and family with this unique keepsake!",
+    "publisher": "Genscom",
+    "developers": [
+        {
+            "githubUserName": "dumazy",
+            "companyName": "make it fly"
+        }
+    ],
+    "releaseData": "2021-02-10",
+    "links": {
+        "appstore": "https://apps.apple.com/us/app/lettr/id1518612885",
+        "playstore": "https://play.google.com/store/apps/details?id=be.genscom.joehoe",
+        "marketingWebsite": "https://lettr.eu/",
+        "demoYouTubeVideo": "https://youtu.be/jWgEtE4nWzY"
+    }
+}
