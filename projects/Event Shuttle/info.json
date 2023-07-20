@@ -1,0 +1,21 @@
+{
+    "name": "Event Shuttle",
+    "description": "The Keolis Event Shuttle App is a user-friendly and efficient mobile app which enables bus drivers to effortlessly scan and verify tickets of passengers attending an event. This ensures a smooth and hassle-free boarding process for passengers.",
+    "publisher": "Keolis Belgium",
+    "developers": [
+        {
+            "githubUserName": "JeffreyDeNeve",
+            "companyName": "make it fly"
+        },
+        {
+            "githubUserName": "dumazy",
+            "companyName": "make it fly"
+        }
+    ],
+    "releaseData": "2023-03-07",
+    "links": {
+        "playstore": "https://play.google.com/store/apps/details?id=be.keolis.eventshuttle.app",
+        "appstore": "https://apps.apple.com/us/app/keolis-event-shuttle/id6449685565",
+        "marketingWebsite": "https://www.event-shuttle.be/en"
+    }
+}
