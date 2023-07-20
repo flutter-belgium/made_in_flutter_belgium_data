@@ -1,6 +1,6 @@
 {
     "name": "Mbus",
-    "description": "Mbus is a platform for companies to manage their employees' mobility. It allows employees to book a seat on a shuttle bus to and from work. The platform is created by Max Mobiel, a company that provides shuttle bus services to companies in Ghent, Belgium.",
+    "description": "Mbus is a platform for companies to manage their employees' mobility. It allows employees to book a seat on a shuttle bus to and from work. The platform is created by Max Mobiel, a company that provides shuttle bus services to companies in Ghent, Belgium.\n\nThis app is specifically for passengers, while Mbus Driver is used by the drivers of the shuttle buses.",
     "publisher": "Max Mobiel",
     "developers": [
         {
