@@ -1,0 +1,8 @@
+{
+    "name": "Genscom",
+    "description": "Genscom is an innovative communications agency specializing in personalized newspapers. Companies, organizations and private individuals can design, print and ship their own newspapers with Genscom.",
+    "useLogoInsteadOfTextTitle": true,
+    "links": {
+        "website": "https://www.genscom.be/"
+    }
+}
