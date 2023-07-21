@@ -6,3 +6,6 @@
 
 # Generated content
 api/
+
+# OS generated files
+.DS_Store
