@@ -1,0 +1,9 @@
+{
+    "githubUserName": "ikbendewilliam",
+    "name": "William Verhaeghe",
+    "description": "I love creating mobile applications in Flutter and try to expand my knowledge every day. My passions are Code generation, Shaders, Flutter, Game Dev and some AI.\n\nIt started when playing Age of Empires and the game didn't allow something simple. I disagreed and thought \"how hard can it be?\" which you could describe as a bit of my motto. I learned \"Game maker\" on my own and moved on to JavaScript, HTML and PHP. \n\nWhen I started my higher education, I went towards more general programming and had a wide knowledge base (FrontEnd, BackEnd, IoT, Android, and a small bit ML). I did my internship in OxfordShire where I used web technologies combined with Python to improve the UI of the games at aigaming.com. During my internship I also wrote my bachelor paper about Machine Learning on the game of battleships in which the ML algorithm beat my code.\n\nIn my professional career I looked around and didn't quite know where I would find my passion until I encountered Flutter. Flutter is a cross platform technology, initially focused on mobile applications. After a small bit of experience with it, I started at icapps which clearly shared my interest in the technology and seemed like a perfect fit. At icapps I got offered many opportunities and grew to Flutter Lead. The biggest project I did was 2 apps that shared their codebase and got downloaded over 10 million times, in a country of 11.5 million people.",
+    "links": {
+        "personalWebsite": "https://wive.be",
+        "linkedin": "https://www.linkedin.com/in/william-verhaeghe/"
+    }
+}
