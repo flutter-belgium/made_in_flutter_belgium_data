@@ -1,0 +1,21 @@
+{
+    "name": "Royal Belgian Sailing Club",
+    "description": "View your favorite RBSC base via the webcams and follow the weather closely with the app. As a member of RBSC you can consult your consumptions at the base and membership cards.",
+    "publisher": "RBSC",
+    "developers": [
+        {
+            "githubUserName": "dumazy",
+            "companyName": "make it fly"
+        },
+        {
+            "githubUuserName": "AntonBaeckelandt",
+            "companyName": "make it fly"
+        }
+    ],
+    "releaseData": "2020-02-24",
+    "links": {
+        "appstore": "https://apps.apple.com/be/app/royal-belgian-sailing-club/id524978234",
+        "playstore": "https://play.google.com/store/apps/details?id=be.duo.rbsc",
+        "marketingWebsite": "https://www.rbsc.be/"
+    }
+}
