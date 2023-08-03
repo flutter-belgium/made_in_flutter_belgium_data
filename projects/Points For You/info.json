@@ -1,0 +1,17 @@
+{
+    "name": "Points For You",
+    "description": "Points For You is an app by Signature Foods that bridges the gap between the company and their end consumers by allowing them to collect points and exchange them for rewards.",
+    "publisher": "Signature Foods Belgium",
+    "developers": [
+        {
+            "githubUserName": "dumazy",
+            "companyName": "make it fly"
+        }
+    ],
+    "releaseData": "2020-01-09",
+    "links": {
+        "appstore": "https://apps.apple.com/be/app/points-for-you/id1485407151",
+        "playstore": "https://play.google.com/store/apps/details?id=be.signaturefoods.loyalty",
+        "marketingWebsite": "https://signaturefoodsbelgium.be/"
+    }
+}
