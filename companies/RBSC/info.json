@@ -1,0 +1,8 @@
+{
+    "name": "RBSC",
+    "description": "The Royal Belgian Sailing Club (RBSC) is a sailing club with 5 locations in Belgium. The club was founded in 1863 and has over 2,000 active members. The RBSC offers a variety of sailing and water sports activities, including lessons, rentals, and competitions.",
+    "useLogoInsteadOfTextTitle": true,
+    "links": {
+        "website": "https://www.rbsc.be/"
+    }
+}
