@@ -1,0 +1,8 @@
+{
+    "name": "Fibricheck",
+    "description": "FibriCheck provides the first medical CE-certified app that makes a regular and long-term screening of the heart possible.",
+    "useLogoInsteadOfTextTitle": true,
+    "links": {
+        "website": "https://www.fibricheck.com/"
+    }
+}
