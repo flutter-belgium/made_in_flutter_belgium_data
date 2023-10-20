@@ -1,0 +1,21 @@
+{
+    "name": "MyFlexiO",
+    "description": "Check out an up-to-date overview of how your system is behaving and how much FlexiO has helped you save today, last week, last month or even over the years. Quickly want to switch your charging mode? The MyFlexiO app makes it possible!",
+    "publisher": "LIFEPOWR",
+    "developers": [
+        {
+            "githubUserName": "SHuygh",
+            "companyName": "ACA Group"
+        },
+        {
+            "githubUserName": "brentvvosselen",
+            "companyName": "ACA Group"
+        }
+    ],
+    "releaseData": "2022-10-01",
+    "links": {
+        "appstore": "https://apps.apple.com/in/app/myflexio/id6443828888",
+        "playstore": "https://play.google.com/store/apps/details?id=io.lifepowr.lifepowr_mob",
+        "marketingWebsite": "https://www.lifepowr.io/"
+    }
+}
