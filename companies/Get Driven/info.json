@@ -1,0 +1,9 @@
+{
+    "name": "Get Driven",
+    "description": "Get Driven is a pioneer in the drivers-on-demand segment. A platform enabling you to book a driver in your own car whenever and wherever you like.",
+    "useLogoInsteadOfTextTitle": true,
+    "links": {
+        "website": "https://www.getdriven.app/",
+        "jobWebsite": "https://www.getdriven.app/en/jobs"
+    }
+}
