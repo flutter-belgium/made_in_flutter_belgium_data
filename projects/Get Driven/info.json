@@ -1,0 +1,33 @@
+{
+    "name": "Get Driven",
+    "description": "Get Driven is a pioneer in the drivers-on-demand segment. A platform enabling you to book a driver in your own car whenever and wherever you like. In 2020 Get Driven recruited a full software team and opened branches in Berlin, London and Luxembourg. Get Driven stands for innovation with a constant focus on service and user-friendliness.",
+    "publisher": "Get Driven",
+    "developers": [
+        {
+            "githubUserName": "Goruth",
+            "companyName": "Get Driven"
+        },
+        {
+            "githubUserName": "vixez",
+            "companyName": "Get Driven"
+        },
+        {
+            "githubUserName": "sclaeye",
+            "companyName": "Get Driven"
+        },
+        {
+            "githubUserName": "TanguyDeBrabandere",
+            "companyName": "Get Driven"
+        },
+        {
+            "githubUserName": "LegeinLorenz",
+            "companyName": "Get Driven"
+        }
+    ],
+    "releaseData": "2019-02-14",
+    "links": {
+        "playstore": "https://play.google.com/store/apps/details?id=app.getdriven.customer",
+        "appstore": "https://apps.apple.com/nl/app/get-driven-customer/id1529444655",
+        "marketingWebsite": "https://www.getdriven.app/"
+    }
+}
