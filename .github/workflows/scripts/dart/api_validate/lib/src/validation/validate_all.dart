@@ -32,6 +32,7 @@ Future<void> _validateProjectsLinkedToCompanies(
     for (final developer in developers) {
       final companyNameForDeveloper = developer.companyName;
       if (companyNameForDeveloper == null) continue;
+      if (project.publisher == companyNameForDeveloper) continue;
       final companyForDeveloper = getCompanyForProject(
           companies, project.name, companyNameForDeveloper);
       companyForDeveloper.isAgency = true;
