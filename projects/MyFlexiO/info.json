@@ -2,7 +2,11 @@
     "name": "MyFlexiO",
     "description": "Check out an up-to-date overview of how your system is behaving and how much FlexiO has helped you save today, last week, last month or even over the years. Quickly want to switch your charging mode? The MyFlexiO app makes it possible!",
     "publisher": "LIFEPOWR",
-    "developers": [
+    "developers": [,
+        {
+            "githubUserName": "yannickvg",
+            "companyName": "LIFEPOWR"
+        }
         {
             "githubUserName": "SHuygh",
             "companyName": "ACA Group"
