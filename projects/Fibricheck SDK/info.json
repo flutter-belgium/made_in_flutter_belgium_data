@@ -1,0 +1,19 @@
+{
+    "name": "Fibricheck SDK",
+    "description": "FibriCheck not only provides a mobile application (written in React Native), but is also providing companies the possibility to integrate their services into Flutter applications. Two libraries were created.\n\nSDK integration: You have developed your own mobile or wearable solution and would like to add advanced cardiac arrhythmia analysis to your current/future product via our regulatory-compliant SDK. The library is written native for each platform and a plugin was created for Flutter.\n\nAPI integration: Your hospital or tele-monitoring service would like to integrate FibriCheck data into your own ecosystem to improve remote monitoring and enhance your patient care. A package was created to support the API integration.\n\nThe Fibricheck technology was first introduced to Asia in the DrGo app (written in Flutter)",
+    "publisher": "Fibricheck",
+    "developers": [
+        {
+            "githubUserName": "SHuygh",
+            "companyName": "ACA Group"
+        },
+        {
+            "githubUserName": "Corbeel1",
+            "companyName": "ACA Group"
+        }
+    ],
+    "releaseData": "2022-09-01",
+    "links": {
+        "marketingWebsite": "https://docs.fibricheck.com/introduction/"
+    }
+}

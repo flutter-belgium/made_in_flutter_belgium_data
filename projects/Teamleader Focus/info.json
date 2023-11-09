@@ -1,0 +1,25 @@
+{
+    "name": "Teamleader Focus",
+    "description": "Invoices, quotes, CRM, project management and planning: manage your business easily in one place with Teamleader Focus.\n\nMake use of the most powerful features on the mobile app and run your business from anywhere:\n\n- Access and update contact details in your CRM.\n- Stay on top of payments, create invoices and quotations.\n- Maintain a clear overview of your tasks, meetings and calls.\n- Track time, create digital work orders, and manage resources.",
+    "publisher": "Teamleader",
+    "developers": [
+        {
+            "githubUserName": "brentvvosselen",
+            "companyName": "ACA Group"
+        },
+        {
+            "githubUserName": "mPlaisier",
+            "companyName": "ACA Group"
+        },
+        {
+            "githubUserName": "SHuygh",
+            "companyName": "ACA Group"
+        }
+    ],
+    "releaseData": "2023-08-01",
+    "links": {
+        "appstore": "https://apps.apple.com/us/app/teamleader-focus/id6453793095",
+        "playstore": "https://play.google.com/store/apps/details?id=eu.teamleader.focus",
+        "marketingWebsite": "https://www.teamleader.eu/focus/"
+    }
+}
