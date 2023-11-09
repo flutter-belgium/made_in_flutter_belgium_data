@@ -4,6 +4,10 @@
     "publisher": "LIFEPOWR",
     "developers": [
         {
+            "githubUserName": "yannickvg",
+            "companyName": "LIFEPOWR"
+        },
+        {
             "githubUserName": "SHuygh",
             "companyName": "ACA Group"
         },
