@@ -1,0 +1,18 @@
+{
+    "name": "ijsjesradar",
+    "description": "With this app you can follow on a map where your favorite ice cream truck is driving. Set your place of residence and automatically receive a notification when the ice cream truck is about to pass by.",
+    "developers": [
+        {
+            "githubUserName": "jockri"
+        },
+        {
+            "githubUserName": "krispypen"
+        }
+    ],
+    "releaseData": "2020-07-20",
+    "links": {
+        "playstore": "https://play.google.com/store/apps/details?id=app.ijsjesradar.ijsjesradar",
+        "appstore": "https://apps.apple.com/be/app/ijsjesradar/id1464218277",
+        "marketingWebsite": "https://ijsjesradar.app/"
+    }
+}
