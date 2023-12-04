@@ -1,0 +1,14 @@
+{
+    "name": "Tim-R",
+    "description": "Tim-R will help you to coordinate your swim training.\n1/ Specify the number of swim lanes available and the number of swimmers participating in your training session.\n2/ Connect your bluetooth speaker and the start sound will be broadcasted automatically when your swimmer needs to start his training set.\n3/ During each training set, check the total time elapsed, the number of repetitions and remaining recovery time.",
+    "developers": [
+        {
+            "githubUserName": "verscph"
+        }
+    ],
+    "releaseData": "2019-01-05",
+    "links": {
+        "appstore": "https://apps.apple.com/be/app/tim-r/id1442332077",
+        "marketingWebsite": "https://www.swim-r.eu/"
+    }
+}
