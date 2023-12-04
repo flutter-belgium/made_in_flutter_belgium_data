@@ -1,0 +1,16 @@
+{
+    "name": "ilusmart",
+    "description": "With the iLusmart App you get the most out of your digital energy meter. Based on data from your digital meter, the App maps your consumption and the (possible) injection flows, if you have solar panels, to and from the grid. In this way, the App not only offers you interesting insights into your consumption profile, but also provides advice on how you can save on your energy bill. The iLusmart App is modularly expandable with specific widgets for solar panels, battery storage systems and charging systems for electric vehicles.",
+    "developers": [
+        {
+            "githubUserName": "verscph"
+        }
+    ],
+    "releaseData": "2021-03-11",
+    "links": {
+        "playstore": "https://play.google.com/store/apps/details?id=be.ilumen.ilusmart",
+        "appstore": "https://apps.apple.com/be/app/ilusmart/id1538996243",
+        "webApp": "https://ilusmart.com/",
+        "marketingWebsite": "https://www.ilumen.solar/ilusmart/"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Attend-R",
+    "description": "Attend-R will give you insights in athlete's training sessions.\n1/ Create your club, grant access to your coaches and start creating teams.\n2/ Register athlete's presence, absence or sickness for each training session.\n3/ Consult monthly statistics per team or athlete.",
+    "developers": [
+        {
+            "githubUserName": "verscph"
+        }
+    ],
+    "releaseData": "2019-12-01",
+    "links": {
+        "playstore": "https://play.google.com/store/apps/details?id=eu.swimr.athlete_presence",
+        "appstore": "https://apps.apple.com/be/app/attend-r/id1473842670",
+        "marketingWebsite": "https://www.swim-r.eu/"
+    }
+}
