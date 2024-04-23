@@ -1,0 +1,13 @@
+{
+    "name": "equipo",
+    "description": "One central platform that allows you to design & share your strategy, create your communication & project planning and follow-up on your team, status and (local) results to ensure efficiency, a real-life overview and data-based decision making.",
+    "developers": [
+        {
+            "githubUserName": "verscph"
+        }
+    ],
+    "releaseData": "2021-05-29",
+    "links": {
+        "marketingWebsite": "https://getequipo.com/"
+    }
+}

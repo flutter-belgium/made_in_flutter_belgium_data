@@ -1,0 +1,25 @@
+{
+    "name": "mysdworx",
+    "description": "SD Worx's mobile app provides a seamless HR experience on the go! Employees and line managers can take action anytime, anywhere!",
+    "publisher": "SD Worx",
+    "developers": [
+        {
+            "githubUserName": "DelcoigneYves",
+            "companyName": "In The Pocket"
+        },
+        {
+            "githubUserName": "SebWojd",
+            "companyName": "SD Worx"
+        },
+        {
+            "githubUserName": "Cliffus",
+            "companyName": "In The Pocket"
+        }
+    ],
+    "releaseData": "2023-08-31",
+    "links": {
+        "appstore": "https://apps.apple.com/be/app/mysdworx/id1372019222",
+        "playstore": "https://play.google.com/store/apps/details?id=com.sdworx.digital.assistant",
+        "marketingWebsite": "https://my.sdworx.com/"
+    }
+}
