@@ -1,0 +1,15 @@
+{
+    "name": "WTC Nieuwendijk",
+    "description": "Mobile app to manage the rides of cycling club WTC Nieuwendijk. The app is only available for members of WTC Nieuwendijk, but a public version will become available soon.",
+    "developers": [
+        {
+            "githubUserName": "verscph"
+        }
+    ],
+    "releaseData": "2024-04-11",
+    "links": {
+        "playstore": "https://play.google.com/store/apps/details?id=be.verduco.wtcnieuwendijk",
+        "appstore": "https://apps.apple.com/be/app/wtc-nieuwendijk/id6478600105",
+        "marketingWebsite": "https://www.wtcnieuwendijk.be/"
+    }
+}
