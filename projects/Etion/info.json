@@ -1,0 +1,22 @@
+{
+  "name": "Etion",
+  "description": "Mobile app to view the articles and events of Etion. Easily manage your membership with Etion.",
+  "publisher": "Etion",
+  "developers": [
+    {
+      "githubUserName": "tijlivens",
+      "companyName": "Lemon"
+    },
+    {
+      "githubUserName": "mathieu-van-flieberge-lemon",
+      "companyName": "Lemon"
+    }
+  ],
+  "releaseData": "2024-05-16",
+  "links": {
+    "appstore": "https://apps.apple.com/be/app/etion/id6470307468",
+    "playstore": "https://play.google.com/store/apps/details?id=be.etion.app",
+    "webApp": "https://app.etion.be/",
+    "marketingWebsite": "https://etion.be/"
+  }
+}
