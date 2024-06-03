@@ -1,0 +1,17 @@
+{
+    "name": "Robaws",
+    "description": "Robaws is an ERP system tailored for the construction and installation sectors. It brings together essential business functions like project management, inventory, and finance into a simple platform. This helps businesses streamline their operations and work more efficiently.\n\nThe Robaws app enhances this by allowing users to manage their projects anywhere. Through the app, team members can easily access project information, update progress, and stay connected with their work, no matter where they are. This makes it easier to respond quickly and keep projects moving smoothly.",
+    "publisher": "Robaws",
+    "developers": [
+        {
+            "githubUserName": "dumazy",
+            "companyName": "Robaws"
+        }
+    ],
+    "releaseData": "2021-03-27",
+    "links": {
+        "appstore": "https://apps.apple.com/be/app/robaws/id1559563155",
+        "playstore": "https://play.google.com/store/apps/details?id=be.eforge.bawsy",
+        "marketingWebsite": "https://robaws.com/"
+    }
+}
