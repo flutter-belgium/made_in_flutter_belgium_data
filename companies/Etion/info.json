@@ -1,0 +1,8 @@
+{
+  "name": "Etion",
+  "description": "ETION is het forum voor geëngageerd ondernemen",
+  "useLogoInsteadOfTextTitle": true,
+  "links": {
+    "website": "https://etion.be/"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Bevoy",
+  "description": "Bevoy is an all-in-one solution that integrates your existing well-being initiatives, fills in what’s missing, ensures legal compliance, and delivers actionable data — all while rewarding colleagues for feedback, learning, and healthier living.",
+  "publisher": "Bevoy",
+  "developers": [
+    {
+      "githubUserName": "tijlivens",
+      "companyName": "Lemon"
+    },
+    {
+      "githubUserName": "mathieu-van-flieberge-lemon",
+      "companyName": "Lemon"
+    }
+  ],
+  "releaseData": "2023-07-04",
+  "links": {
+    "appstore": "https://apps.apple.com/be/app/bevoy/id6443584006",
+    "playstore": "https://play.google.com/store/apps/details?id=life.bevoy.app",
+    "webApp": "https://go.bevoy.life",
+    "marketingWebsite": "https://bevoy.be"
+  }
+}
