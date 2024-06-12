@@ -1,0 +1,9 @@
+{
+  "name": "Quality Guard",
+  "description": "The application for allergens and food safety! Quality Guard is the number one solution for managing food safety, allergens and nutritional information.",
+  "useLogoInsteadOfTextTitle": false,
+  "links": {
+    "website": "https://www.qguard.be/",
+    "jobWebsite": "https://www.qguard.be/nl/vacatures/"
+  }
+}
