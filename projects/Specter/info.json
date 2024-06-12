@@ -1,0 +1,26 @@
+{
+    "name": "Specter",
+    "description": "The companion app teams up with the integrated display to allow remote services like lock / unlock, locate and change vehicle parameters, set destinations for the route guidance on the cockpit.",
+    "publisher": "Specter",
+    "developers": [
+      {
+        "githubUserName": "johanna-DB",
+        "companyName": "Aaltra"
+      },
+      {
+        "githubUserName": "baukehoeree",
+        "companyName": "Aaltra"
+      },
+      {
+        "githubUserName": "stephanieaaltra",
+        "companyName": "Aaltra"
+      }
+    ],
+    "releaseData": "2022-11-21",
+    "links": {
+      "appstore": "https://apps.apple.com/lu/app/specter/id6444264188",
+      "playstore": "https://play.google.com/store/apps/details?id=eu.specter.app",
+      "marketingWebsite": "https://www.specter.bike/en"
+    }
+  }
+  
