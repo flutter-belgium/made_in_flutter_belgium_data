@@ -1,7 +1,7 @@
 {
   "name": "Citymesh connect",
   "description": "Control your mobile subscriptions and data usage with the Citymesh Connect app.",
-  "publisher": "Citymesh Group",
+  "publisher": "Citymesh",
   "developers": [
     {
       "githubUserName": "johanna-DB",
