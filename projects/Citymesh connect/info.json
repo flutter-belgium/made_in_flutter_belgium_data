@@ -1,0 +1,25 @@
+{
+  "name": "Citymesh connect",
+  "description": "Control your mobile subscriptions and data usage with the Citymesh Connect app.",
+  "publisher": "Citymesh",
+  "developers": [
+    {
+      "githubUserName": "johanna-DB",
+      "companyName": "Aaltra"
+    },
+    {
+      "githubUserName": "alex-andrause",
+      "companyName": "Aaltra"
+    },
+    {
+      "githubUserName": "baukehoeree",
+      "companyName": "Aaltra"
+    }
+  ],
+  "releaseData": "2024-01-16",
+  "links": {
+    "appstore": "https://apps.apple.com/be/app/citymesh-connect/id6469772306",
+    "playstore": "https://play.google.com/store/apps/details?id=be.digi.business.app",
+    "marketingWebsite": "https://www.citymesh.com/"
+  }
+}

@@ -1,0 +1,29 @@
+{
+    "name": "OnTracx",
+    "description": "OnTracx goes beyond distance, by allowing you to run smarter, not harder. Our unique wearable sensor tracks your mechanical load with every step and helps you building with confidence towards your next goal.",
+    "publisher": "OnTracx",
+    "developers": [
+      {
+        "githubUserName": "johanna-DB",
+        "companyName": "Aaltra"
+      },
+      {
+        "githubUserName": "tijl-dev-aaltra",
+        "companyName": "Aaltra"
+      },
+      {
+        "githubUserName": "baukehoeree",
+        "companyName": "Aaltra"
+      },
+      {
+        "githubUserName": "WouterDemuynck",
+        "companyName": "Aaltra"
+      }
+    ],
+    "releaseData": "2024-04-23",
+    "links": {
+      "appstore": "https://apps.apple.com/be/app/ontracx/id6473828071",
+      "playstore": "https://play.google.com/store/apps/details?id=com.ontracx.app.mobile",
+      "marketingWebsite": "https://www.ontracx.com/"
+    }
+  }

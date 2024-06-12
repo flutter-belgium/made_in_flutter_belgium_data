@@ -1,0 +1,25 @@
+{
+  "name": "Locinox",
+  "description": "Easy configuration of Locinox automation and access control products. This app is used for the initialization and configuration of Locinox automation and access control products, starting with the Venus motorized gate closer.",
+  "publisher": "Locinox",
+  "developers": [
+    {
+      "githubUserName": "johanna-DB",
+      "companyName": "Aaltra"
+    },
+    {
+      "githubUserName": "tijl-dev-aaltra",
+      "companyName": "Aaltra"
+    },
+    {
+      "githubUserName": "baukehoeree",
+      "companyName": "Aaltra"
+    }
+  ],
+  "releaseData": "2023-12-23",
+  "links": {
+    "appstore": "https://apps.apple.com/be/app/locinox/id1663230897",
+    "playstore": "https://play.google.com/store/apps/details?id=com.locinox.venus.app",
+    "marketingWebsite": "https://www.locinox.com/en-gb/"
+  }
+}
