@@ -1,0 +1,21 @@
+{
+  "name": "Quality Guard Mobile",
+  "description": "With Quality Guard, you rent wireless sensors that continuously monitor the temperature in your cooling system(s). Is your cooling system not working optimally and is there a risk of food spoilage? You will immediately receive a notification via SMS or email, allowing you to take action. Have you repaired your cooling system? You can also log this in the application. The Quality Guard temperature sensors are not dependent on a mobile network or WiFi signal. You can always rely on TempGuard!",
+  "publisher": "Quality Guard",
+  "developers": [
+    {
+      "githubUserName": "johanna-DB",
+      "companyName": "Aaltra"
+    },
+    {
+      "githubUserName": "MerijnDefoort",
+      "companyName": "Aaltra"
+    }
+  ],
+  "releaseData": "2021-06-15",
+  "links": {
+    "appstore": "https://apps.apple.com/be/app/quality-guard-mobile/id1567168773?platform=iphone",
+    "playstore": "https://play.google.com/store/apps/details?id=com.auth0.qguardapp",
+    "marketingWebsite": "https://www.qguard.be/"
+  }
+}
