@@ -1,7 +1,7 @@
 {
   "name": "OnTracx",
   "description": "Cutting-edge technology to reduce (re-)injury risk. OnTracx uses advanced biomechanical algorithms to quantify the mechanical load on your muscles and bones during running.",
-  "useLogoInsteadOfTextTitle": true,
+  "useLogoInsteadOfTextTitle": false,
   "links": {
     "website": "https://www.ontracx.com/",
     "jobWebsite": "https://www.ontracx.com/jobs"
