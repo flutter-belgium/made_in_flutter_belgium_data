@@ -1,8 +1,5 @@
 {
   "name": "Picky",
   "description": "Picky is a Belgian application that allows users to easily find a recipe that the whole household will like, based on personal preferences. In the app, users swipe through recipes from chefs and food bloggers from Belgium and abroad. When everyone in the household likes the same recipe, it's a match. That way, the question “What are we eating tonight?” becomes a thing of the past.",
-  "useLogoInsteadOfTextTitle": true,
-  "links": {
-    "website": "https://about.picky.recipes"
-  }
+  "useLogoInsteadOfTextTitle": true
 }
