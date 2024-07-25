@@ -1,0 +1,25 @@
+{
+  "name": "Dagelijkse Kost",
+  "description": "",
+  "publisher": "Dagelijkse Kost",
+  "developers": [
+    {
+      "githubUserName": "freakness",
+      "companyName": "Picky"
+    },
+    {
+      "githubUserName": "lebomb",
+      "companyName": "Picky"
+    },
+    {
+      "githubUserName": "bert-picky",
+      "companyName": "Picky"
+    }
+  ],
+  "releaseData": "2021-10-01",
+  "links": {
+    "appstore": "https://apps.apple.com/be/app/dagelijkse-kost/id6458738919",
+    "playstore": "https://play.google.com/store/apps/details?id=be.vrt.dagelijksekost",
+    "marketingWebsite": "https://dagelijksekost.vrt.be/"
+  }
+}
