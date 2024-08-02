@@ -1,18 +1,16 @@
 {
     "name": "Trickle",
     "description": "Trickle is the smartest personal assistant for the tech-savvy business professional designed to eliminate tedious back-and-forth scheduling messages - so you can connect effortlessly with both familiar faces and new acquaintances - and intelligently manage your schedule and work, allowing you to stay in control, be more relaxed and free up time.",
+    "publisher": "Trickle",
     "developers": [
         {
-            "githubUserName": "cverhelst",
-            "companyName": "Trickle"
+            "githubUserName": "cverhelst"
         },
         {
-            "githubUserName": "YarnoVdW",
-            "companyName": "Trickle"
+            "githubUserName": "YarnoVdW"
         },
         {
-            "githubUserName": "MikeHeremans",
-            "companyName": "Trickle"
+            "githubUserName": "MikeHeremans"
         }
     ],
     "releaseData": "2024-09-27",
